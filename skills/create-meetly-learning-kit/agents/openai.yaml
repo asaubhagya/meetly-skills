@@ -1,0 +1,14 @@
+interface:
+  display_name: "Create Meetly Learning Kit"
+  short_description: "Turn lectures into rich learning artifacts"
+  brand_color: "#111111"
+  default_prompt: "Use $create-meetly-learning-kit to turn my latest lecture into notes, a study map, and a quiz."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve and render authorized Meetly lecture evidence"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

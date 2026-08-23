@@ -27,13 +27,14 @@ context, synthesize in the host, and preserve source attribution.
 - Exact transcript detail: `get_transcript`; follow `nextCursor` only as far as
   the task requires.
 - Commitments: `list_action_items`.
+- Usage and setup: `get_meetly_usage_guide`.
 - Interactive artifacts: fetch evidence, author the content yourself, call the
   matching `prepare_*` tool, then pass its returned object unchanged to the
   matching `render_*` tool.
 
-Available artifact pairs are study map, lecture notes, quiz, and engineering
-spec. Do not invent parameters or pass raw transcripts into prepare tools;
-follow each published input schema.
+Available artifact pairs are study map, lecture notes, quiz, product
+requirements, and engineering specification. Do not invent parameters or pass
+raw transcripts into prepare tools; follow each published input schema.
 
 ## Evidence rules
 
