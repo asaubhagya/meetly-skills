@@ -16,13 +16,17 @@ evidence. Keep retrieval bounded and preserve speaker labels and timestamps.
    needed.
 3. Identify the central question, concepts, dependencies, misconceptions, and
    memorable evidence. Separate source claims from your synthesis.
-4. Create the requested result:
+4. If the user has not chosen a format, first give a compact teaching-oriented
+   summary and recommend one best-fit artifact: a study map for relationships,
+   lecture notes for durable reference, or a quiz for retrieval practice. Ask
+   one short “Create it?” question, then proceed immediately when accepted.
+5. Create the requested result:
    - Study map: concise nodes, meaningful links, and evidence per concept.
    - Lecture notes: learning goals, structured sections, key terms, examples,
      open questions, and a recap.
    - Quiz: varied questions, plausible distractors, delayed answers, and an
      evidence-backed explanation for every answer.
-5. Call the matching `prepare_*` tool, then pass its returned object unchanged
+6. Call the matching `prepare_*` tool, then pass its returned object unchanged
    to the matching `render_*` tool.
 
 ## Quality bar

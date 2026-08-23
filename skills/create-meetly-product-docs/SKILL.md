@@ -15,14 +15,19 @@ decisions, uncertainty, and evidence distinct.
 2. Extract the problem, users, desired outcomes, constraints, decisions,
    rejected options, risks, owners, and unresolved questions. Preserve who said
    what; never turn a proposal into an approved decision.
-3. For a product document, write context, problem, users, goals, non-goals,
+3. If the user has not chosen a deliverable, first summarize what happened and
+   recommend one best-fit artifact: a research brief for interviews, a product
+   brief for discovery and alignment, or an engineering specification for an
+   implementation discussion. Ask one short “Create it?” question and proceed
+   immediately when accepted.
+4. For a product document, write context, problem, users, goals, non-goals,
    requirements, success measures, risks, and open questions.
-4. For an engineering specification, write system context, behavioral
+5. For an engineering specification, write system context, behavioral
    requirements, data and interface changes, edge cases, security/privacy,
    rollout, observability, testing, and unresolved decisions.
-5. Attach concise Meetly evidence to each material requirement. Mark host
+6. Attach concise Meetly evidence to each material requirement. Mark host
    inference explicitly.
-6. Call `prepare_prd` or `prepare_engineering_spec`, then pass the returned
+7. Call `prepare_prd` or `prepare_engineering_spec`, then pass the returned
    object unchanged to its matching `render_*` tool.
 
 ## Quality bar

@@ -8,6 +8,35 @@ description: Use when answering from private Meetly meetings, lectures, intervie
 Meetly is a read-only evidence source. Retrieve the minimum necessary meeting
 context, synthesize in the host, and preserve source attribution.
 
+## Default conversation flow
+
+When the user invokes Meetly without a specific task, make the first experience
+useful instead of showing a tool menu:
+
+1. Identify the most recent authorized conversation with `list_meetings`, then
+   retrieve its summary and enough speaker-tagged evidence with `fetch` to
+   understand it. Do not retrieve the full transcript unless the evidence is
+   insufficient.
+2. Classify its primary intent: learning, product discovery, engineering,
+   research/interview, decision review, planning, or general notes.
+3. Lead with a compact **What happened** summary. Include the purpose, key
+   ideas or decisions, open questions, and commitments when present. Preserve
+   uncertainty and speaker attribution.
+4. Recommend the single artifact that would create the most value from this
+   conversation. Name the outcome, not the tool—for example **interactive study
+   map**, **lecture notes and quiz**, **research brief**, **product brief**, or
+   **engineering specification**. Mention at most two useful alternatives.
+5. End with one easy action such as: “Create the interactive study map?” If the
+   user agrees, create it immediately with the relevant skill and artifact
+   tools; do not repeat setup or ask for details already present in the source.
+
+A natural first response is: “I found your recent _[conversation]_ from
+_[date]_. It looks like a _[type]_. Here is the quick take … The most useful
+next artifact would be _[artifact]_ because _[reason]_. Want me to create it?”
+
+If the user asks a specific question or requests a specific artifact, answer or
+create it directly instead of forcing this discovery flow.
+
 ## First-run handling
 
 - If Meetly is not set up, direct the user to
