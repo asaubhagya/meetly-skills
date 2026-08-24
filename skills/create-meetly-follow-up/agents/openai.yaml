@@ -1,0 +1,14 @@
+interface:
+  display_name: "Create Meetly Follow-up"
+  short_description: "Draft minutes, decisions, actions, and follow-ups"
+  brand_color: "#ED5A36"
+  default_prompt: "Use $create-meetly-follow-up to turn my latest planning meeting into decisions, actions, and a concise follow-up."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly meeting evidence"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false

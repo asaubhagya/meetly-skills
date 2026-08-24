@@ -1,0 +1,14 @@
+interface:
+  display_name: "Create Meetly Product Spec"
+  short_description: "Turn discussions into grounded PRDs and specs"
+  brand_color: "#ED5A36"
+  default_prompt: "Use $create-meetly-product-spec to turn my latest product discussion into an implementation-ready specification."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly product evidence"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false
