@@ -68,7 +68,7 @@ export function metadata(text, key) {
   if (result.interface.short_description.length < 25 || result.interface.short_description.length > 64) fail(`${key}: short description must be 25–64 characters`);
   if (!result.interface.default_prompt.includes('$' + key)) fail(`${key}: default prompt must name the skill`);
   if (result.interface.brand_color && !/^#[0-9a-fA-F]{6}$/.test(result.interface.brand_color)) fail(`${key}: invalid brand color`);
-  if (result.implicit !== !key.startsWith('create-')) fail(`${key}: artifact skills must be explicit; setup/catch-up/briefing implicit`);
+  if (result.implicit !== !key.startsWith('create-')) fail(`${key}: research must be explicit; conversational capabilities implicit`);
   if (result.dependencies.length !== 1) fail(`${key}: exactly one Meetly MCP dependency required`);
   const dep = result.dependencies[0];
   if (dep.type !== 'mcp' || dep.value !== 'meetly' || !dep.description ||

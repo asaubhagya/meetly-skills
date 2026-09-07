@@ -2,7 +2,7 @@
 
 Canonical agent instructions for Meetly in the public
 `asaubhagya/meetly-skills` repository.
-Start with [GUIDE.md](GUIDE.md). All eight skill folders are usable unchanged by
+Start with [GUIDE.md](GUIDE.md). All five skill folders are usable unchanged by
 packaged plugins and MCP inline workflows.
 
 ## Develop
@@ -26,7 +26,8 @@ nonempty Markdown body. Skill names match their directories and contain lowercas
 letters, digits, and single hyphens (at most 64 characters). UI metadata uses
 JSON-quoted strings, one Meetly MCP dependency, and an explicit boolean invocation
 policy. Unsupported or duplicate fields fail closed; extend the parser/tests
-together when adding metadata. Artifact skills must remain explicitly invoked.
+together when adding metadata. Research is explicitly invoked; meeting insights
+can draft useful follow-on work within the request. Sending remains separate.
 Symlinks, unsafe paths, and nonregular files are rejected.
 
 ## Manifest contract

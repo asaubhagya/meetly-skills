@@ -1,33 +1,38 @@
 ---
 name: create-meetly-research-brief
-version: 1
-description: Turn questions, hypotheses, or claims from an authorized Meetly interview or discussion into a sourced research brief that distinguishes meeting evidence from external evidence.
+version: 2
+description: Use when someone wants to fact-check a claim, investigate a question, or develop research from a recorded discussion or interview.
 ---
 
-# Create a Meetly Research Brief
+# Research from a conversation
 
-Use for an explicitly requested artifact. Ordinary catch-up insights do not
-authorize creating or sending one. Reuse evidence already retrieved for the
-request. Draft with the host's native capabilities; sending or publishing requires
-the user's authorization for that destination.
+Start with the question that affects the user's decision. Read its transcript
+context using `search`, `fetch` and bounded `get_transcript` when needed.
+Apply the standing Meetly evidence rules.
 
-Use `search` and `fetch` to recover the discussion and its open claims. Extract
-the research question, hypotheses, assumptions, evidence already offered,
-disagreements, and decisions the research must inform.
+Separate three things in the answer: what participants said, what external
+evidence establishes, and your synthesis. Cite exact transcript quotes and current
+primary sources close to the claims they support. Do not treat repeated claims,
+confidence, a generated summary, or a participant's job title as verification.
 
-Research unresolved claims with current primary sources when browsing is
-available. Prefer official data, standards, original research, and first-party
-documentation. For each important conclusion, distinguish:
+For a quick check, resolve the narrow claim directly when the host can browse.
+Before a substantial investigation, explain the intended scope and likely effort
+in a short sentence and ask whether to proceed, unless the user already requested
+that research or approved an applicable preference. Do not ask again for work
+already authorized. Use a supplied time budget; prioritize consequential claims.
 
-- what meeting participants said;
-- what external sources establish;
-- your synthesis or recommendation.
+Use current first-party documentation, original studies or official data. Seek
+contrary evidence and comparable definitions, dates and conditions. Avoid sending
+private transcript passages, participant names or confidential project details
+to a public search engine; abstract the query to the necessary topic.
 
-Return an executive answer, evidence by question, conflicts or uncertainty,
-implications for the decision, and a short next-step recommendation. Cite both
-Meetly evidence and external sources close to the claims they support. Do not
-upgrade a participant hypothesis into fact or hide contrary evidence.
+Lead with the answer and its confidence, then the decisive evidence, unresolved
+questions and practical implication. Scale to the request: one disputed sentence
+may need a paragraph; a complex decision may need a dense brief. Draft a useful
+recommendation, distinguishing it from meeting decisions.
 
-Create the brief directly with the host's native research and document
-capabilities. Meetly supplies private context; it does not browse or generate
-the brief.
+If browsing or sources are unavailable, identify the claim as unverified, explain
+what evidence would settle it, and provide the useful transcript-grounded part.
+Never fabricate a source, search result or completed verification.
+Use host file tools only for requested/preferred documents and report actual
+creation. Sending or publishing requires authorization for the destination.

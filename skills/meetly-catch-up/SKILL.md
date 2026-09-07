@@ -1,39 +1,47 @@
 ---
 name: meetly-catch-up
-version: 1
-description: Use when someone asks what happened, what was discussed, or what to do next from Meetly meetings without requesting a specific artifact.
+version: 2
+description: Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.
 ---
 
-# Meetly Catch-up
+# Meeting insights
 
-Retrieve only the meeting evidence needed. Use `list_meetings` for recent/date
-requests, `search` for subjects or participants, and `fetch` to read selected
-sources. Use `get_transcript` only for a bounded exact passage. Tool schemas are
-authoritative for supported arguments. For recurring or multi-meeting period
-digests, use `meetly-briefing` and its coverage rules.
+Read the transcript, understand what this conversation was for, and give the
+user something they can act on. Apply the standing Meetly evidence rules.
 
-Classify the meeting from its content: planning/decision, product discovery,
-engineering, learning, research/interview, customer conversation, or mixed.
-Automatically surface useful insights for that type: decisions and blockers,
-customer needs, technical tradeoffs, concepts and misconceptions, conflicting
-claims, or commitments. Do not make the user choose a classification or ask for
-permission to provide ordinary insights.
+Use `list_meetings` for dates, `search` for subjects, and `fetch` for selected
+sources. Use `get_transcript` for bounded passages or continuation, following
+actual schemas. Read enough to support the scope; reuse evidence already read.
+Generated titles and old summaries can be wrong. Classify from the conversation.
 
-Apply the user's role, topics, detail, technical depth, and attribution preferences
-from conversation or available caller-host native memory. Otherwise lead with a
-compact account of purpose, key points, decisions, commitments, and open questions.
-Preserve synced speaker labels; use `Unknown speaker` when missing. Never infer
-an owner, deadline, identity, or decision. Label synthesis and inference, and cite
-meeting links/identities and available timestamps for consequential claims.
+Lead with the answer or most consequential insight. Follow with a compact,
+information-rich explanation supported by short exact quotes and nearby meeting
+links, dates and available timestamps. Keep proposals, decisions, commitments,
+reported experiences and your recommendations distinct. Infer useful implications,
+but label them. Unstated owners, deadlines and approvals stay open.
 
-Standalone artifacts require a user request. When useful, suggest one matching
-next step: `create-meetly-product-spec` for product/engineering;
-`create-meetly-learning-kit` for learning; `create-meetly-research-brief` for open
-claims; `create-meetly-interactive-map` for relationships; or
-`create-meetly-follow-up` for minutes/actions. Do not append a sales pitch or
-forced artifact question to every answer. Reuse retrieved evidence if requested.
+Adapt to the user's work, meeting mix and detail preference; do not ask them to
+choose a template. If no preference exists, deliver a dense brief first.
+Choose the relevant depth from these references only when it helps:
 
-Meetly is a read-only evidence source. Disclose incomplete retrieval and failed
-reads. No results means no accessible synced records found, not no meetings held.
-Never infer recording, pairing, calendar, or voice training status from records.
-For setup help use `setup-meetly` and the app's current connection guidance.
+- Brainstorm, product review or technical design: [product and RFC](references/product.md).
+- Customer discovery or interview: [interview insights](references/interviews.md).
+- Lecture or explanation: [learning](references/learning.md).
+- Commitments, next steps or messages: [follow-up](references/follow-up.md).
+- Relationships clearer visually: [maps](references/maps.md).
+
+A mixed conversation can combine forms. Draft the useful next piece of work
+within the requested analysis without another permission round. For example,
+a brainstorm can yield a short product/RFC draft with unresolved choices; an
+interview can yield a hypothesis and discriminating follow-up question.
+Do not generate a document for every conceivable outcome. Keep the main answer
+in chat; create a file when requested or enabled by the user's delivery preference.
+
+For a day or period use meetly-briefing. For external checks use
+create-meetly-research-brief; ask before substantial research unless already
+authorized. For personal speaking feedback or style use meetly-communication-coach.
+
+Report what you actually read and any missing evidence in one concise coverage
+line. Short source material needs a short answer; never pad to a page target.
+If only a legacy summary is available, say transcript-grounded analysis is
+unavailable and request/retrieve the transcript instead of laundering that summary.

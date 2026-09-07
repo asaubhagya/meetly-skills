@@ -100,9 +100,12 @@ test('CLI can build outside its working directory and invalid skill edits invali
   assert.match(result.stderr, /positive safe integer/);
 });
 
-test('all production skills validate; artifact invocation remains explicit', async () => {
+test('production catalog exposes five capabilities with progressively loaded references', async () => {
   const manifest = await buildManifest(root);
-  assert.equal(manifest.skills.length, 8);
+  assert.deepEqual(manifest.skills.map(s => s.key), ['create-meetly-research-brief', 'meetly-briefing', 'meetly-catch-up', 'meetly-communication-coach', 'setup-meetly']);
+  const insights = manifest.skills.find(s => s.key === 'meetly-catch-up');
+  assert.ok(insights.files.some(f => f.path === 'references/product.md'));
+  assert.ok(insights.files.some(f => f.path === 'references/interviews.md'));
   assert.deepEqual(manifest.skills.map(s => s.key), [...manifest.skills.map(s => s.key)].sort());
   for (const skill of manifest.skills) {
     const parsed = metadata(await readFile(join(root, 'skills', skill.key, 'agents/openai.yaml'), 'utf8'), skill.key);

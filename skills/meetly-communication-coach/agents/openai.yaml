@@ -1,8 +1,8 @@
 interface:
-  display_name: "Research and fact-checking"
-  short_description: "Check claims and investigate meeting questions"
+  display_name: "Communication coaching"
+  short_description: "Understand your contribution and writing style"
   brand_color: "#151515"
-  default_prompt: "Use $create-meetly-research-brief to check the claims from my latest discussion."
+  default_prompt: "Use $meetly-communication-coach to help me communicate more clearly."
 dependencies:
   tools:
     - type: "mcp"
@@ -11,4 +11,4 @@ dependencies:
       transport: "streamable_http"
       url: "https://mcp.getmeetly.ai/mcp"
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

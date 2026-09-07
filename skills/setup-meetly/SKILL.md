@@ -1,84 +1,75 @@
 ---
 name: setup-meetly
-version: 2
-description: Use when someone wants to get started with Meetly, personalize meeting digests, or set up or change recurring catch-ups.
+version: 3
+description: Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.
 ---
 
 # Set up Meetly
 
-Have a short conversation, asking one or two related questions at a time. Reuse
-answers already given and any available caller-host native memory. Start with
-what the person uses meetings for and wants help keeping track of.
+Make the first useful briefing feel close. Ask one or two short, related
+questions per turn; reuse what the user and host memory already tell you.
+Use the standing evidence rules in the Meetly guide.
 
-## App readiness
+## Learn the person
 
-Ask whether they have recorded in Meetly, connected/paired their AI host, linked
-their calendar, and completed voice training. These are user-reported states:
-MCP cannot inspect recording readiness, pairing, calendar connection, or voice
-training. Retrieved meetings prove only that those records are accessible.
-Never infer app status from an empty list, speaker labels, or a successful call.
+Start naturally: “What does your day job involve, and what kinds of conversations
+do you record?” Offer examples when helpful: engineering reviews, customer or
+research interviews, team decisions, brainstorms, lectures. Let them describe a
+mix. Use accessible transcripts to propose a meeting mix, then let them correct
+it; do not silently infer their job or identity.
 
-For anything unfinished, ask which platform they use and read
-[the platform-specific app guidance](references/app-guidance.md). iPhone/iPad
-uses Settings → AI Agent Access; Mac uses the library's Connect to AI button.
-Guide a short recording and the applicable calendar/voice steps using current
-in-app labels and help; do not invent screens, settings, or success.
-Calendar and voice training are optional for this conversation. An access error
-needs its stated remedy, not a claim that setup succeeded. Continue tailoring
-preferences while the user handles app steps.
+Next learn the desired depth: quick highlights, a dense brief, or an in-depth
+read. Default to a dense brief, decisions and useful implications first, with
+short transcript quotes and references. Learn technical depth and priority topics
+only where not already answered. Each meeting's analysis adapts to its content.
 
-## Shape the digest
+Ask whether to keep briefings in chat or also attach a compact PDF. Default to
+chat; accept “PDF occasionally” as on-request. Keep the chat useful even when a
+document is attached. Offer speaking feedback and “write in my style” as optional
+capabilities, using meetly-communication-coach when chosen.
 
-Learn their role/audience, digest detail (brief, balanced, or thorough), topics
-to prioritize or skip, technical depth, and speaker attribution preference.
-Offer a compact proposed profile for confirmation instead of a long form.
-Defaults when accepted: balanced detail, plain language, decisions and actions
-first, speaker names for consequential commitments when supported by evidence.
-Speaker preferences change presentation, never source identity or certainty.
+Draft useful next steps proactively. Ask before time-consuming external research;
+record a different research preference only if the user chooses one.
 
-Persist preferences ONLY through the caller host's native memory, when available
-and permitted, including its supported conversational memory facility when no
-explicit memory tool is exposed. Look for an existing Meetly preference first; update that entry
-instead of adding a duplicate. Never use Meetly/server preference writes, an
-external memory service, or a file fallback. If native memory is unavailable,
-unreadable, disallowed, or a write fails, apply the profile in this conversation
-and say it was not saved. Claim persistence only after a successful tool result
-or an explicit durable-save confirmation from the host's memory facility; your
-own conversational acknowledgment is not confirmation.
-If existing memory cannot be inspected, do not create a potentially duplicate
-entry; keep preferences in-session until the host/user resolves this.
+## Get recording and access working
 
-## Optional recurring briefing
+Ask their platform if unknown and whether they have already recorded and connected.
+Load [app guidance](references/app-guidance.md) for the relevant missing step,
+not a long checklist. Put the pairing key instructions directly beside the field
+in the authorization page; never ask for a key in chat. If they do not have the app,
+point to the platform download. Explain the loop simply: open Meetly, press record,
+finish and let it sync, then ask here.
 
-Offer a recurring briefing if useful; do not create one without the user's
-request. Obtain time, timezone, and cadence (including weekdays for weekly or
-weekday schedules). Confirm ambiguous zones and daylight-saving expectations.
-Inspect the caller host's native scheduling tool documentation/capabilities to
-confirm that scheduled execution can access authenticated Meetly tools. A timer
-or reminder alone is insufficient; interactive access does not prove scheduled
-access. If unsupported or unknown, explain and offer an on-demand briefing.
-ChatGPT Tasks may not support Apps/Meetly in scheduled execution. A connected
-Meetly app and an available Tasks tool do not establish that support. Check the
-current host documentation and exposed capabilities; if access remains unknown
-or unsupported, do not promise or create an automated Meetly digest.
+Offer calendar linking and voice training one step at a time when useful.
+They are optional. Source calendar snapshots or labeled segments do not prove
+current device permissions, voice training or recording readiness.
+A successful retrieval confirms access to those records only.
 
-Inspect existing native schedules before creating anything. Update a matching
-Meetly briefing, preserving unrelated fields; if several plausibly match, ask
-which to change. If schedules cannot be inspected, avoid creating a duplicate.
-Use ONLY the caller host's native scheduler, never a Meetly server write,
-external scheduler, shell cron, or invented tool.
+## Save and arrange delivery
 
-The scheduled prompt should invoke `meetly-briefing`, include the agreed profile,
-time window/timezone and cadence, and require coverage/error disclosure on every
-run. Include the profile because scheduled execution may lack conversation
-memory. A schedule is not a separate preference store. Use a supported native
-checkpoint for the last successful covered interval when available; otherwise
-use an explicit rolling interval and disclose possible overlap.
+Recap the proposed profile briefly and accept corrections. Use native host memory
+when permitted; update an existing Meetly profile when it can be found. If existing
+memory cannot be inspected, apply preferences here rather than create duplicates.
+Only claim a lasting save after a tool result or host-provided durable confirmation.
+Conversational acknowledgment alone is not proof.
 
-## Finish
+For “daily briefing,” clarify whether they want today's brief or daily delivery
+if the intent is ambiguous. For a schedule, gather time, timezone and cadence;
+offer morning catch-up or evening recap, and inspect existing schedules before
+creating a duplicate. Use ChatGPT's native Scheduled capability when it supports
+authenticated Meetly execution. Check current capabilities; do not repeat outdated
+blanket claims that connected apps cannot run on schedules. A reminder alone is
+not an automatic briefing. If unsupported, give the brief now and state the limit.
 
-Recap the agreed profile, app steps still user-reported or pending, whether
-memory was actually saved, and whether a schedule was actually created/updated
-(with time, timezone, cadence, and identifier if returned). Distinguish a draft
-or failed tool result from completion. Offer or provide a first catch-up from
-accessible meetings without fabricating calendar events or voice status.
+The scheduled instructions include meetly-briefing, the approved profile, timezone,
+coverage interval and PDF choice, since future runs may not inherit memory.
+Confirm the actual schedule result. Use explicit rolling intervals if the host
+cannot keep a reliable last-success checkpoint; disclose overlap and late sync.
+Never create a Meetly server preference or an external scheduling workaround.
+
+## First result
+
+Deliver a first useful briefing from accessible transcripts, using the agreed
+profile. Finish with a short recap of what works, what was saved/scheduled,
+and any next app step. The user can ask follow-up questions in this chat.
+Do not make downloads, memory or schedules prerequisites for on-demand use.

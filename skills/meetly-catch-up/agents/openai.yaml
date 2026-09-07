@@ -1,13 +1,13 @@
 interface:
-  display_name: "Meetly Catch-up"
-  short_description: "Catch up with grounded meeting insights"
-  brand_color: "#ED5A36"
-  default_prompt: "Use $meetly-catch-up to catch me up on my latest meeting and surface the important insights."
+  display_name: "Meeting insights"
+  short_description: "Find what matters and draft the next step"
+  brand_color: "#151515"
+  default_prompt: "Use $meetly-catch-up to explain what mattered in my latest conversation."
 dependencies:
   tools:
     - type: "mcp"
       value: "meetly"
-      description: "Retrieve authorized Meetly meeting context"
+      description: "Retrieve authorized Meetly transcript evidence"
       transport: "streamable_http"
       url: "https://mcp.getmeetly.ai/mcp"
 policy:

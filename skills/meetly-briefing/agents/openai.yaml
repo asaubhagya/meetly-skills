@@ -1,13 +1,13 @@
 interface:
-  display_name: "Meetly Briefing"
-  short_description: "Catch up across meetings with clear coverage"
-  brand_color: "#ED5A36"
-  default_prompt: "Use $meetly-briefing to brief me on my meetings this week and disclose any gaps."
+  display_name: "Daily briefing"
+  short_description: "A dense daily brief with transcript references"
+  brand_color: "#151515"
+  default_prompt: "Use $meetly-briefing to brief me on my recorded meetings today."
 dependencies:
   tools:
     - type: "mcp"
       value: "meetly"
-      description: "Retrieve authorized Meetly meeting evidence"
+      description: "Retrieve authorized Meetly transcript evidence"
       transport: "streamable_http"
       url: "https://mcp.getmeetly.ai/mcp"
 policy:

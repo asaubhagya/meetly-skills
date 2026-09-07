@@ -1,13 +1,13 @@
 interface:
   display_name: "Set up Meetly"
-  short_description: "Personalize meeting digests and recurring briefings"
-  brand_color: "#ED5A36"
-  default_prompt: "Use $setup-meetly to help me get started and tailor my meeting digests."
+  short_description: "Personalize notes and daily briefings"
+  brand_color: "#151515"
+  default_prompt: "Use $setup-meetly to set up Meetly."
 dependencies:
   tools:
     - type: "mcp"
       value: "meetly"
-      description: "Retrieve authorized Meetly meeting evidence"
+      description: "Retrieve authorized Meetly transcript evidence"
       transport: "streamable_http"
       url: "https://mcp.getmeetly.ai/mcp"
 policy:
