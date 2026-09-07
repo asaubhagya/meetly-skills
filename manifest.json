@@ -22,33 +22,39 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "54abe674c343dfa054e4fdcf7996d3d498e49a6fd368a06bb43c2b2dd9fcb6c3",
-          "bytes": 4771
+          "sha256": "c9efd944855aa67f4d5f21826aa1fb9bd23b4fc425c04cba02008a966464338e",
+          "bytes": 1954
         },
         {
           "path": "agents/openai.yaml",
           "src": "skills/meetly-briefing/agents/openai.yaml",
           "sha256": "56da77f4ebc4509ee652f2bc44c8c181ab86fc986b1490997a02d6e0039d4878",
           "bytes": 473
+        },
+        {
+          "path": "references/delivery.md",
+          "src": "skills/meetly-briefing/references/delivery.md",
+          "sha256": "e06eabb4b5edacad0466428eb5c644e735f113084c4bcbc2c808d502d8ea6433",
+          "bytes": 1980
         }
       ]
     },
     {
       "key": "meetly-catch-up",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "41e648fadf67b34c1ea8ecf0bf74e32d0fcc76dba75080988a20bc095297c859",
-          "bytes": 2669
+          "sha256": "55d1a41bb4f08a19c5d6cd6c92cd2c5142995529fa67cdb142bc5a92c4609cd2",
+          "bytes": 1695
         },
         {
           "path": "agents/openai.yaml",
@@ -90,14 +96,14 @@
     },
     {
       "key": "meetly-communication-coach",
-      "version": 1,
+      "version": 2,
       "description": "Use when someone asks for feedback on their contribution or speaking patterns, wants to write in their own style, or offers a recording to develop a style preference.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-communication-coach/SKILL.md",
-          "sha256": "d48a0c7353d68ae31d7687ae9c3a1fe1026a2a15d9b9d4eb73b1780d18ce2ac8",
-          "bytes": 3059
+          "sha256": "3b4df207fb33847b88c833a10557241ac46e80220a7a5c42b36560c07571f6b3",
+          "bytes": 1773
         },
         {
           "path": "agents/openai.yaml",
@@ -109,14 +115,14 @@
     },
     {
       "key": "setup-meetly",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "0e24b7da41263dd19738fffd12b52a72cd57c0457701d42b65157d09ce7201d0",
-          "bytes": 4048
+          "sha256": "54fafa5931589fe8be7b4c066c0494161145e853ee79b0f1ee935364f91b835f",
+          "bytes": 1834
         },
         {
           "path": "agents/openai.yaml",
@@ -129,13 +135,19 @@
           "src": "skills/setup-meetly/references/app-guidance.md",
           "sha256": "4460496fb80b8d494ae3a223a78ee5a94b358e271af28b1534b8ca4bf0d2eec9",
           "bytes": 3575
+        },
+        {
+          "path": "references/profile-and-delivery.md",
+          "src": "skills/setup-meetly/references/profile-and-delivery.md",
+          "sha256": "0afb38c12f5f652faae8848f38b6781e1a3726ff370ac8bb714be52342c84a35",
+          "bytes": 2125
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "b5a49becccf7164d3ec35a5c8b6984dfd61a924be1491a5c74aaf2b7870ba688",
-    "bytes": 4287
+    "sha256": "a5647af7c32d2ca13e857f93725fb0ec9a44b26476071225896a8db47ab71337",
+    "bytes": 3548
   }
 }
