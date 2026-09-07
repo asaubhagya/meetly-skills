@@ -78,5 +78,8 @@ jobs:
           path: plugin
           ssh-key: ${{ secrets.MEETLY_PLUGIN_DEPLOY_KEY }}
           ssh-strict: true
+      - name: Install pinned plugin dependencies
+        working-directory: plugin
+        run: npm ci --ignore-scripts
       - name: Hydrate, verify, and commit generated plugin files
         run: node scripts/promote-plugin.mjs plugin
