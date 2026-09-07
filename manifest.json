@@ -22,14 +22,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "3a8da8eed432862f0edac260870030984322009045a01ea69d7c7247d5d7fc5d",
-          "bytes": 3608
+          "sha256": "54abe674c343dfa054e4fdcf7996d3d498e49a6fd368a06bb43c2b2dd9fcb6c3",
+          "bytes": 4771
         },
         {
           "path": "agents/openai.yaml",
