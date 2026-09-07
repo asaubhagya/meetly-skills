@@ -1,8 +1,8 @@
 interface:
   display_name: "Meetly Catch-up"
-  short_description: "Summarize meetings and suggest what comes next"
+  short_description: "Catch up with grounded meeting insights"
   brand_color: "#ED5A36"
-  default_prompt: "Use $meetly-catch-up to catch me up on my latest meeting and suggest the most useful next artifact."
+  default_prompt: "Use $meetly-catch-up to catch me up on my latest meeting and surface the important insights."
 dependencies:
   tools:
     - type: "mcp"

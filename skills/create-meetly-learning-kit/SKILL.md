@@ -1,9 +1,15 @@
 ---
 name: create-meetly-learning-kit
+version: 1
 description: Create evidence-grounded notes, a study guide, flashcards, or a quiz from an authorized Meetly lecture, seminar, interview, or study session.
 ---
 
 # Create a Meetly Learning Kit
+
+Use for an explicitly requested artifact. Ordinary catch-up insights do not
+authorize creating or sending one. Reuse evidence already retrieved for the
+request. Draft with the host's native capabilities; sending or publishing requires
+the user's authorization for that destination.
 
 Retrieve the source with `search` and `fetch`; use bounded `get_transcript`
 pages only when exact detail is needed. Identify the central question, concepts,

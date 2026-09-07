@@ -1,9 +1,15 @@
 ---
 name: create-meetly-interactive-map
+version: 1
 description: Create an interactive visual map from relationships, arguments, concepts, systems, or dependencies discussed in an authorized Meetly meeting or lecture.
 ---
 
 # Create a Meetly Interactive Map
+
+Use for an explicitly requested artifact. Ordinary catch-up insights do not
+authorize creating or sending one. Reuse evidence already retrieved for the
+request. Draft with the host's native capabilities; sending or publishing requires
+the user's authorization for that destination.
 
 Retrieve the source with `search` and `fetch`. Identify the map's central
 question, the smallest useful set of nodes, and meaningful typed relationships.

@@ -1,9 +1,15 @@
 ---
 name: create-meetly-research-brief
+version: 1
 description: Turn questions, hypotheses, or claims from an authorized Meetly interview or discussion into a sourced research brief that distinguishes meeting evidence from external evidence.
 ---
 
 # Create a Meetly Research Brief
+
+Use for an explicitly requested artifact. Ordinary catch-up insights do not
+authorize creating or sending one. Reuse evidence already retrieved for the
+request. Draft with the host's native capabilities; sending or publishing requires
+the user's authorization for that destination.
 
 Use `search` and `fetch` to recover the discussion and its open claims. Extract
 the research question, hypotheses, assumptions, evidence already offered,

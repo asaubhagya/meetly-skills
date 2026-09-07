@@ -1,9 +1,15 @@
 ---
 name: create-meetly-product-spec
+version: 1
 description: Create an evidence-grounded product brief, PRD, or engineering specification from an authorized Meetly product, customer, design, or technical discussion.
 ---
 
 # Create a Meetly Product Spec
+
+Use for an explicitly requested artifact. Ordinary catch-up insights do not
+authorize creating or sending one. Reuse evidence already retrieved for the
+request. Draft with the host's native capabilities; sending or publishing requires
+the user's authorization for that destination.
 
 Use `search` and `fetch` to retrieve the relevant meeting evidence. Use
 `get_transcript` only when exact wording or a bounded missing passage matters.

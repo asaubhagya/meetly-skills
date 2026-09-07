@@ -1,0 +1,16 @@
+{
+  "name": "meetly-skills",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build-manifest.mjs",
+    "check": "node scripts/build-manifest.mjs --check",
+    "test": "node --test"
+  }
+}
