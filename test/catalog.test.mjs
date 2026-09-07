@@ -8,7 +8,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { buildManifest, serialize, frontmatter, metadata } from '../scripts/catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const source = await readFile(join(root, 'skills/setup-meetly/SKILL.md'), 'utf8');
+const source = (await readFile(join(root, 'skills/setup-meetly/SKILL.md'), 'utf8')).replace(/^version: \d+$/m, 'version: 1');
 const ui = await readFile(join(root, 'skills/setup-meetly/agents/openai.yaml'), 'utf8');
 
 async function fixture(t) {

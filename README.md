@@ -1,7 +1,7 @@
 # Meetly skills
 
-Canonical agent instructions for Meetly, intended for the public
-`asaubhagya/meetly-skills` repository after the publication audit.
+Canonical agent instructions for Meetly in the public
+`asaubhagya/meetly-skills` repository.
 Start with [GUIDE.md](GUIDE.md). All eight skill folders are usable unchanged by
 packaged plugins and MCP inline workflows.
 
@@ -62,19 +62,30 @@ verify every file, preserving relative paths and invocation policy.
 
 CI runs tests, validation, and manifest drift checks for pushes and pull requests.
 After successful checks, trusted pushes to `main` (beta) and stable semver tags
-(latest) may dispatch `meetly-skills-updated` to `asaubhagya/get-meetly-ai`.
-The payload carries repository, immutable SHA, ref, and channel outside the
-manifest. The downstream consumer must compare semantic versions before moving
-latest, so replaying an older tag cannot roll it back, and must verify hashes.
+(latest) notify downstream using the first configured route:
 
-The repository secret `MEETLY_DISTRIBUTION_TOKEN` must be provisioned by the owner
-with permission to dispatch to that downstream repository. It is not created or
-stored here. Missing secret skips dispatch with an explicit CI notice.
-Pull requests never dispatch. The downstream repository owns web build/deploy,
-channel resolution and the Meetly setup tool integration; this repo's workflow
-does not publish releases or deploy a site.
+1. `MEETLY_AGENTS_DEPLOY_HOOK`: preferred project-scoped Vercel deploy-hook URL.
+   CI POSTs to it without a Vercel management token. The hook selects the website
+   project/branch; its build must resolve checked Meetly skills channels, pin the
+   chosen revision, and verify the manifest. A hook does not transmit the triggering
+   skills SHA or select a skills release by itself.
+2. `MEETLY_DISTRIBUTION_TOKEN`: optional fallback only when no hook is configured.
+   Dispatches `meetly-skills-updated` to `asaubhagya/get-meetly-ai`, with repository,
+   immutable SHA, ref, and channel in the payload outside the manifest.
 
-Release plan: audit public content → publish repository → configure secret →
+The owner provisions these repository secrets; local scripts do not create them.
+Neither configured means a successful skip with a clear CI notice. Pull requests
+run checks only and explicitly report that notification is disabled. A configured
+route's failure fails notification without trying the other route, avoiding
+duplicate builds after an ambiguous response. Hook URLs, tokens, response bodies,
+and raw network errors are never logged. Acceptance is not deployment success.
+
+The downstream consumer must compare semantic versions before moving latest,
+so replaying an older tag cannot roll it back, and must verify hashes. The website
+owns channel resolution, deployment, and Meetly setup tool integration. This
+workflow triggers its configured build but does not publish GitHub releases.
+
+Release plan: audit public content → configure the project hook secret →
 merge checked changes to main for beta → audit beta consumers → tag a reviewed
 commit `v0.1.0` for latest. Subsequent stable releases use increasing semver tags.
 No publication, remote changes, or secret creation occurs from local scripts.

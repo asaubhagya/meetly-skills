@@ -7,8 +7,10 @@ instruction source for both packaged plugins and MCP inline workflows.
 ## Connect and set up
 
 Connect the host to `https://mcp.getmeetly.ai/mcp` using its native connector flow.
-Discover the live tool catalog. When the Meetly `setup` tool is exposed, call it
-and follow its returned guide and skill references. Its purpose in this reference
+Discover the live tool catalog. The agreed Meetly tool is `setup`, with the boolean
+argument `include_bodies` (underscore, not a space). Call `setup` with
+`{"include_bodies": true}` to request instruction bodies and follow its returned
+guide and skill references; `false` requests references without bodies. Its purpose in this reference
 model is instruction discovery, not preference storage or app configuration.
 If it is absent, read this guide and load `setup-meetly` directly. Do not invent
 a setup call or parameters; the live schema determines availability and inputs.
@@ -23,6 +25,12 @@ scheduler may create recurring briefings, after time/timezone/cadence are known
 and scheduled authenticated Meetly access is confirmed. Inspect existing entries
 before writing and recap actual success or failure. Never write server preferences.
 Neither native memory nor scheduling is required to use Meetly on demand.
+Native conversational memory facilities are eligible, but an assistant saying
+“I'll remember” is not durable-save confirmation. ChatGPT Tasks may not allow
+Apps such as Meetly during scheduled execution; do not promise a digest unless
+the current host explicitly supports authenticated Meetly access in that mode.
+Check the host's current [Tasks documentation](https://help.openai.com/en/articles/10291617-tasks-in-chatgpt)
+and exposed capabilities; interactive App availability alone is insufficient.
 
 ## Read and interpret
 

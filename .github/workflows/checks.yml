@@ -18,42 +18,24 @@ jobs:
       - run: npm run validate
       - run: npm test
       - run: npm run check
+      - name: Pull request distribution status
+        if: github.event_name == 'pull_request'
+        run: echo '::notice::Pull request checks only; downstream notification is disabled.'
 
   notify:
     needs: checks
     if: github.event_name == 'push' && github.repository == 'asaubhagya/meetly-skills' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch checked revision to website
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Notify website after successful checks
         env:
-          DISTRIBUTION_TOKEN: ${{ secrets.MEETLY_DISTRIBUTION_TOKEN }}
+          MEETLY_AGENTS_DEPLOY_HOOK: ${{ secrets.MEETLY_AGENTS_DEPLOY_HOOK }}
+          MEETLY_DISTRIBUTION_TOKEN: ${{ secrets.MEETLY_DISTRIBUTION_TOKEN }}
           SOURCE_REPOSITORY: ${{ github.repository }}
           SOURCE_REF: ${{ github.ref }}
           SOURCE_SHA: ${{ github.sha }}
-        shell: bash
-        run: |
-          node --input-type=module <<'NODE'
-          const { DISTRIBUTION_TOKEN: token, SOURCE_REF: ref, SOURCE_SHA: sha, SOURCE_REPOSITORY: repository } = process.env;
-          const stable = /^refs\/tags\/v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.test(ref);
-          if (ref !== 'refs/heads/main' && !stable) {
-            console.log('Skipping non-stable tag; latest requires vMAJOR.MINOR.PATCH.');
-          } else if (!token) {
-            console.log('::notice::MEETLY_DISTRIBUTION_TOKEN is absent; downstream dispatch skipped.');
-          } else {
-            const response = await fetch('https://api.github.com/repos/asaubhagya/get-meetly-ai/dispatches', {
-              method: 'POST',
-              headers: {
-                Authorization: `Bearer ${token}`,
-                Accept: 'application/vnd.github+json',
-                'Content-Type': 'application/json',
-                'X-GitHub-Api-Version': '2022-11-28'
-              },
-              body: JSON.stringify({
-                event_type: 'meetly-skills-updated',
-                client_payload: { repository, sha, ref, channel: stable ? 'latest' : 'beta' }
-              })
-            });
-            if (response.status !== 204) throw new Error(`Distribution dispatch failed: HTTP ${response.status}`);
-            console.log('Dispatched checked revision.');
-          }
-          NODE
+        run: node scripts/notify-distribution.mjs

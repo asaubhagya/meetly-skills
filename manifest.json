@@ -136,27 +136,33 @@
     },
     {
       "key": "setup-meetly",
-      "version": 1,
+      "version": 2,
       "description": "Use when someone wants to get started with Meetly, personalize meeting digests, or set up or change recurring catch-ups.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "4fcf0f23449cd70a3e3f6dd54def579bfa62d03366a472a5d1feb8acce7ec8fc",
-          "bytes": 4254
+          "sha256": "3d4cf9d898a59474bf51b38ab3a4fdfc482fe0de594b00fb4ca2dcc3536f4213",
+          "bytes": 4843
         },
         {
           "path": "agents/openai.yaml",
           "src": "skills/setup-meetly/agents/openai.yaml",
           "sha256": "56b11b15afc8a5c5c0b96fa8ccd981b8381d351c410412b506db3905a5fabb60",
           "bytes": 482
+        },
+        {
+          "path": "references/app-guidance.md",
+          "src": "skills/setup-meetly/references/app-guidance.md",
+          "sha256": "780f5a1d558777330d9f85077e927a85be5986e2b3798a59c73572b69ff2e04c",
+          "bytes": 3641
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "e40134b5ee7c2ac347e520d19bcb49226b9a0cc4bcc9134426c9353fe93b0627",
-    "bytes": 4646
+    "sha256": "07faf20be0e820ba182a082951dd910416f9d3c54348fe39ef84b25d54adf64f",
+    "bytes": 5327
   }
 }

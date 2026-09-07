@@ -1,6 +1,6 @@
 ---
 name: setup-meetly
-version: 1
+version: 2
 description: Use when someone wants to get started with Meetly, personalize meeting digests, or set up or change recurring catch-ups.
 ---
 
@@ -18,10 +18,11 @@ MCP cannot inspect recording readiness, pairing, calendar connection, or voice
 training. Retrieved meetings prove only that those records are accessible.
 Never infer app status from an empty list, speaker labels, or a successful call.
 
-For anything unfinished, guide them to the relevant flow in the Meetly app:
-make a short recording; open Settings → Connect AI for connection guidance;
-follow the app's calendar connection or voice training guidance. Use current
-in-app labels and help if available; do not invent screens, settings, or success.
+For anything unfinished, ask which platform they use and read
+[the platform-specific app guidance](references/app-guidance.md). iPhone/iPad
+uses Settings → AI Agent Access; Mac uses the library's Connect to AI button.
+Guide a short recording and the applicable calendar/voice steps using current
+in-app labels and help; do not invent screens, settings, or success.
 Calendar and voice training are optional for this conversation. An access error
 needs its stated remedy, not a claim that setup succeeded. Continue tailoring
 preferences while the user handles app steps.
@@ -36,11 +37,14 @@ first, speaker names for consequential commitments when supported by evidence.
 Speaker preferences change presentation, never source identity or certainty.
 
 Persist preferences ONLY through the caller host's native memory, when available
-and permitted. Look for an existing Meetly preference first; update that entry
+and permitted, including its supported conversational memory facility when no
+explicit memory tool is exposed. Look for an existing Meetly preference first; update that entry
 instead of adding a duplicate. Never use Meetly/server preference writes, an
 external memory service, or a file fallback. If native memory is unavailable,
 unreadable, disallowed, or a write fails, apply the profile in this conversation
-and say it was not saved. Claim persistence only after a successful tool result.
+and say it was not saved. Claim persistence only after a successful tool result
+or an explicit durable-save confirmation from the host's memory facility; your
+own conversational acknowledgment is not confirmation.
 If existing memory cannot be inspected, do not create a potentially duplicate
 entry; keep preferences in-session until the host/user resolves this.
 
@@ -53,6 +57,10 @@ Inspect the caller host's native scheduling tool documentation/capabilities to
 confirm that scheduled execution can access authenticated Meetly tools. A timer
 or reminder alone is insufficient; interactive access does not prove scheduled
 access. If unsupported or unknown, explain and offer an on-demand briefing.
+ChatGPT Tasks may not support Apps/Meetly in scheduled execution. A connected
+Meetly app and an available Tasks tool do not establish that support. Check the
+current host documentation and exposed capabilities; if access remains unknown
+or unsupported, do not promise or create an automated Meetly digest.
 
 Inspect existing native schedules before creating anything. Update a matching
 Meetly briefing, preserving unrelated fields; if several plausibly match, ask
