@@ -55,6 +55,5 @@ Paths in the Meetly application source tree (not required runtime attachments):
 - `apps/ios-macos/MeetlyMac/MacAIConnectionView.swift`: key recovery and connection.
 - `agents/mcp/infra/mcp-proxy/api/_consent-page.ts`: Settings → AI Agent Access.
 
-The MCP prompt at `agents/mcp/supabase/functions/mcp/prompts.ts` still said Settings → Connect AI
-when inspected; prefer the native labels above. That external source is owned
-and corrected separately from these skills.
+MCP prompts and the authorization page should use these same native labels.
+If the installed app differs, follow its visible controls rather than guessing.
