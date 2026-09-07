@@ -85,6 +85,36 @@ so replaying an older tag cannot roll it back, and must verify hashes. The websi
 owns channel resolution, deployment, and Meetly setup tool integration. This
 workflow triggers its configured build but does not publish GitHub releases.
 
+### Stable plugin file promotion
+
+The downstream trigger job is `notify`. After `checks` and `notify` succeed,
+`promote-plugin` runs only for stable `vMAJOR.MINOR.PATCH` tag pushes. It peels the
+tag to a commit, then polls `https://agents.getmeetly.ai/channels.json` for up to
+ten minutes until `latest.sha` equals that commit. A build-hook acknowledgment
+alone is insufficient. Poll errors and response bodies are not printed.
+
+The owner must provision `MEETLY_PLUGIN_DEPLOY_KEY`, an SSH write deploy key scoped
+ONLY to private `asaubhagya/meetly-plugin`, in this skills repository. Missing key
+fails stable promotion clearly; PRs and beta pushes never run it. The plugin's
+initial `main` must exist before the first stable skills tag.
+
+The job checks out plugin `main` into `plugin/`, runs
+`npm run hydrate -- --channel latest`, then `npm test` and `npm run check`. It
+verifies the resulting lock SHA matches the triggering commit, checks that latest
+has not moved again, and commits only `meetly/skills/`, `meetly/GUIDE.md`,
+`meetly/skills.lock.json`, and (when bumped) `meetly/.codex-plugin/plugin.json`.
+The plugin patch version increments only when generated files changed and the
+previous lock SHA was non-null and differs. Initial hydration from a null lock
+keeps the version; unchanged files create no commit. A normal fast-forward push
+updates plugin `main`; concurrent changes fail safely without forcing a push.
+Promotion jobs are serialized. A failed or superseded release may need a rerun
+after the owner resolves the pointer/checkout condition.
+
+This updates packaged plugin FILES automatically. It never submits to the OpenAI
+portal, requests review, or approves a release. OpenAI submission and review are
+separate owner-controlled steps. Scripts and tests do not invoke live promotion
+during local validation; CI receives the scoped credential only in its job.
+
 Release plan: audit public content → configure the project hook secret →
 merge checked changes to main for beta → audit beta consumers → tag a reviewed
 commit `v0.1.0` for latest. Subsequent stable releases use increasing semver tags.
