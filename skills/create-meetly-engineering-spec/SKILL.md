@@ -1,7 +1,7 @@
 ---
 name: create-meetly-engineering-spec
 metadata:
-  version: "2"
+  version: "3"
 description: Use when someone asks for an engineering RFC, technical design or implementation specification from recorded discussions.
 ---
 

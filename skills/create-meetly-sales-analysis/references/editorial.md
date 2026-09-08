@@ -8,8 +8,9 @@ useful meaning per paragraph, never tiny type, compressed fragments or repetitio
 
 Establish the conversation's purpose, audience and stakes from its evidence. Lead
 with the central insight and why it matters. Develop the reasoning in connected
-paragraphs with descriptive Markdown headings (## and ###), not bold paragraphs
-standing in for an outline. Examine relevant dimensions: customer needs,
+paragraphs that carry one argument from beginning to end. Use descriptive Markdown
+headings only where they help navigation, not a heading for every observation or a
+compulsory sequence of sections. Examine relevant dimensions: customer needs,
 technical feasibility, commercial consequences, competing explanations, risks and
 learning. Select what changes understanding; do not run a compulsory checklist.
 
@@ -17,7 +18,11 @@ Prefer concrete nouns, active verbs and exact distinctions. Explain unfamiliar
 terms once. Use lists for actual sequences or parallel items and tables for useful
 comparisons. Avoid walls of bullets, generic introductions, inflated adjectives,
 repeated conclusions and decorative quotations. Depth follows substance and the
-person's preferences; do not impose a universal word count or page cap.
+person's preferences; do not impose a universal word count or page cap. Respect the
+reader's attention: every paragraph should add a specific fact, connection,
+explanation or consequence. Cut repeated framing and claims of importance; let
+the evidence demonstrate the insight. Smooth transitions should reveal how ideas
+relate, not add connective filler. Dense means low reading effort for high insight.
 
 ## Evidence that can be followed
 
@@ -26,6 +31,12 @@ recorded statements, agreed decisions, source-backed research, interpretations a
 proposals distinguishable in prose. Cite consequential claims close to the claim,
 using real conversation IDs, returned links and timestamps. Quote short passages
 exactly; never invent a source link, speaker, fact check or degree of certainty.
+Connect supported people, organizations, projects and decisions across passages:
+show whose observation supports or challenges which claim, and what follows from
+that relationship. Do not merge ambiguous identities or infer motives from labels.
+Weave brief attributed quotes into the reasoning when the wording provides evidence,
+with an inline locator. Avoid detached quote galleries and decorative pull quotes.
+Earn confidence by making the evidence and its limits easy to follow.
 
 Consult relevant authorized company sources for company claims and primary public
 sources for external questions. Research should resolve uncertainty, explain a

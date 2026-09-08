@@ -1,7 +1,7 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "9"
+  version: "10"
 description: Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.
 ---
 
@@ -20,7 +20,8 @@ to its intent and connecting useful themes across the day. This is not a stack o
 generic summaries or a two-page total cap; let evidence and preferences set the depth.
 
 Explain consequential reasoning, decisions, open questions and learning opportunities.
-Use short exact quotes, source links and available timestamps. Add selective
+Build a smooth narrative across supported people, claims and decisions. Weave
+short attributed quotes into the reasoning with inline source locators. Add selective
 fact-checking and research that deepen the useful topics, with supporting primary
 links. Separate meeting evidence, external findings and your judgment. Speaker
 observations belong only where evidence supports them. Never fill gaps with invented

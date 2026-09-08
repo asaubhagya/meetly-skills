@@ -3,13 +3,13 @@
   "skills": [
     {
       "key": "create-meetly-customer-insights",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks for deep customer interview analysis, discovery findings or synthesis across customer research conversations.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-customer-insights/SKILL.md",
-          "sha256": "74dd3cfa9ef2c9a74b9db1bae380614c7a1c0f29fbfd9ea38391c2af85adbbe0",
+          "sha256": "2b5196ae27d29f11f65a734f5acf419e6fa287708624fb74bf36c08cf68f9cb8",
           "bytes": 1703
         },
         {
@@ -27,8 +27,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/create-meetly-customer-insights/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/professional.md",
@@ -40,13 +40,13 @@
     },
     {
       "key": "create-meetly-engineering-spec",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks for an engineering RFC, technical design or implementation specification from recorded discussions.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-engineering-spec/SKILL.md",
-          "sha256": "4e09a35d880f266325687c852440324e0c94e56a9a686ea945fad133c0680d3e",
+          "sha256": "90213d2f27e269df6424c5b3210b5848c4b280e7013ed15b5f0cf2973abe6812",
           "bytes": 1763
         },
         {
@@ -64,8 +64,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/create-meetly-engineering-spec/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/professional.md",
@@ -77,13 +77,13 @@
     },
     {
       "key": "create-meetly-legal-intake",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks to organize a legal client intake conversation into a sourced matter brief and questions for counsel.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-legal-intake/SKILL.md",
-          "sha256": "ca9b710bc506b0c171fcefe73224bbcfdb9bf0058a831a78847be5a3562ac76e",
+          "sha256": "e29df4512663076aea86b2fa7a7d2eb3e9e17989b2a0dff264cf6aa9236f5af9",
           "bytes": 1794
         },
         {
@@ -101,8 +101,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/create-meetly-legal-intake/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/professional.md",
@@ -114,13 +114,13 @@
     },
     {
       "key": "create-meetly-prd",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks to turn product conversations or discovery evidence into a PRD or product requirements document.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-prd/SKILL.md",
-          "sha256": "fe0b6ee7e341679642f3696a836d0444e1a151052cb833e83213ea649bfcaf3e",
+          "sha256": "89dc12fcd2c53e687ba35552b4a3188e9ae86a4b0dbe2561e979cd3ba90d7321",
           "bytes": 1614
         },
         {
@@ -138,8 +138,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/create-meetly-prd/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/professional.md",
@@ -151,13 +151,13 @@
     },
     {
       "key": "create-meetly-sales-analysis",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks for deep sales discovery or deal-call analysis, qualification, coaching or an evidence-based follow-up draft.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-sales-analysis/SKILL.md",
-          "sha256": "68096cc958e86036f86da2b65121562e3b2ca4e177d0b15bd858ba54eaf80297",
+          "sha256": "8beb63157843b1ef22c7d459bbf2caf397d70f851b49ce890ab68896918cf8f1",
           "bytes": 1753
         },
         {
@@ -175,8 +175,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/create-meetly-sales-analysis/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/professional.md",
@@ -188,14 +188,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 9,
+      "version": 10,
       "description": "Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "10f1c96c151e73c92ca843fda252e11649e4c1853a1772fad1e42a6f2a4223f5",
-          "bytes": 2237
+          "sha256": "c412f8166e51d503335b0d0f0b764cb65588018db63535873a0276813db48af7",
+          "bytes": 2325
         },
         {
           "path": "agents/openai.yaml",
@@ -224,8 +224,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/meetly-briefing/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         },
         {
           "path": "references/profile-and-delivery.md",
@@ -237,14 +237,14 @@
     },
     {
       "key": "meetly-catch-up",
-      "version": 8,
+      "version": 9,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "e5c1f0185d2560c380d186c8ecb30aad1a6d736943727887942510cd5b1f2ef7",
-          "bytes": 2359
+          "sha256": "bbe4a2a358f03e457d6785ba434813cdf8ff9c6244ead7a0286c7f5c108e622b",
+          "bytes": 2405
         },
         {
           "path": "agents/openai.yaml",
@@ -261,8 +261,8 @@
         {
           "path": "references/editorial.md",
           "src": "skills/meetly-catch-up/references/editorial.md",
-          "sha256": "ac730145cbc88ba2645b2f84358ce125596ecc8e633ac402147498da6930b9cd",
-          "bytes": 4641
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
         }
       ]
     }
