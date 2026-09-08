@@ -9,8 +9,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-research-brief/SKILL.md",
-          "sha256": "f75996221517e5a718a587baa6374a7f74602cf8bd6944a27ac0e5c7768d02c1",
-          "bytes": 2139
+          "sha256": "a6bb5b1f6bf1f73a028888d4f2cb92b44fff3d572301cc75654cf91890db2fd3",
+          "bytes": 2153
         },
         {
           "path": "agents/openai.yaml",
@@ -28,8 +28,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "c9efd944855aa67f4d5f21826aa1fb9bd23b4fc425c04cba02008a966464338e",
-          "bytes": 1954
+          "sha256": "432d4d355a886415362167e8fa42e8d4ae61cc2de17548d6f44985a32f9d1f24",
+          "bytes": 1968
         },
         {
           "path": "agents/openai.yaml",
@@ -53,8 +53,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "55d1a41bb4f08a19c5d6cd6c92cd2c5142995529fa67cdb142bc5a92c4609cd2",
-          "bytes": 1695
+          "sha256": "09b80fe899b6531fd7c4851e21935c04d5263400a1c7ca039ef5c6714bf71ef6",
+          "bytes": 1709
         },
         {
           "path": "agents/openai.yaml",
@@ -102,8 +102,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/meetly-communication-coach/SKILL.md",
-          "sha256": "3b4df207fb33847b88c833a10557241ac46e80220a7a5c42b36560c07571f6b3",
-          "bytes": 1773
+          "sha256": "b3da50559cb0986b8e278bddc9cc3c2398c5507904a7d40fdd96939f667e8ff1",
+          "bytes": 1787
         },
         {
           "path": "agents/openai.yaml",
@@ -121,8 +121,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "54fafa5931589fe8be7b4c066c0494161145e853ee79b0f1ee935364f91b835f",
-          "bytes": 1834
+          "sha256": "17dcfbe327b59ce004782dbe7fe2fc4202ff965e11d8b9a2f660cd6ed96f98b1",
+          "bytes": 1848
         },
         {
           "path": "agents/openai.yaml",

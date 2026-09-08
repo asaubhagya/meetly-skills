@@ -18,7 +18,9 @@ export function frontmatter(text, key) {
   const match = /^---\n([\s\S]*?)\n---\n([\s\S]+)$/.exec(text);
   if (!match) fail(`${key}: missing frontmatter or body (use LF line endings)`);
   const fields = {};
-  for (const line of match[1].split('\n')) {
+  const header = match[1].replace(/^metadata:\n  version: "([1-9][0-9]*)"$/m, 'version: $1');
+  if (header === match[1] || /^version:/m.test(match[1])) fail(`${key}: version belongs in metadata as a quoted string`);
+  for (const line of header.split('\n')) {
     const field = /^(name|version|description): (.+)$/.exec(line);
     if (!field || Object.hasOwn(fields, field[1])) fail(`${key}: unsupported or duplicate frontmatter field`);
     fields[field[1]] = field[2];

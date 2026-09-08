@@ -17,11 +17,12 @@ npm run check
 ```
 
 Commit the generated manifest with every distributed content change. Increment
-a skill's positive integer `version` when its instructions or attachments change;
+a skill's positive integer `metadata.version` string when its instructions or attachments change;
 the initial versioned catalog starts at 1. Package/release semver is separate.
 
 The built-in validator intentionally accepts a small YAML subset: SKILL.md has
-plain single-line `name`, `version`, and `description` fields, followed by a
+plain single-line `name` and `description` fields and a `metadata` mapping
+containing a quoted `version` string, followed by a
 nonempty Markdown body. Skill names match their directories and contain lowercase
 letters, digits, and single hyphens (at most 64 characters). UI metadata uses
 JSON-quoted strings, one Meetly MCP dependency, and an explicit boolean invocation

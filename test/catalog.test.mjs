@@ -8,7 +8,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { buildManifest, serialize, frontmatter, metadata } from '../scripts/catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const source = (await readFile(join(root, 'skills/setup-meetly/SKILL.md'), 'utf8')).replace(/^version: \d+$/m, 'version: 1');
+const source = (await readFile(join(root, 'skills/setup-meetly/SKILL.md'), 'utf8')).replace(/^  version: "\d+"$/m, '  version: "1"');
 const ui = await readFile(join(root, 'skills/setup-meetly/agents/openai.yaml'), 'utf8');
 
 async function fixture(t) {
@@ -61,14 +61,15 @@ test('check command detects missing and stale manifests without rewriting them',
 });
 
 test('validation rejects malformed or unsafe metadata', () => {
-  for (const version of ['0', '-1', '1.5', '01', '"1"', '9007199254740992']) {
-    assert.throws(() => frontmatter(source.replace('version: 1', `version: ${version}`), 'setup-meetly'), /version/);
+  for (const version of ['0', '-1', '1.5', '01', '9007199254740992']) {
+    assert.throws(() => frontmatter(source.replace('version: "1"', `version: "${version}"`), 'setup-meetly'), /version/);
   }
   assert.throws(() => frontmatter(source.replace('name: setup-meetly', 'name: wrong'), 'setup-meetly'), /name/);
-  assert.throws(() => frontmatter(source.replace('version: 1\n', ''), 'setup-meetly'), /version/);
-  assert.throws(() => frontmatter(source.replace('version: 1', 'version: 1\nversion: 2'), 'setup-meetly'), /duplicate/);
+  assert.throws(() => frontmatter(source.replace('metadata:\n  version: "1"\n', ''), 'setup-meetly'), /version/);
+  assert.throws(() => frontmatter(source.replace('  version: "1"', '  version: "1"\n  version: "2"'), 'setup-meetly'), /unsupported|duplicate/);
   assert.throws(() => frontmatter(source.replace(/^description: .*\n/m, ''), 'setup-meetly'), /description/);
-  assert.throws(() => frontmatter(source.replace('version: 1', 'version: 1\ndepends_on: invented'), 'setup-meetly'), /unsupported/);
+  assert.throws(() => frontmatter(source.replace('description:', 'depends_on: invented\ndescription:'), 'setup-meetly'), /unsupported/);
+  assert.throws(() => frontmatter(source.replace('metadata:\n  version: "1"', 'version: 1'), 'setup-meetly'), /version belongs in metadata/);
   assert.throws(() => metadata(ui.replace('value: "meetly"', 'value: "other"'), 'setup-meetly'), /dependency/);
   assert.throws(() => metadata(ui.replace('https://mcp.getmeetly.ai/mcp', 'https://example.invalid/mcp'), 'setup-meetly'), /dependency/);
   assert.throws(() => metadata(ui.replace('streamable_http', 'stdio'), 'setup-meetly'), /dependency/);
@@ -94,10 +95,10 @@ test('validation rejects missing entrypoints, symlinks and invalid skill names',
 test('CLI can build outside its working directory and invalid skill edits invalidate checks', async t => {
   const dir = await fixture(t);
   execFileSync(process.execPath, [join(dir, 'scripts/build-manifest.mjs')], { cwd: tmpdir() });
-  await writeFile(join(dir, 'skills/setup-meetly/SKILL.md'), source.replace('version: 1', 'version: 0'));
+  await writeFile(join(dir, 'skills/setup-meetly/SKILL.md'), source.replace('version: "1"', 'version: "0"'));
   const result = spawnSync(process.execPath, [join(dir, 'scripts/build-manifest.mjs'), '--check'], { encoding: 'utf8' });
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /positive safe integer/);
+  assert.match(result.stderr, /version/);
 });
 
 test('production catalog exposes five capabilities with progressively loaded references', async () => {

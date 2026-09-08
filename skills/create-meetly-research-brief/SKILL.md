@@ -1,6 +1,7 @@
 ---
 name: create-meetly-research-brief
-version: 2
+metadata:
+  version: "2"
 description: Use when someone wants to fact-check a claim, investigate a question, or develop research from a recorded discussion or interview.
 ---
 

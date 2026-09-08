@@ -1,6 +1,7 @@
 ---
 name: meetly-catch-up
-version: 3
+metadata:
+  version: "3"
 description: Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.
 ---
 

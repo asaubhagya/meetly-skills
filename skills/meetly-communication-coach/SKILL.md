@@ -1,6 +1,7 @@
 ---
 name: meetly-communication-coach
-version: 2
+metadata:
+  version: "2"
 description: Use when someone asks for feedback on their contribution or speaking patterns, wants to write in their own style, or offers a recording to develop a style preference.
 ---
 

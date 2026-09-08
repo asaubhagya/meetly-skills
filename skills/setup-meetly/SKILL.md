@@ -1,6 +1,7 @@
 ---
 name: setup-meetly
-version: 4
+metadata:
+  version: "4"
 description: Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.
 ---
 
