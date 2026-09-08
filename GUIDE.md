@@ -106,6 +106,26 @@ generic menu. The current interview question counts. If the user explicitly stop
 or asks for no follow-ups, close without one. Never invent meetings, counts or
 findings. A suggestion is not authorization to send, schedule or change anything.
 
+## Prompts people can try
+
+Use “Set up Meetly” as the first starter and the entry point for “Try in chat”.
+Keep the two core experiences next. These examples describe available requests;
+the person can use their own words, and no slash command is required.
+
+- “Set up Meetly”
+- “Give me my daily executive brief”
+- “Summarize my latest conversation”
+- “Create a PRD from this product discussion”
+- “Draft an engineering RFC from this technical discussion”
+- “Find the customer insights in this interview”
+- “Analyze this sales call and draft the follow-up”
+- “Prepare a legal intake brief from this conversation”
+
+After setup, briefly introduce what else is possible using one or two examples
+relevant to the person's work or returned conversations. If they ask what Meetly
+can do, show the full set. These are invitations, not automatically started work;
+the legal brief prepares evidence for counsel, not a legal opinion.
+
 ## Discover and distribute
 
 - [Conversation Summary](skills/meetly-catch-up/SKILL.md): adapt to a conversation or answer a question from it.
