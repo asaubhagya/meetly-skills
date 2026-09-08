@@ -1,5 +1,11 @@
 # Delivery and coverage
 
+Load the current account profile through `setup`. If access is missing, explicit
+`preference_access: "read"` requests read consent in an interactive host; it does
+not request write permission. Scheduled runs cannot assume someone will approve
+a prompt. Report unavailable personalization and use an explicitly configured
+fallback rather than invent saved preferences or permissions.
+
 Use `list_meetings` through its pages for period coverage, `fetch` for full sources,
 and `get_transcript` for bounded passages or continuation. Deduplicate meeting IDs.
 A topic search is not a complete day. Report interval, timezone and actual coverage

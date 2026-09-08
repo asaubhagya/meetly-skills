@@ -4,6 +4,10 @@
 No access is different from an empty profile. Use the live schema and the stated
 reconnection remedy; existing meeting-only connections may need consent to the
 preference scopes. On-demand analysis can continue with in-chat preferences.
+To request access without a dummy write, call `setup` with `preference_access`
+set to `read` for personalization, or `read_write` when the user wants to save
+preferences. The default `if_authorized` never forces extra consent. Follow the
+host's authorization flow, then reload the actual revision; never guess revision 0.
 
 Save a minimal, user-confirmed profile: relevant work context, writing preferences,
 detail, interests, research, format and delivery wishes. Host memory is only an

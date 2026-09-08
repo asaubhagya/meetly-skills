@@ -21,6 +21,9 @@ test('account preference saves are explicit and schedule execution stays in the 
   const guide = await read('GUIDE.md');
   assert.match(guide, /account profile/i);
   assert.doesNotMatch(guide, /Preferences, schedules and documents belong to the host/);
+  const reference = await read('skills/setup-meetly/references/profile-and-delivery.md');
+  assert.match(reference, /preference_access/);
+  assert.match(reference, /never guess revision 0/);
 });
 
 test('daily edition has an executive page and detailed edition, not a total two-page cap', async () => {

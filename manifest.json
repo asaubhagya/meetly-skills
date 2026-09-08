@@ -40,8 +40,8 @@
         {
           "path": "references/delivery.md",
           "src": "skills/meetly-briefing/references/delivery.md",
-          "sha256": "e06eabb4b5edacad0466428eb5c644e735f113084c4bcbc2c808d502d8ea6433",
-          "bytes": 1980
+          "sha256": "2317f5b3094e08c8035d6d3fc2d2c543b8f19b30d80f98bc06a9d6e8f9673809",
+          "bytes": 2364
         }
       ]
     },
@@ -139,8 +139,8 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/setup-meetly/references/profile-and-delivery.md",
-          "sha256": "0afb38c12f5f652faae8848f38b6781e1a3726ff370ac8bb714be52342c84a35",
-          "bytes": 2125
+          "sha256": "b045bb25aac26b09a8dab8c14dfdfb6be663db22e44b3007c8ca24e69eb8c753",
+          "bytes": 2447
         }
       ]
     }
