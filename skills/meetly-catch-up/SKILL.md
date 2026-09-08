@@ -1,33 +1,39 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "5"
+  version: "6"
 description: Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.
 ---
 
 # Conversation Summary
 
-First understand what the conversation was about and why it matters to this person.
-Load the current account profile and Meetly guide through `setup`; apply the current
-request over saved preferences, then Meetly defaults. Reuse context already loaded
-in this conversation. If preferences are unavailable, continue with what is known.
+Make an intent-led, evidence-backed brief for understanding, discovery and useful
+work. Load the account profile and Meetly guide through `setup`; apply the current
+request over saved preferences, then defaults. Reuse already loaded context.
 
-Read the raw transcript and available context. Create a self-contained, substantive
-summary whose shape follows the conversation: an interview, lesson, brainstorm
-and decision discussion need different treatment. Mixed conversations can need
-mixed forms. Do not make the user choose a template.
+Read the raw transcript and available metadata: time, speaker labels, calendar and
+capture context. Identify the purpose and supported participants; invitees are not
+proof of attendance. Adapt to brainstorming, one-on-ones, sales calls, seminars,
+lectures, interviews, personal notes or mixed intent. Open with a high-level
+orientation, then dense, substantive insight: meaning, reasoning, decisions,
+uncertainties, implications and useful next steps. Let the conversation choose the
+structure, not a fixed template.
 
-Bring out the meaning, reasoning, implications and useful next steps at the preferred
-depth. Support consequential points with short exact quotes and available source
-links/timestamps. Keep proposals, decisions and your interpretation distinct.
-Include pertinent research or speaker observations when useful and supported, not
-as compulsory sections. Honor the guide's research, attribution and action boundaries.
+Check consequential company claims against relevant, authorized connected sources
+such as company documents, CRM or issue trackers. Use scoped read tools, not a
+workspace-wide trawl. Add public research for public claims and learning; never
+send private details into public searches. Cite sources, check freshness, and
+surface disagreements or unavailable verification. The transcript establishes what
+was said; distinguish corroboration and your interpretation. Use short exact quotes
+and returned links/timestamps; preserve uncertainty and supported speaker identity.
 
-Use restrained Meetly presentation and the preferred language, tone and format.
-Keep full transcripts separate, with an appendix only when requested or preferred.
-Keep the useful answer in chat even if a requested attachment cannot be created.
-A preference for email is usable only with confirmed authorization and host capability.
+When the discussion calls for useful work, include a substantive in-chat draft—for
+example a PRD from a product brainstorm—rather than merely listing it as an action.
+Ground it in evidence, label proposed details and gaps, and keep its scope useful.
+Do not force an artifact onto every conversation. Drafting does not authorize
+sending, publishing or changing connected systems; follow the guide's boundaries.
 
-End each answer with one grounded question or suggested next step; respect an explicit
-stop. Feedback can tune the result now; save a lasting preference only with clear intent
-through the guide's profile flow.
+Honor preferred depth, language, tone and format with restrained Meetly styling.
+Keep the answer in chat and full transcripts separate unless requested. End each answer
+with one grounded question or suggested next step; respect explicit stops. Save lasting
+feedback only with clear intent through the guide's profile flow.
