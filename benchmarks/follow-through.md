@@ -46,6 +46,14 @@ for that answer. A clarifying question already being asked counts as the close.
 
 ## Verification and handoff
 
+The integration owner also ran a fresh-context agent against the revised guide,
+setup skill and profile reference. With two returned meeting names and more pages
+available, it offered one named meeting without claiming a complete total. After
+a failed save and one reconnect, it proposed a non-forcing capability refresh and
+a recording/sync next step rather than another pairing loop. With an explicit
+“No more questions,” it replied “You’re welcome” with no tool calls. These are
+three qualitative simulations, not a measured ChatGPT reliability benchmark.
+
 The revision uses a short shared closing contract, a one-sentence reminder in each
 skill, and observable setup branches. It does not prescribe report sections or
 force questions after an explicit stop. All five skill metadata versions change;
