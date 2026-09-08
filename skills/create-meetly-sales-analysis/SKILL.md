@@ -1,7 +1,7 @@
 ---
 name: create-meetly-sales-analysis
 metadata:
-  version: "1"
+  version: "2"
 description: Use when someone asks for deep sales discovery or deal-call analysis, qualification, coaching or an evidence-based follow-up draft.
 ---
 

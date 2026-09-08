@@ -17,3 +17,9 @@ tr,figure { break-inside: avoid; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .executive-page { break-after: page; }
 @media print { body { max-width: none; } }
+@media screen and (max-width: 600px) {
+  body { max-width: none; padding: 12px; font-size: 18px; line-height: 1.5; }
+  small,.meta { font-size: 14px; }
+  table { font-size: 17px; }
+  h1 { font-size: 28px; }
+}

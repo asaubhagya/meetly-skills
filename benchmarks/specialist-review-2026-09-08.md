@@ -53,6 +53,9 @@ evaluation models did not actually search connected company systems or browse.
 - The owner requested low margins, bold emphasis and clickable inline references.
   The template uses 14 mm margins, 10.7 pt body type, restrained branding and inline
   source links to the transcript appendix plus external research URLs.
+- The owner emphasized mobile readability. A separate narrow phone PDF uses
+  12.5 pt body text and reflows tables into labeled blocks. The A4 edition retains
+  one executive page; the mobile edition preserves readable type over page count.
 
 ## Evidence checks
 

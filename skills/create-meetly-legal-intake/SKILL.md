@@ -1,7 +1,7 @@
 ---
 name: create-meetly-legal-intake
 metadata:
-  version: "1"
+  version: "2"
 description: Use when someone asks to organize a legal client intake conversation into a sourced matter brief and questions for counsel.
 ---
 

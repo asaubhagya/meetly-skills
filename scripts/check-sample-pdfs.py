@@ -1,8 +1,10 @@
 from pathlib import Path
 from pypdf import PdfReader
 import pdfplumber
+import sys
 
-root=Path(__file__).resolve().parent.parent/'output/pdf'
+mobile='--mobile' in sys.argv
+root=Path(__file__).resolve().parent.parent/'output/pdf'/('mobile' if mobile else '')
 ids=['conversation-summary','daily-brief','product-prd','engineering-rfc','customer-interview','sales-call','legal-intake']
 combined=PdfReader(root/'meetly-workflow-review.pdf')
 offset=0; internal=0; external=0
@@ -26,10 +28,11 @@ for key in ids:
                 external+=1
     with pdfplumber.open(path) as pdf:
         for i,page in enumerate(pdf.pages):
-            assert all(c['x0']>=30 and c['x1']<=page.width-30 for c in page.chars),(key,i,'horizontal clipping')
+            edge=10 if mobile else 30
+            assert all(c['x0']>=edge and c['x1']<=page.width-edge for c in page.chars),(key,i,'horizontal clipping')
             assert all(c['top']>=10 and c['bottom']<=page.height-10 for c in page.chars),(key,i,'vertical clipping')
-    if key=='daily-brief':
+    if key=='daily-brief' and not mobile:
         assert 'Detailed edition' in original.pages[1].extract_text(),'Executive opening must fit exactly one readable page'
     offset+=len(original.pages)
 assert offset==len(combined.pages)
-print(f'PASS: {len(ids)} PDFs; {offset} pages; {internal} transcript links and {external} research links preserved in portfolio; no text clipping; executive opening is one page.')
+print(f'PASS: {len(ids)} PDFs; {offset} pages; {internal} transcript links and {external} research links preserved in portfolio; no text clipping; mobile={mobile}.')

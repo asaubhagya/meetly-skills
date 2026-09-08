@@ -1,7 +1,7 @@
 ---
 name: create-meetly-customer-insights
 metadata:
-  version: "1"
+  version: "2"
 description: Use when someone asks for deep customer interview analysis, discovery findings or synthesis across customer research conversations.
 ---
 

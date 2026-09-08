@@ -1,7 +1,7 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "7"
+  version: "8"
 description: Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.
 ---
 

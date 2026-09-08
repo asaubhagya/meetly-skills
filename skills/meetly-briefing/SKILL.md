@@ -1,7 +1,7 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "8"
+  version: "9"
 description: Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.
 ---
 

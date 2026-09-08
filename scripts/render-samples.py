@@ -5,7 +5,7 @@ local downloads; fall back to the system Arial family. No model calls or rewriti
 of findings happen here. Input/output stay in ignored output/.
 """
 from pathlib import Path
-import json, re, html
+import json, re, html, sys
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
@@ -17,7 +17,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 from pypdf import PdfReader, PdfWriter
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'output/pdf'
+MOBILE = '--mobile' in sys.argv
+if MOBILE: A4 = (306, 544)  # ~108 x 192 mm; 12.5 pt reads at ~16 px on a 390 px phone.
+OUT = ROOT / 'output/pdf' / ('mobile' if MOBILE else '')
 OUT.mkdir(parents=True, exist_ok=True)
 fixtures = json.loads((ROOT / 'benchmarks/specialists.json').read_text())
 fonts = ROOT / 'output/fonts'
@@ -30,7 +32,7 @@ for name, preferred, fallback in [('Body','IBMPlexSans-Regular.ttf','Arial.ttf')
     pdfmetrics.registerFont(TTFont(name, str(path if path.exists() else system / fallback)))
 pdfmetrics.registerFontFamily('Body',normal='Body',bold='Bold',italic='Italic',boldItalic='Bold')
 INK, MUTED, PAPER = map(colors.HexColor, ['#151515','#626262','#f5f5f3'])
-MARGIN = 40
+MARGIN = 14 if MOBILE else 40
 ANCHORS = set()
 styles = {
     'body': ParagraphStyle('body',fontName='Body',fontSize=10.7,leading=14.6,textColor=INK,spaceAfter=7,allowWidows=0,allowOrphans=0),
@@ -41,6 +43,14 @@ styles = {
     'cell': ParagraphStyle('cell',fontName='Body',fontSize=9.4,leading=13,textColor=INK,spaceAfter=3),
     'quote': ParagraphStyle('quote',fontName='Italic',fontSize=10.7,leading=15.4,leftIndent=12,borderColor=colors.HexColor('#92979e'),borderWidth=0,borderPadding=5,spaceAfter=9),
 }
+if MOBILE:
+    styles['body'].fontSize=12.5; styles['body'].leading=17
+    styles['body'].spaceAfter=9
+    styles['title'].fontSize=22; styles['title'].leading=26
+    styles['h2'].fontSize=17; styles['h2'].leading=22
+    styles['h3'].fontSize=13; styles['h3'].leading=18
+    styles['meta'].fontSize=10; styles['meta'].leading=14
+    styles['quote'].fontSize=12.5; styles['quote'].leading=17
 
 def inline(text):
     text=text.replace('\u2011','-').replace('\u2013','-').replace('\u2014',' - ')
@@ -72,6 +82,13 @@ def blocks(md, daily=False):
         if line.startswith('|') and i<len(lines) and re.match(r'^\|?[\s:|-]+\|?$',lines[i]):
             rows=[line]; i+=1
             while i<len(lines) and lines[i].strip().startswith('|'): rows.append(lines[i].strip()); i+=1
+            if MOBILE:
+                text_rows=[[c.strip() for c in row.strip('|').split('|')] for row in rows]
+                for row in text_rows[1:]:
+                    for header,cell in zip(text_rows[0],row):
+                        result.append(Paragraph('<b>'+inline(header)+':</b> '+inline(cell),styles['body']))
+                    result.append(Spacer(1,7))
+                seen_content=True; continue
             cells=[[Paragraph(inline(c.strip()),styles['cell']) for c in row.strip('|').split('|')] for row in rows]
             n=len(cells[0]); cells=[r for r in cells if len(r)==n]
             table=Table(cells,colWidths=[(A4[0]-2*MARGIN)/n]*n,repeatRows=1,hAlign='LEFT')

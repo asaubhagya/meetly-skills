@@ -1,7 +1,7 @@
 ---
 name: create-meetly-prd
 metadata:
-  version: "1"
+  version: "2"
 description: Use when someone asks to turn product conversations or discovery evidence into a PRD or product requirements document.
 ---
 

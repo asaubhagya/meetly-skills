@@ -62,3 +62,11 @@ Before delivering, inspect rendered pages for clipping, cramped tables, broken
 glyphs, dangling headings and unnecessary blank space. Keep text selectable. Preserve
 the user's language and accessibility; typography never overrides meaning or legibility.
 Return the useful answer in chat with requested attachments; exporting is not sending.
+
+For phone reading, provide a mobile-sized PDF or responsive HTML when useful.
+A mobile PDF should use a narrow page (about 108 x 192 mm), 12.5 pt body text,
+17 pt leading and roughly 5 mm side margins, so fit-to-width is comfortable on a
+phone. Reflow wide tables into labeled blocks instead of shrinking text. HTML should
+use responsive width and at least 17-18 px body text. Keep source links tappable.
+The executive one-page target applies to the print edition; let the same opening
+flow across phone pages. Never shrink type to preserve page counts on mobile.
