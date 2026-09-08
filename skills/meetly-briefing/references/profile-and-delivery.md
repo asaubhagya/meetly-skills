@@ -17,13 +17,18 @@ steps. The default `if_authorized` never forces extra consent. After authorizati
 reload the actual revision; never guess revision 0.
 
 Save a minimal, user-confirmed profile: relevant work context, writing preferences,
-detail, interests, research, format and delivery wishes. Host memory is only an
+preferred name, language, detail, interests, research, format and delivery wishes.
+Store these as flexible notes in the supported profile fields, not invented API fields.
+Host memory is only an
 optional input. Do not copy a memory archive, raw transcripts, credentials, health
 or other unrelated sensitive details, or third-party personal profiles. The user
 can correct, replace or clear their profile. A clear replaces it with `{}`.
 
 `update_user_preferences` replaces the profile, not a patch. Preserve unchanged
-approved fields; show the proposed changes and confirm intent. Send the latest
+approved fields; show proposed imported/inferred notes and confirm intent. A clear
+request such as “remember that I prefer Hindi briefs” already confirms that change;
+do not ask for redundant approval. A one-off “shorter today” stays in this chat.
+Send the latest
 `expected_revision` and a unique `request_id`. Retry an uncertain identical write
 with the same ID and payload. On conflict, reload and reconcile with the user;
 never overwrite a newer profile silently. Claim a save only after success.
@@ -42,3 +47,15 @@ configuration controls cadence; the stored schedule field is a preference, not
 proof of execution. Report save and schedule outcomes separately. A profile change
 does not itself reschedule anything. Follow-up reminders require a clear request
 and a confirmed host operation, not just a line in a meeting transcript.
+
+Ask broadly whether they want anything else; adapt to the tools actually available.
+Chat is the default. Create a requested PDF, HTML or other supported format with
+host tools and return real files/links; disclose unavailable formats without
+withholding the chat answer. Email requires the user's explicit opt-in and a
+confirmed address for themselves. A standing recurring-delivery authorization can
+cover future briefs to that address; check the actual host authorization and tool
+policies rather than treating a saved note or connected email app as permission.
+Do not ask again for an unchanged authorized action unless the host requires it.
+If sending, file creation or scheduling fails, report the real result, keep the
+useful draft, and offer a workable next step. Never claim that saving preferences
+created a schedule, generated a PDF or sent an email.

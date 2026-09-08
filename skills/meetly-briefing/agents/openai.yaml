@@ -1,6 +1,6 @@
 interface:
-  display_name: "Daily briefing"
-  short_description: "A dense daily brief with transcript references"
+  display_name: "Daily Executive Brief"
+  short_description: "Your daily newspaper of insights and learning"
   brand_color: "#151515"
   default_prompt: "Use $meetly-briefing to brief me on my recorded meetings today."
 dependencies:

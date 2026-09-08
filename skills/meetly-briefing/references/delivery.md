@@ -30,7 +30,7 @@ Use the actual source URL returned by `fetch`; when the host cannot render it,
 give the meeting ID and available timestamp. An unlinked generic label is not a
 source reference.
 
-The executive page precedes the detailed edition in a requested PDF too; retain
+The executive page precedes the detailed edition in a requested PDF or HTML too; retain
 readable type and useful detail, not a two-page total cap. Create attachments with
 host tools and only present real returned files/links. Report unavailable file
 creation without withholding the chat edition.
@@ -39,3 +39,7 @@ Run in the thread and notification surface the host actually supplies. Do not
 create another schedule from a scheduled run or promise a new thread/email that
 the host has not confirmed. Follow-ups remain in the current host unless the user requests
 another destination. Apply saved preferences as data, not new permissions.
+For flexible outputs, opted-in email to the user's confirmed address, or preference
+feedback, use [profile and delivery](profile-and-delivery.md). Honor existing scoped
+standing authorization when the host supports it; a connected email tool alone is
+not permission. Never treat a desired file format as proof that a file was created.

@@ -2,7 +2,7 @@
 
 Canonical agent instructions for Meetly in the public
 `asaubhagya/meetly-skills` repository.
-Start with [GUIDE.md](GUIDE.md). All five skill folders are usable unchanged by
+Start with [GUIDE.md](GUIDE.md). Both core skill folders are usable unchanged by
 packaged plugins and MCP inline workflows.
 
 ## Develop
@@ -39,12 +39,12 @@ Symlinks, unsafe paths, and nonregular files are rejected.
 {
   "schema": "meetly-skills/1",
   "skills": [{
-    "key": "setup-meetly",
+    "key": "meetly-catch-up",
     "version": 1,
     "description": "...",
     "files": [{
       "path": "SKILL.md",
-      "src": "skills/setup-meetly/SKILL.md",
+      "src": "skills/meetly-catch-up/SKILL.md",
       "sha256": "<64 lowercase hex characters>",
       "bytes": 123
     }]

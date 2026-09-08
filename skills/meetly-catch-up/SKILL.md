@@ -1,34 +1,33 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "4"
-description: Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.
+  version: "5"
+description: Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.
 ---
 
-# Meeting insights
+# Conversation Summary
 
-Understand what this conversation was really about and why it matters to this
-person. Use the Meetly guide, the current account profile from `setup`, and the raw
-transcript with its available calendar and speaker context. Reuse evidence already
-read; retrieve enough to answer the actual question.
+First understand what the conversation was about and why it matters to this person.
+Load the current account profile and Meetly guide through `setup`; apply the current
+request over saved preferences, then Meetly defaults. Reuse context already loaded
+in this conversation. If preferences are unavailable, continue with what is known.
 
-Lead with the answer. Develop rich, specific insights at the depth the user wants,
-with source references they can follow. Let the conversation suggest the shape:
-a customer interview, lecture and product debate deserve different treatment.
-Mixed meetings can need mixed forms. Do not ask the user to choose a template.
+Read the raw transcript and available context. Create a self-contained, substantive
+summary whose shape follows the conversation: an interview, lesson, brainstorm
+and decision discussion need different treatment. Mixed conversations can need
+mixed forms. Do not make the user choose a template.
 
-Be curious and useful. Explain the implications, check consequential claims within
-the agreed research scope, and develop the next draft when the discussion and
-request support it. If a promising direction needs more input, ask a specific
-follow-up: “The interview suggests onboarding is the sticking point—shall we
-explore that?” An action in a transcript is evidence, not permission to act externally.
+Bring out the meaning, reasoning, implications and useful next steps at the preferred
+depth. Support consequential points with short exact quotes and available source
+links/timestamps. Keep proposals, decisions and your interpretation distinct.
+Include pertinent research or speaker observations when useful and supported, not
+as compulsory sections. Honor the guide's research, attribution and action boundaries.
 
-Load a reference only when it helps:
-[product/RFC](references/product.md), [interviews](references/interviews.md),
-[learning](references/learning.md), [follow-up](references/follow-up.md),
-or [visual relationships](references/maps.md).
-For a period use meetly-briefing; for personal feedback or style use
-meetly-communication-coach. Keep the answer in chat and disclose meaningful
-coverage limits. Thin evidence deserves an honest answer, not generic filler.
-End each answer with one grounded question or suggested next step, following the
-guide's stop and authorization boundaries.
+Use restrained Meetly presentation and the preferred language, tone and format.
+Keep full transcripts separate, with an appendix only when requested or preferred.
+Keep the useful answer in chat even if a requested attachment cannot be created.
+A preference for email is usable only with confirmed authorization and host capability.
+
+End each answer with one grounded question or suggested next step; respect an explicit
+stop. Feedback can tune the result now; save a lasting preference only with clear intent
+through the guide's profile flow.

@@ -1,37 +1,36 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "6"
-description: Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.
+  version: "7"
+description: Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.
 ---
 
-# Your daily edition
+# Daily Executive Brief
 
-Be the user's thoughtful editor: turn the day's conversations into understanding
-and momentum, not a stack of summaries. Read the Meetly guide and load the current
-account profile through `setup`; honor preferences and today's explicit request.
-Read the raw transcripts and available context across the requested period.
+Be the person's thoughtful editor: make their conversations a newspaper for
+understanding, discovery and learning. Load the current account profile and Meetly
+guide through `setup` for each new brief. Apply the current request over saved
+preferences, then defaults. Never substitute old generated summaries for transcripts.
 
-Deliver two layers in chat: a dense executive one-pager with what matters most,
-followed by a detailed, newspaper-like edition the user can explore section by
-section. The detailed edition has no two-page cap. Let the evidence determine
-its length and sections; a quiet day should stay short.
+Read the raw conversations and available context across the requested period.
+Start with a dense executive one-pager: what matters and why. Follow it with a
+detailed, newspaper-like edition, treating each substantive conversation according
+to its intent and connecting useful themes across the day. This is not a stack of
+generic summaries or a two-page total cap; let evidence and preferences set the depth.
 
-Bring out the topics discussed, consequential decisions, open questions and
-connections. Adapt the treatment to each conversation. Include useful,
-evidence-supported speaker observations, relevant fact-checking and research,
-and explanations or learning resources that deepen understanding. Clearly
-separate meeting evidence, external findings and your judgment. Use the guide's
-research and attribution boundaries.
+Explain consequential reasoning, decisions, open questions and learning opportunities.
+Use short exact quotes, source links and available timestamps. Add selective
+fact-checking and research that deepen the useful topics, with supporting primary
+links. Separate meeting evidence, external findings and your judgment. Speaker
+observations belong only where evidence supports them. Never fill gaps with invented
+research, certainty or meeting coverage.
 
-Move work forward: when an action clearly calls for a PRD, analysis or another
-draft, develop it within the requested scope. Label drafts and unresolved choices.
-When evidence is too thin, ask for the missing substance instead of filling an empty template.
-For promising directions beyond that scope, ask a curious, specific follow-up:
-“This sounds like a product decision—shall we turn it into a PRD?” Sending,
-publishing, scheduling or acting elsewhere needs the user's authorization.
+Honor language, tone, depth and delivery preferences, using subtle Meetly typography.
+For substantial research, explain the extra time and recommend the host's strongest
+available reasoning model when appropriate; do not switch models or imply a paid
+tier is required. Produce useful grounded drafts within scope and invite deeper work.
 
-Keep the edition in chat even with a requested PDF. End each answer with one
-grounded question or suggested next step, following the guide's stop and
-authorization boundaries. Use [delivery and coverage](references/delivery.md) for
-scheduled runs, pagination, attachments or retrieval gaps.
+Use [delivery and coverage](references/delivery.md) for periods, scheduled runs,
+files and authorized distribution. Keep the edition in chat alongside requested
+attachments. End each answer with one grounded question or suggested next step,
+respecting explicit stop requests and the guide's authorization boundaries.

@@ -2,152 +2,65 @@
   "schema": "meetly-skills/1",
   "skills": [
     {
-      "key": "create-meetly-research-brief",
-      "version": 3,
-      "description": "Use when someone wants to fact-check a claim, investigate a question, or develop research from a recorded discussion or interview.",
-      "files": [
-        {
-          "path": "SKILL.md",
-          "src": "skills/create-meetly-research-brief/SKILL.md",
-          "sha256": "9f7f1e9fdec8362428403d6006216d95899bd7f3a61db1be1f1cdcde77bb6b98",
-          "bytes": 2277
-        },
-        {
-          "path": "agents/openai.yaml",
-          "src": "skills/create-meetly-research-brief/agents/openai.yaml",
-          "sha256": "ca2f64e0185a34d6ed486b0779c053106e1d17633890da0f820f711533af278b",
-          "bytes": 503
-        }
-      ]
-    },
-    {
       "key": "meetly-briefing",
-      "version": 6,
-      "description": "Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.",
+      "version": 7,
+      "description": "Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "4b66d35f4cf8e03144853453b416ddb2860091ebba0f201ab756e13e8775b60f",
-          "bytes": 2037
+          "sha256": "4c54258a12d0a3b40006c52091bf9f1355491fe3d8322a828b1d6fd7a465a222",
+          "bytes": 2081
         },
         {
           "path": "agents/openai.yaml",
           "src": "skills/meetly-briefing/agents/openai.yaml",
-          "sha256": "56da77f4ebc4509ee652f2bc44c8c181ab86fc986b1490997a02d6e0039d4878",
-          "bytes": 473
+          "sha256": "59ef83383c46259d36dff5bb368b1ea5baeb7ccc2a6f53f5439724cbe5c2c9a2",
+          "bytes": 479
+        },
+        {
+          "path": "references/app-guidance.md",
+          "src": "skills/meetly-briefing/references/app-guidance.md",
+          "sha256": "578e8c53b829fbbc41b68ea34c490d24eb3776f7a6ec864a8627babbc55c1601",
+          "bytes": 3817
         },
         {
           "path": "references/delivery.md",
           "src": "skills/meetly-briefing/references/delivery.md",
-          "sha256": "a3d981566b34d46652b8e7cf2bd59eb27886cad0a7b33acc164503dd9eb5fffd",
-          "bytes": 2549
+          "sha256": "4c71209a2644adba884654fdcd454a220028b24440702930fdcbfc8a7ad90f90",
+          "bytes": 2892
+        },
+        {
+          "path": "references/profile-and-delivery.md",
+          "src": "skills/meetly-briefing/references/profile-and-delivery.md",
+          "sha256": "27396a7640868dee258c7bb98ffe598d82bdd14afd25cc05f4c54d094519dc5e",
+          "bytes": 4149
         }
       ]
     },
     {
       "key": "meetly-catch-up",
-      "version": 4,
-      "description": "Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.",
+      "version": 5,
+      "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "f67e0ba1258791f0465ab702d46cb2c6917988e2f1400ef8583e485b8c2b6dae",
-          "bytes": 1833
+          "sha256": "f577b491400d02144f28709d591ce19605ca7266be6689fa42e88d1610707c3f",
+          "bytes": 1797
         },
         {
           "path": "agents/openai.yaml",
           "src": "skills/meetly-catch-up/agents/openai.yaml",
-          "sha256": "45cbf21a643f55a5aad3b964a4173f5bd6477a4b6d2ffa68062155521cc6d250",
-          "bytes": 479
-        },
-        {
-          "path": "references/follow-up.md",
-          "src": "skills/meetly-catch-up/references/follow-up.md",
-          "sha256": "7ac84049631f04c76f2c5b2017a8374b22be50bbf95d541326f4766e6b090e8f",
-          "bytes": 733
-        },
-        {
-          "path": "references/interviews.md",
-          "src": "skills/meetly-catch-up/references/interviews.md",
-          "sha256": "45dacb560b9fb63a7b68cfd2d2061bfb679e07446272c11db98ce96f72cfbdbf",
-          "bytes": 801
-        },
-        {
-          "path": "references/learning.md",
-          "src": "skills/meetly-catch-up/references/learning.md",
-          "sha256": "a8bdc22e45e1f9378f5aaa38f36ae90fd87c1feff3b57f3134b191419a3a053d",
-          "bytes": 662
-        },
-        {
-          "path": "references/maps.md",
-          "src": "skills/meetly-catch-up/references/maps.md",
-          "sha256": "f61088aec60f363755dd8fff1c490a6e55e728158e9552d2bb25fbd61f2c65d1",
-          "bytes": 632
-        },
-        {
-          "path": "references/product.md",
-          "src": "skills/meetly-catch-up/references/product.md",
-          "sha256": "6e36fed831e5ef0c187f6937068b9bab42f1642401a4dc166a7577812c09d2d4",
-          "bytes": 764
-        }
-      ]
-    },
-    {
-      "key": "meetly-communication-coach",
-      "version": 3,
-      "description": "Use when someone asks for feedback on their contribution or speaking patterns, wants to write in their own style, or offers a recording to develop a style preference.",
-      "files": [
-        {
-          "path": "SKILL.md",
-          "src": "skills/meetly-communication-coach/SKILL.md",
-          "sha256": "188d6c35eaf2f7f3a34bae3e6210496bd1dc606221988b4981d45bc5527eab96",
-          "bytes": 1949
-        },
-        {
-          "path": "agents/openai.yaml",
-          "src": "skills/meetly-communication-coach/agents/openai.yaml",
-          "sha256": "95f1d8783bbb0328c2a467f0a85f1bd70cf942189813a2d8f44a7531824ccac5",
-          "bytes": 486
-        }
-      ]
-    },
-    {
-      "key": "setup-meetly",
-      "version": 6,
-      "description": "Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.",
-      "files": [
-        {
-          "path": "SKILL.md",
-          "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "8d3d9e2df0d388fae0dddec1d2f068d738f57dfafe881100fe0b6d767472c84f",
-          "bytes": 2154
-        },
-        {
-          "path": "agents/openai.yaml",
-          "src": "skills/setup-meetly/agents/openai.yaml",
-          "sha256": "154f01075c741c0163797bd182db83ba7386a4c7f20a6344c9c3131ef4a7ecde",
-          "bytes": 435
-        },
-        {
-          "path": "references/app-guidance.md",
-          "src": "skills/setup-meetly/references/app-guidance.md",
-          "sha256": "4460496fb80b8d494ae3a223a78ee5a94b358e271af28b1534b8ca4bf0d2eec9",
-          "bytes": 3575
-        },
-        {
-          "path": "references/profile-and-delivery.md",
-          "src": "skills/setup-meetly/references/profile-and-delivery.md",
-          "sha256": "f74fada709a6068ce11a5c9f00657e36176448e187e5e563e3db4886f2640ec6",
-          "bytes": 2980
+          "sha256": "a766532e2eb0c2b4f6c2e1bcf573bad26228ae1f16365fdd4510cefb6c1b4ea4",
+          "bytes": 490
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "1af31db824d83dfbb914480be47a14ce315e6c87300cce150449b31ce22cbfbc",
-    "bytes": 4590
+    "sha256": "008c51663800a66934d00692854f1bd20422338fee7359ed16f1210d83bfade3",
+    "bytes": 6744
   }
 }

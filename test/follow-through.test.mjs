@@ -15,23 +15,23 @@ test('standing guidance closes answers with grounded progress while honoring sto
 });
 
 test('setup moves from preferences to evidence-backed discovery, including unavailable results', async () => {
-  const setup = await read('skills/setup-meetly/SKILL.md');
+  const setup = await read('GUIDE.md');
   assert.match(setup, /After the preference step/);
   assert.match(setup, /list_meetings/);
-  assert.match(setup, /already retrieved/);
+  assert.match(setup, /already retrieved|already retrieved or/);
   assert.match(setup, /empty|no recordings/i);
   assert.match(setup, /unavailable/i);
   assert.match(setup, /claim a total.*complete/s);
 });
 
 test('each independently loaded skill includes the conversational closing rule', async () => {
-  for (const key of ['setup-meetly', 'meetly-briefing', 'meetly-catch-up', 'create-meetly-research-brief', 'meetly-communication-coach']) {
+  for (const key of ['meetly-briefing', 'meetly-catch-up']) {
     assert.match(await read(`skills/${key}/SKILL.md`), /End each answer.*grounded question or suggested next step/s, key);
   }
 });
 
 test('pairing includes preferences while legacy grants require one reconnect, not retry loops', async () => {
-  const profile = await read('skills/setup-meetly/references/profile-and-delivery.md');
+  const profile = await read('skills/meetly-briefing/references/profile-and-delivery.md');
   assert.match(profile, /Connect Meetly/);
   assert.match(profile, /meetings:read/);
   assert.match(profile, /preferences:read/);

@@ -1,5 +1,9 @@
 # Platform-specific Meetly setup guidance
 
+Download for iPhone, iPad or Mac: https://apps.apple.com/app/id6747639933.
+No recording/settings/calendar/voice-training destination deep links are verified.
+Use the navigation below; never invent a meetly:// URL or claim a setting changed.
+
 Labels verified against native source on 2026-09-08. Use the user's current
 app if its version differs. Source inspection validates labels, not the user's
 connection, permissions, training status, or installed version.
