@@ -3,14 +3,14 @@
   "skills": [
     {
       "key": "create-meetly-research-brief",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone wants to fact-check a claim, investigate a question, or develop research from a recorded discussion or interview.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-research-brief/SKILL.md",
-          "sha256": "a6bb5b1f6bf1f73a028888d4f2cb92b44fff3d572301cc75654cf91890db2fd3",
-          "bytes": 2153
+          "sha256": "9f7f1e9fdec8362428403d6006216d95899bd7f3a61db1be1f1cdcde77bb6b98",
+          "bytes": 2277
         },
         {
           "path": "agents/openai.yaml",
@@ -22,14 +22,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 5,
+      "version": 6,
       "description": "Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "f301d8f11220265ec9db3daf17c946ce1bacd4cd43c24b4b39791c526a9ce911",
-          "bytes": 1968
+          "sha256": "4b66d35f4cf8e03144853453b416ddb2860091ebba0f201ab756e13e8775b60f",
+          "bytes": 2037
         },
         {
           "path": "agents/openai.yaml",
@@ -40,21 +40,21 @@
         {
           "path": "references/delivery.md",
           "src": "skills/meetly-briefing/references/delivery.md",
-          "sha256": "5310172b29b0403696eab1804ede9f22fd9882bc60609e268883065d74fade11",
-          "bytes": 2373
+          "sha256": "a3d981566b34d46652b8e7cf2bd59eb27886cad0a7b33acc164503dd9eb5fffd",
+          "bytes": 2549
         }
       ]
     },
     {
       "key": "meetly-catch-up",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "09b80fe899b6531fd7c4851e21935c04d5263400a1c7ca039ef5c6714bf71ef6",
-          "bytes": 1709
+          "sha256": "f67e0ba1258791f0465ab702d46cb2c6917988e2f1400ef8583e485b8c2b6dae",
+          "bytes": 1833
         },
         {
           "path": "agents/openai.yaml",
@@ -96,14 +96,14 @@
     },
     {
       "key": "meetly-communication-coach",
-      "version": 2,
+      "version": 3,
       "description": "Use when someone asks for feedback on their contribution or speaking patterns, wants to write in their own style, or offers a recording to develop a style preference.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-communication-coach/SKILL.md",
-          "sha256": "b3da50559cb0986b8e278bddc9cc3c2398c5507904a7d40fdd96939f667e8ff1",
-          "bytes": 1787
+          "sha256": "188d6c35eaf2f7f3a34bae3e6210496bd1dc606221988b4981d45bc5527eab96",
+          "bytes": 1949
         },
         {
           "path": "agents/openai.yaml",
@@ -115,14 +115,14 @@
     },
     {
       "key": "setup-meetly",
-      "version": 5,
+      "version": 6,
       "description": "Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "250ef3ea6a33df6adcc26cf58f71c08be016d51ef2e25239453279fced319435",
-          "bytes": 1842
+          "sha256": "8d3d9e2df0d388fae0dddec1d2f068d738f57dfafe881100fe0b6d767472c84f",
+          "bytes": 2154
         },
         {
           "path": "agents/openai.yaml",
@@ -139,15 +139,15 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/setup-meetly/references/profile-and-delivery.md",
-          "sha256": "752c0fd38e81ca2e20abff0e88f10664934bc08baf8d7fa6d4520b708d529603",
-          "bytes": 2458
+          "sha256": "f74fada709a6068ce11a5c9f00657e36176448e187e5e563e3db4886f2640ec6",
+          "bytes": 2980
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "9cb67935ab4072d78aa9a7f7d730ea68e1dfc386e011c716f0c630f77286cc0f",
-    "bytes": 3913
+    "sha256": "1af31db824d83dfbb914480be47a14ce315e6c87300cce150449b31ce22cbfbc",
+    "bytes": 4590
   }
 }

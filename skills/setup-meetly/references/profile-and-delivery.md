@@ -1,13 +1,20 @@
 # Profile and delivery
 
 `setup` returns the account profile, revision and read/write capabilities.
-No access is different from an empty profile. Use the live schema and the stated
-reconnection remedy; existing meeting-only connections may need consent to the
-preference scopes. On-demand analysis can continue with in-chat preferences.
+No access is different from an empty profile. The current pairing page visibly
+explains that choosing **Connect Meetly** authorizes `meetings:read`,
+`preferences:read` and `preferences:write` together: one key and one action, no
+separate preference checkbox. Older meeting-only grants are not silently widened;
+use the host's stated remedy to reconnect once through the current pairing page.
+Never ask for a connection key in chat; enter it only on the authorization page.
+Do not loop on denied saves or repeat pairing after a successful reconnect.
+Reload capabilities; if access is still missing, report the unresolved access
+problem and continue authorized on-demand analysis with in-chat preferences.
 To request access without a dummy write, call `setup` with `preference_access`
 set to `read` for personalization, or `read_write` when the user wants to save
-preferences. The default `if_authorized` never forces extra consent. Follow the
-host's authorization flow, then reload the actual revision; never guess revision 0.
+preferences. These select the operation's access requirement, not separate pairing
+steps. The default `if_authorized` never forces extra consent. After authorization,
+reload the actual revision; never guess revision 0.
 
 Save a minimal, user-confirmed profile: relevant work context, writing preferences,
 detail, interests, research, format and delivery wishes. Host memory is only an

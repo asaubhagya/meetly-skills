@@ -1,7 +1,7 @@
 ---
 name: setup-meetly
 metadata:
-  version: "5"
+  version: "6"
 description: Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.
 ---
 
@@ -26,10 +26,14 @@ Confirm the small proposed profile before `update_user_preferences` saves it to
 their Meetly account. Use [profile and delivery](references/profile-and-delivery.md)
 for consent, updates and host scheduling. A saved preference is not a schedule.
 
-Help them reach the first recording and first useful edition. Load
-[app guidance](references/app-guidance.md) only for missing steps. Explain the loop:
-open Meetly, record with participants' consent, let it sync, continue here.
-Offer calendar linking and voice training when useful; neither is mandatory.
+After the preference step, report what was actually saved or scheduled, then
+discover recent recordings with `list_meetings` when access and scope allow;
+reuse results already retrieved. Offer a first briefing or explore an actual
+returned meeting. Never claim a total unless the requested period is complete.
+If results are empty, offer a first consented recording and sync using
+[app guidance](references/app-guidance.md). If retrieval is unavailable, explain
+the gap and offer the next workable step, not fictional meetings. A failed or
+skipped preference save need not block authorized meeting discovery.
 
-Finish with a useful first result and what was actually saved or scheduled.
-Stay curious: ask the next question that would make their next edition better.
+End each answer with one grounded question or suggested next step, following the
+guide's stop and authorization boundaries; the current interview question counts.

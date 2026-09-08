@@ -1,10 +1,12 @@
 # Delivery and coverage
 
-Load the current account profile through `setup`. If access is missing, explicit
-`preference_access: "read"` requests read consent in an interactive host; it does
-not request write permission. Scheduled runs cannot assume someone will approve
-a prompt. Report unavailable personalization and use an explicitly configured
-fallback rather than invent saved preferences or permissions.
+Load the current account profile through `setup`. Current pairing includes
+preference access. An older meeting-only connection needs one interactive reconnect
+through the current Connect Meetly page; `preference_access: "read"` expresses the
+read requirement, not a separate pairing step. Do not repeat denied calls or ask
+for a key in chat. Scheduled runs cannot assume someone will approve a prompt;
+report unavailable personalization and the reconnect remedy, using an explicitly
+configured fallback rather than inventing saved preferences or permissions.
 
 Use `list_meetings` through its pages for period coverage, `fetch` for full sources,
 and `get_transcript` for bounded passages or continuation. Deduplicate meeting IDs.

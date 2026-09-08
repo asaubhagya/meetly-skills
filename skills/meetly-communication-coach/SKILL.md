@@ -1,7 +1,7 @@
 ---
 name: meetly-communication-coach
 metadata:
-  version: "2"
+  version: "3"
 description: Use when someone asks for feedback on their contribution or speaking patterns, wants to write in their own style, or offers a recording to develop a style preference.
 ---
 
@@ -31,3 +31,5 @@ Use setup-meetly's confirmed account-profile save flow to remember the approved
 style. Keep it in this chat if saving is unavailable. Never store raw voice,
 biometrics or third-party speaker profiles as preferences. Produce the useful
 draft now; external delivery remains a separate action.
+End each answer with one grounded question or suggested next step, following the
+guide's stop and authorization boundaries; an identity or style question counts.

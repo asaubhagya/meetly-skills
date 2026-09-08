@@ -1,7 +1,7 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks about a recorded conversation, wants meeting insights or quotes, or needs a useful draft from a discussion.
 ---
 
@@ -30,3 +30,5 @@ or [visual relationships](references/maps.md).
 For a period use meetly-briefing; for personal feedback or style use
 meetly-communication-coach. Keep the answer in chat and disclose meaningful
 coverage limits. Thin evidence deserves an honest answer, not generic filler.
+End each answer with one grounded question or suggested next step, following the
+guide's stop and authorization boundaries.

@@ -1,7 +1,7 @@
 ---
 name: create-meetly-research-brief
 metadata:
-  version: "2"
+  version: "3"
 description: Use when someone wants to fact-check a claim, investigate a question, or develop research from a recorded discussion or interview.
 ---
 
@@ -37,3 +37,5 @@ what evidence would settle it, and provide the useful transcript-grounded part.
 Never fabricate a source, search result or completed verification.
 Use host file tools only for requested/preferred documents and report actual
 creation. Sending or publishing requires authorization for the destination.
+End each answer with one grounded question or suggested next step, following the
+guide's stop and authorization boundaries.

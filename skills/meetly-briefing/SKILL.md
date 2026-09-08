@@ -1,7 +1,7 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "5"
+  version: "6"
 description: Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.
 ---
 
@@ -31,6 +31,7 @@ For promising directions beyond that scope, ask a curious, specific follow-up:
 “This sounds like a product decision—shall we turn it into a PRD?” Sending,
 publishing, scheduling or acting elsewhere needs the user's authorization.
 
-Keep the edition in chat even with a requested PDF. Invite the next conversation,
-not a generic checklist. Use [delivery and coverage](references/delivery.md) for
+Keep the edition in chat even with a requested PDF. End each answer with one
+grounded question or suggested next step, following the guide's stop and
+authorization boundaries. Use [delivery and coverage](references/delivery.md) for
 scheduled runs, pagination, attachments or retrieval gaps.
