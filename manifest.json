@@ -243,8 +243,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "bbe4a2a358f03e457d6785ba434813cdf8ff9c6244ead7a0286c7f5c108e622b",
-          "bytes": 2405
+          "sha256": "dce5f09ae242c0036efea8ea5c321f291203b37846d32626fbadb4dec26912c1",
+          "bytes": 2394
         },
         {
           "path": "agents/openai.yaml",

@@ -16,8 +16,8 @@ capture context. Identify the purpose and supported participants; invitees are n
 proof of attendance. Adapt to brainstorming, one-on-ones, sales calls, seminars,
 lectures, interviews, personal notes or mixed intent. Establish context, then develop
 insight: meaning, reasoning, decisions,
-uncertainties, implications and useful next steps. Let the conversation choose the
-shape a continuous narrative, not a fixed template. Connect supported people,
+uncertainties, implications and useful next steps. Let the conversation shape
+a continuous narrative, not a fixed template. Connect supported people,
 claims and decisions across passages; weave attributed quotes into the reasoning.
 
 Check consequential company claims against relevant, authorized connected sources
