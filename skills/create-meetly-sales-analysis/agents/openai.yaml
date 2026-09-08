@@ -1,0 +1,14 @@
+interface:
+  display_name: "Analyze a sales call"
+  short_description: "Understand buyer needs, deal evidence and next steps"
+  brand_color: "#151515"
+  default_prompt: "Use $create-meetly-sales-analysis to analyze my sales call and draft a follow-up."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly transcript evidence and preferences"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false

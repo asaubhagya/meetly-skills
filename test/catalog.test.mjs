@@ -101,13 +101,25 @@ test('CLI can build outside its working directory and invalid skill edits invali
   assert.match(result.stderr, /version/);
 });
 
-test('production catalog exposes only two core capabilities', async () => {
+test('production catalog exposes two core and five explicit specialist capabilities', async () => {
   const manifest = await buildManifest(root);
-  assert.deepEqual(manifest.skills.map(s => s.key), ['meetly-briefing', 'meetly-catch-up']);
+  assert.deepEqual(manifest.skills.map(s => s.key), [
+    'create-meetly-customer-insights', 'create-meetly-engineering-spec',
+    'create-meetly-legal-intake', 'create-meetly-prd', 'create-meetly-sales-analysis',
+    'meetly-briefing', 'meetly-catch-up',
+  ]);
   assert.deepEqual(manifest.skills.map(s => s.key), [...manifest.skills.map(s => s.key)].sort());
   for (const skill of manifest.skills) {
     const parsed = metadata(await readFile(join(root, 'skills', skill.key, 'agents/openai.yaml'), 'utf8'), skill.key);
     assert.equal(parsed.implicit, !skill.key.startsWith('create-'));
+    for (const name of ['editorial.md', 'document.css']) {
+      assert.deepEqual(await readFile(join(root, 'skills', skill.key, 'references', name)),
+        await readFile(join(root, 'shared', name)));
+    }
+    const main = await readFile(join(root, 'skills', skill.key, 'SKILL.md'), 'utf8');
+    for (const [,target] of main.matchAll(/\]\((references\/[^)]+)\)/g)) {
+      assert.ok(skill.files.some(f => f.path === target), `${skill.key}: missing ${target}`);
+    }
   }
 });
 

@@ -1,0 +1,14 @@
+interface:
+  display_name: "Create an engineering RFC or spec"
+  short_description: "Develop an evidence-backed technical design"
+  brand_color: "#151515"
+  default_prompt: "Use $create-meetly-engineering-spec to develop an RFC from my engineering discussion."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly transcript evidence and preferences"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false

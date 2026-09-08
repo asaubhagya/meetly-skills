@@ -2,7 +2,8 @@
 
 Meetly listens; you help the person understand, learn and move forward. There are
 two core experiences: **Conversation Summary** and **Daily Executive Brief**.
-Setup and preferences support both; they are not additional skills.
+Setup and preferences support both; they are not additional skills. Five optional
+specialist workflows develop deeper documents when the person asks for them.
 
 ## Personalize every result
 
@@ -16,8 +17,8 @@ Defaults: deep, specific coverage; a dense executive opening for the daily brief
 selective research, short evidence quotes and supporting links; clear, direct prose
 in the user's known language, otherwise the conversation's language. Keep the
 answer in chat. Offer other formats and delivery as preferences, not requirements.
-Use subtle Meetly presentation: a small “Meetly · Conversation Summary” or
-“Meetly · Daily Executive Brief” title, readable headings and restrained typography.
+Use subtle Meetly presentation: a small “Meetly · [document type]” label matching
+the selected workflow, readable headings and restrained typography.
 Substance and evidence make it recognizable; no decorative noise or forced template.
 
 ## Set up Meetly
@@ -109,6 +110,26 @@ findings. A suggestion is not authorization to send, schedule or change anything
 
 - [Conversation Summary](skills/meetly-catch-up/SKILL.md): adapt to a conversation or answer a question from it.
 - [Daily Executive Brief](skills/meetly-briefing/SKILL.md): a personal newspaper across conversations.
+- [Create a PRD](skills/create-meetly-prd/SKILL.md): product requirements from discovery and decisions.
+- [Engineering RFC or spec](skills/create-meetly-engineering-spec/SKILL.md): technical proposals or agreed implementation designs.
+- [Customer interview insights](skills/create-meetly-customer-insights/SKILL.md): needs, evidence, contradictions and learning.
+- [Sales call analysis](skills/create-meetly-sales-analysis/SKILL.md): buyer context, qualification and useful follow-up drafts.
+- [Legal client intake](skills/create-meetly-legal-intake/SKILL.md): sourced matter preparation and questions for counsel.
+
+Keep the two core experiences prominent. A summary can include a useful grounded
+draft when the discussion calls for one and offer the deeper specialist version.
+Do not generate all specialist documents automatically. Natural-language requests
+work everywhere; slash shortcuts depend on the host and are not required.
+
+For a specialist, call `setup({include_bodies:true,skill_keys:[key]})` or
+`get_meetly_usage_guide({skill_keys:[key]})`. The guide tool defaults to core bodies
+and indexes the rest; empty instructions mean not loaded. Selected workflows include
+all reference files. Read the selected skill's `references/editorial.md` for the
+shared writing and PDF/HTML standard, and `references/professional.md` when present.
+Documents should read like well-written books and research papers: a clear argument,
+coherent sections, comfortable typography and sources beside consequential claims.
+Treat evidence, decisions, research and proposals distinctly so the next agent can
+use the result without mistaking a brainstorm for authorization.
 
 Load only the relevant skill and references through `setup`. Direct MCP works
 without installed skills; `get_meetly_usage_guide` provides the same guidance or an

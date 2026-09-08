@@ -2,8 +2,16 @@
 
 Canonical agent instructions for Meetly in the public
 `asaubhagya/meetly-skills` repository.
-Start with [GUIDE.md](GUIDE.md). Both core skill folders are usable unchanged by
-packaged plugins and MCP inline workflows.
+Start with [GUIDE.md](GUIDE.md). Two core experiences and five explicitly requested
+specialist skills work unchanged in packaged plugins and MCP inline workflows.
+Shared editorial and document CSS sources live in `shared/`; `npm run build` copies
+them into every skill so individual downloads are self-contained. Edit the shared
+source, not its generated per-skill copies. Bump all affected skill versions.
+
+The specialist set is PRD, engineering RFC/spec, customer interview insights,
+sales analysis and legal client intake. The MCP guide indexes all of them and
+returns selected bodies and complete reference files. Templates inform quality;
+they do not force identical document sections or an extra onboarding interview.
 
 ## Develop
 

@@ -1,0 +1,14 @@
+interface:
+  display_name: "Analyze customer interviews"
+  short_description: "Find grounded product insights in customer interviews"
+  brand_color: "#151515"
+  default_prompt: "Use $create-meetly-customer-insights to analyze my customer interviews."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly transcript evidence and preferences"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false

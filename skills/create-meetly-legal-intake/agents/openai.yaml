@@ -1,0 +1,14 @@
+interface:
+  display_name: "Create a legal client intake brief"
+  short_description: "Organize intake evidence and open questions for counsel"
+  brand_color: "#151515"
+  default_prompt: "Use $create-meetly-legal-intake to prepare a sourced client intake brief for counsel."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Retrieve authorized Meetly transcript evidence and preferences"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: false

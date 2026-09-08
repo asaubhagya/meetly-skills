@@ -1,7 +1,7 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "6"
+  version: "7"
 description: Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.
 ---
 
@@ -33,7 +33,8 @@ Ground it in evidence, label proposed details and gaps, and keep its scope usefu
 Do not force an artifact onto every conversation. Drafting does not authorize
 sending, publishing or changing connected systems; follow the guide's boundaries.
 
-Honor preferred depth, language, tone and format with restrained Meetly styling.
+Use [Meetly editorial standards](references/editorial.md): book-like clarity,
+evidence-rich insight and readable PDF/HTML. Honor depth, language, tone and format.
 Keep the answer in chat and full transcripts separate unless requested. End each answer
 with one grounded question or suggested next step; respect explicit stops. Save lasting
 feedback only with clear intent through the guide's profile flow.
