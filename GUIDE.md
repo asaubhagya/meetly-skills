@@ -54,6 +54,10 @@ Respect live schemas and access remedies. Meeting tools remain read-only.
 Load only the relevant skill and references. Installed plugins carry thin prompts;
 ordinary onboarding never asks users to reinstall skills. Direct MCP clients can
 request selected bodies through `setup` using the live schema.
+No plugin or persistent skill installation is required. If skill loading is
+unavailable, call `get_meetly_usage_guide` for standing rules and basic workflows.
+Its offline fallback is explicitly unverified for currency; continue useful
+transcript-grounded work without pretending the latest skills were loaded.
 
 ## Distribution
 
