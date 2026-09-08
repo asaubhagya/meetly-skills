@@ -22,13 +22,13 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 4,
+      "version": 5,
       "description": "Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "432d4d355a886415362167e8fa42e8d4ae61cc2de17548d6f44985a32f9d1f24",
+          "sha256": "f301d8f11220265ec9db3daf17c946ce1bacd4cd43c24b4b39791c526a9ce911",
           "bytes": 1968
         },
         {
@@ -40,8 +40,8 @@
         {
           "path": "references/delivery.md",
           "src": "skills/meetly-briefing/references/delivery.md",
-          "sha256": "2317f5b3094e08c8035d6d3fc2d2c543b8f19b30d80f98bc06a9d6e8f9673809",
-          "bytes": 2364
+          "sha256": "5310172b29b0403696eab1804ede9f22fd9882bc60609e268883065d74fade11",
+          "bytes": 2373
         }
       ]
     },
@@ -115,14 +115,14 @@
     },
     {
       "key": "setup-meetly",
-      "version": 4,
+      "version": 5,
       "description": "Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/setup-meetly/SKILL.md",
-          "sha256": "17dcfbe327b59ce004782dbe7fe2fc4202ff965e11d8b9a2f660cd6ed96f98b1",
-          "bytes": 1848
+          "sha256": "250ef3ea6a33df6adcc26cf58f71c08be016d51ef2e25239453279fced319435",
+          "bytes": 1842
         },
         {
           "path": "agents/openai.yaml",
@@ -139,15 +139,15 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/setup-meetly/references/profile-and-delivery.md",
-          "sha256": "b045bb25aac26b09a8dab8c14dfdfb6be663db22e44b3007c8ca24e69eb8c753",
-          "bytes": 2447
+          "sha256": "752c0fd38e81ca2e20abff0e88f10664934bc08baf8d7fa6d4520b708d529603",
+          "bytes": 2458
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "a48a805273a4b9ca839ea740a0c4f2b53995be7f7c16a24d44e2da0c83635ef3",
-    "bytes": 3858
+    "sha256": "9cb67935ab4072d78aa9a7f7d730ea68e1dfc386e011c716f0c630f77286cc0f",
+    "bytes": 3913
   }
 }

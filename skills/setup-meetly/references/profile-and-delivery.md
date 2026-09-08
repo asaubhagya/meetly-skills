@@ -22,11 +22,11 @@ with the same ID and payload. On conflict, reload and reconcile with the user;
 never overwrite a newer profile silently. Claim a save only after success.
 
 Offer end-of-day daily delivery; collect local time and an unambiguous timezone.
-Inspect existing ChatGPT schedules and update the intended one rather than create
+Inspect the current host's schedules and update the intended one rather than create
 a duplicate. Use the host's actual scheduler only if it supports authenticated
 Meetly execution. A reminder is not an automatic briefing. Keep notification
 preferences separate from report content, and describe new-thread/email behavior
-only when the host confirms it. Keep follow-ups in ChatGPT; do not create an
+only when the host confirms it. Keep follow-ups in the current host; do not create an
 external scheduler workaround.
 
 Scheduled instructions load the current account profile and `meetly-briefing`,

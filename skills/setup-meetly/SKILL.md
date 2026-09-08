@@ -1,7 +1,7 @@
 ---
 name: setup-meetly
 metadata:
-  version: "4"
+  version: "5"
 description: Use when someone gets started with Meetly, changes briefing or writing preferences, or asks for a daily or recurring briefing.
 ---
 
@@ -14,7 +14,7 @@ questions at a time, reusing what the user has already told you.
 “What does your work involve, and what would make these briefings valuable?”
 Explore their meeting mix, interests, technical depth and writing style naturally.
 Use relevant host memory actually available to you; show what you propose to
-carry into Meetly and let them correct it. Never imply access to all ChatGPT memory.
+carry into Meetly and let them correct it. Never imply access to all host memory.
 
 Introduce the daily edition: an executive one-pager followed by a detailed,
 newspaper-like exploration with evidence, research and useful next steps.
@@ -24,7 +24,7 @@ before scheduling. On-demand use should work without any schedule.
 
 Confirm the small proposed profile before `update_user_preferences` saves it to
 their Meetly account. Use [profile and delivery](references/profile-and-delivery.md)
-for consent, updates and ChatGPT scheduling. A saved preference is not a schedule.
+for consent, updates and host scheduling. A saved preference is not a schedule.
 
 Help them reach the first recording and first useful edition. Load
 [app guidance](references/app-guidance.md) only for missing steps. Explain the loop:

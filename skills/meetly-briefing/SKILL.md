@@ -1,7 +1,7 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "4"
+  version: "5"
 description: Use when someone requests a daily, weekly or date-range briefing across recorded meetings, including an existing scheduled run.
 ---
 

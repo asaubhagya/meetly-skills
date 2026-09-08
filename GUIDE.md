@@ -36,7 +36,8 @@ Call `setup` for the guide, skill index and authorized account profile.
 `update_user_preferences` saves only a small, confirmed profile. Relevant host
 memory is an optional, user-approved input, not an archive to copy. Existing
 meeting-only connections need separate consent for preference access.
-ChatGPT owns actual schedules, reminders, threads and files: a stored schedule
+The caller host (for example ChatGPT or Codex) owns actual schedules, reminders,
+threads and files where supported: a stored schedule
 preference does not execute one. Report actual save and scheduling results separately.
 
 Use `list_meetings` for periods, `search` for topics, `fetch` for source transcripts
