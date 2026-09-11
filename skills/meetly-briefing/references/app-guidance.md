@@ -8,6 +8,22 @@ Labels verified against native source on 2026-09-08. Use the user's current
 app if its version differs. Source inspection validates labels, not the user's
 connection, permissions, training status, or installed version.
 
+## Staged iCloud connections
+
+The paths below describe legacy controls. For staged private iCloud connections,
+follow the installed app and returned capabilities. Settings → AI connections may
+provide Allow AI access, per-connection meeting access and optional Save AI notes;
+verify availability and readiness rather than infer it from this guide. CloudKit
+authorization is separate from Meetly sign-in. A compatible iPhone/iPad or Mac app
+can provide explicit approval; push delivery is neither required nor guaranteed.
+Never request CloudKit credentials or connection keys in chat. This staged design
+does not establish that Mac-only approval is available in the installed release.
+
+Private sync and AI access are independent. Turning off uploads is not revocation.
+Offline permission changes may leave access active until server acknowledgement.
+Disconnect requires new consent and cannot recall previously delivered content.
+Preserve the user's existing audio settings.
+
 ## iPhone / iPad
 
 - AI connection: Settings → **AI Agent Access**. Follow **Restore AI Agent Access**

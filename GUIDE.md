@@ -69,6 +69,38 @@ only when needed for download, pairing, calendar or voice training; do not inven
 destination deep links. Say: “Any time, tell me what to change and I can tune this
 and save your preference.” A one-off request is not automatically a lasting change.
 
+## Connection capabilities and source readiness
+
+Read actual `setup` capabilities and live schemas before selecting a workflow.
+The private iCloud path is staged: this guide does not enable it or prove it is
+deployed. Legacy connections keep their reported behavior until explicitly migrated
+and reauthorized. Missing capabilities mean unknown, not permission. Setup can
+inspect metadata to offer a first result; it must not automatically summarize or
+enrich the library.
+
+For enabled iCloud connections, check global/client read access, CloudKit readiness
+and optional context-write permission separately. Meetly identity, CloudKit access
+and the assistant grant are distinct; Sign in with Apple alone does not prove
+private-library access. A grant covers all current and future supported meetings
+synced to that library. Device-only recordings remain unavailable. Reconnect,
+paused access, pending sync and index lag are specific limitations, never an empty
+library. Do not weaken account protections or switch backends to bypass failure.
+
+On the iCloud path, `search` discovers titles/tags only, not transcript-wide or
+semantic matches. Resolve dates in the user's timezone; `from`/`to` are inclusive
+lower/exclusive upper epoch-millisecond bounds. Use `tagsAll` only when exposed.
+Follow opaque cursors unchanged and report index coverage. Read the canonical
+tagged transcript with speaker provenance and revision/hash; finish every page
+for whole-meeting synthesis. Restart on revision change rather than mixing pages.
+Preserve segment IDs and returned fragment ranges. A completed-transfer receipt
+proves full-revision delivery, not recording completeness or model understanding.
+Never infer the owner or “self” from a speaker display name alone.
+
+An interactive read does not prove scheduled or unattended access. Verify the
+actual host's authenticated execution support before offering recurring delivery.
+For requested title/tag or AI-note saves, read the
+[context write workflow](skills/meetly-catch-up/references/icloud-context.md).
+
 ## Evidence and useful work
 
 Read raw transcripts and available calendar/capture/speaker context for the scope.

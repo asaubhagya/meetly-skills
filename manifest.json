@@ -188,14 +188,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 10,
+      "version": 11,
       "description": "Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "c412f8166e51d503335b0d0f0b764cb65588018db63535873a0276813db48af7",
-          "bytes": 2325
+          "sha256": "47de7f98c47b7af94ff23e61a4aa7556ef4fa10fd790a5b25a6bdcbd48561230",
+          "bytes": 2366
         },
         {
           "path": "agents/openai.yaml",
@@ -206,8 +206,8 @@
         {
           "path": "references/app-guidance.md",
           "src": "skills/meetly-briefing/references/app-guidance.md",
-          "sha256": "578e8c53b829fbbc41b68ea34c490d24eb3776f7a6ec864a8627babbc55c1601",
-          "bytes": 3817
+          "sha256": "c268e80a76aa97a0b4595a9a80185b3c7e196b19faaf3e1c759dd173afa42328",
+          "bytes": 4794
         },
         {
           "path": "references/delivery.md",
@@ -237,14 +237,14 @@
     },
     {
       "key": "meetly-catch-up",
-      "version": 9,
+      "version": 10,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "dce5f09ae242c0036efea8ea5c321f291203b37846d32626fbadb4dec26912c1",
-          "bytes": 2394
+          "sha256": "e13774a4f5a6da1f461453f7e11e24886d58b7ec98537560361655a6f89902b5",
+          "bytes": 2492
         },
         {
           "path": "agents/openai.yaml",
@@ -263,13 +263,19 @@
           "src": "skills/meetly-catch-up/references/editorial.md",
           "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
           "bytes": 5547
+        },
+        {
+          "path": "references/icloud-context.md",
+          "src": "skills/meetly-catch-up/references/icloud-context.md",
+          "sha256": "f81243945ce6f12427b31d5dd1e2da84ba5660c90eeed00dca684ea1c5393378",
+          "bytes": 2613
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "ac681f9b99d7cab7d497434399b503f6fa8c1ed0abf0695d006381af6c45d4b4",
-    "bytes": 10328
+    "sha256": "d605d08029bca6345bfc731dcd228deb87785f57e15f0b492c03689d71b264dc",
+    "bytes": 12377
   }
 }

@@ -1,7 +1,7 @@
 ---
 name: meetly-briefing
 metadata:
-  version: "10"
+  version: "11"
 description: Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.
 ---
 
@@ -12,7 +12,8 @@ understanding, discovery and learning. Load the current account profile and Meet
 guide through `setup` for each new brief. Apply the current request over saved
 preferences, then defaults. Never substitute old generated summaries for transcripts.
 
-Read the raw conversations and available context across the requested period.
+Follow the Guide’s capability/discovery rules; completely read each transcript
+revision across the requested period.
 Start with a dense executive one-pager: what matters and why. Keep it one readable
 page; move detail into the articles rather than shrinking type. Follow it with a
 detailed, newspaper-like edition, treating each substantive conversation according
