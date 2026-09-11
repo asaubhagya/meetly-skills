@@ -1,7 +1,8 @@
 # Save independent iCloud context
 
 Use only for a requested save or an explicitly approved save-back workflow. The
-staged `update_meeting_context` tool must be in the live catalog, and `setup` must
+proposed writer, **update_meeting_context**, is not an available command until
+it appears in the live catalog. At that point, `setup` must
 report meeting read and context-write permission. A read-only connection requires
 additional consent through the supported flow, never another endpoint or key.
 

@@ -237,13 +237,13 @@
     },
     {
       "key": "meetly-catch-up",
-      "version": 10,
+      "version": 11,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "e13774a4f5a6da1f461453f7e11e24886d58b7ec98537560361655a6f89902b5",
+          "sha256": "6ccd7f3d2ecdba5249c25eb27396c6fe10e5473763f3da8ae26a17a8004282ba",
           "bytes": 2492
         },
         {
@@ -267,8 +267,8 @@
         {
           "path": "references/icloud-context.md",
           "src": "skills/meetly-catch-up/references/icloud-context.md",
-          "sha256": "f81243945ce6f12427b31d5dd1e2da84ba5660c90eeed00dca684ea1c5393378",
-          "bytes": 2613
+          "sha256": "43a5711665c0a4b9e404fab6d66ca275c220f57a2fc56008abf1f0e3cd7d99f9",
+          "bytes": 2669
         }
       ]
     }
