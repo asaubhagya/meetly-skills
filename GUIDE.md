@@ -5,6 +5,43 @@ two core experiences: **Conversation Summary** and **Daily Executive Brief**.
 Setup and preferences support both; they are not additional skills. Five optional
 specialist workflows develop deeper documents when the person asks for them.
 
+## Connected users and recovery
+
+Use `setup` when the host exposes it; otherwise `get_meetly_usage_guide` provides
+the guide, profile and current connection status. Never require a missing tool.
+Prefer the current server's access result and recovery instructions over older
+bundled setup advice. This does not replace the installed plugin files.
+
+When `cloudAccess.connected` and `cloudAccess.readAllowed` are true, approval has
+succeeded. Continue with `list_meetings` or `search`, then read the requested
+transcripts. Do not repeatedly load the guide or send an approved user back to
+Settings to enable access. Missing preferences, including
+`native_migration_required`, are a personalization limitation, not failed meeting
+authorization. Continue with in-chat preferences; never save using a null revision.
+
+**Cloud Summary is not required for transcript access.** It controls Meetly's
+own summary processing separately from AI connection consent and iCloud sync.
+MCP does not currently expose that device setting; its value is unknown, not off.
+An empty successful list is not an authentication error. Check dates, filters and
+returned sync/index coverage before suggesting a first recording or transcript sync.
+
+For an actual `invalid_token`, `GRANT_REVOKED` or `ICLOUD_REAUTH_REQUIRED`, open
+Meetly's app/plugin connection controls in ChatGPT and choose **Change connection**
+or **Reconnect**, whichever is available. Authenticate, finish phone approval if
+requested, then return and select the updated connection. If the old conversation
+still uses the previous connection, start a new conversation with the updated
+Meetly connection. Repeated phone approval alone does not change ChatGPT's selected
+connection. Other AI hosts use their own connection controls. See the
+[reconnection guide](https://getmeetly.ai/mcp/reconnect?client=chatgpt).
+
+Only an explicit `ACCESS_PAUSED` calls for resuming AI access in Meetly Settings.
+Retry the requested read after resuming; report a persistent error instead of
+repeating approval. `SOURCE_NOT_SYNCED` concerns transcript publication. Respect
+the retry advice for rate limits/outages instead of reconnecting. Do not suggest
+deleting data, toggling access off/on, or changing subscriptions as generic fixes.
+Authorization renews automatically while valid and enabled, but Apple or the host
+can still require sign-in; never promise permanent uninterrupted authentication.
+
 ## Personalize every result
 
 At the start of each new summary or brief, use `setup` to load the current account
@@ -72,8 +109,8 @@ and save your preference.” A one-off request is not automatically a lasting ch
 ## Connection capabilities and source readiness
 
 Read actual `setup` capabilities and live schemas before selecting a workflow.
-The private iCloud path is staged: this guide does not enable it or prove it is
-deployed. Legacy connections keep their reported behavior until explicitly migrated
+The server response establishes the active path; this guide alone does not enable it.
+Legacy connections keep their reported behavior until explicitly migrated
 and reauthorized. Missing capabilities mean unknown, not permission. Setup can
 inspect metadata to offer a first result; it must not automatically summarize or
 enrich the library.

@@ -188,14 +188,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 11,
+      "version": 12,
       "description": "Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "47de7f98c47b7af94ff23e61a4aa7556ef4fa10fd790a5b25a6bdcbd48561230",
-          "bytes": 2366
+          "sha256": "c58de472413c629bd3612cc123e7d7aa332b0d70dd4ed67fbcc0af84311b1f8d",
+          "bytes": 2422
         },
         {
           "path": "agents/openai.yaml",
@@ -206,8 +206,8 @@
         {
           "path": "references/app-guidance.md",
           "src": "skills/meetly-briefing/references/app-guidance.md",
-          "sha256": "c268e80a76aa97a0b4595a9a80185b3c7e196b19faaf3e1c759dd173afa42328",
-          "bytes": 4794
+          "sha256": "3598e91d9866b761583262f1c6034973e84b0bac27e8a4dba7cc25fb731e5e9b",
+          "bytes": 2885
         },
         {
           "path": "references/delivery.md",
@@ -230,21 +230,21 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/meetly-briefing/references/profile-and-delivery.md",
-          "sha256": "27396a7640868dee258c7bb98ffe598d82bdd14afd25cc05f4c54d094519dc5e",
-          "bytes": 4149
+          "sha256": "736ecd5c18e9c4d9af48300b00968eba6b512b0e9c5c447c77222d672bbe9063",
+          "bytes": 4355
         }
       ]
     },
     {
       "key": "meetly-catch-up",
-      "version": 11,
+      "version": 12,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "6ccd7f3d2ecdba5249c25eb27396c6fe10e5473763f3da8ae26a17a8004282ba",
-          "bytes": 2492
+          "sha256": "5aeb979940220ad69a64569edd7f7d2821361bd2d7c3b2891f8ecfac3194dbf9",
+          "bytes": 2490
         },
         {
           "path": "agents/openai.yaml",
@@ -275,7 +275,7 @@
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "d605d08029bca6345bfc731dcd228deb87785f57e15f0b492c03689d71b264dc",
-    "bytes": 12377
+    "sha256": "51d8598b772a9bb1b1f88f94c1005d423e4a3699dd5ddd2997a4375377bba2b7",
+    "bytes": 14793
   }
 }
