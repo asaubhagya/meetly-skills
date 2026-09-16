@@ -30,15 +30,15 @@ test('each independently loaded skill includes the conversational closing rule',
   }
 });
 
-test('pairing includes preferences while legacy grants require one reconnect, not retry loops', async () => {
+test('approved connections do not repeat pairing for missing personalization', async () => {
   const profile = await read('skills/meetly-briefing/references/profile-and-delivery.md');
-  assert.match(profile, /Connect Meetly/);
-  assert.match(profile, /meetings:read/);
-  assert.match(profile, /preferences:read/);
-  assert.match(profile, /preferences:write/);
+  assert.match(profile, /get_meetly_usage_guide/);
+  assert.match(profile, /does not block meeting retrieval/);
+  assert.match(profile, /not a pasted connection key/);
   assert.match(profile, /not silently widened/);
-  assert.match(profile, /reconnect once/);
-  assert.match(profile, /Never ask for.*key in chat/);
+  assert.match(profile, /reconnect for missing preference scopes only when needed/);
+  assert.match(profile, /Never request keys in chat/);
+  assert.match(profile, /repeating phone approval\s+repairs preference encryption/);
   assert.match(profile, /Do not loop.*denied/s);
   const delivery = await read('skills/meetly-briefing/references/delivery.md');
   assert.doesNotMatch(delivery, /does\s+not request write permission/);

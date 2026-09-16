@@ -1,12 +1,15 @@
 # Profile and delivery
 
-`setup` returns the account profile, revision and read/write capabilities.
-No access is different from an empty profile. The current pairing page visibly
-explains that choosing **Connect Meetly** authorizes `meetings:read`,
-`preferences:read` and `preferences:write` together: one key and one action, no
-separate preference checkbox. Older meeting-only grants are not silently widened;
-use the host's stated remedy to reconnect once through the current pairing page.
-Never ask for a connection key in chat; enter it only on the authorization page.
+`setup`, or `get_meetly_usage_guide` when setup is unavailable, returns the account
+profile, revision and read/write capabilities. No preference access is different
+from an empty profile and does not block meeting retrieval. A null revision or
+`native_migration_required` means saved personalization is unavailable; continue
+with in-chat preferences instead of telling an already-approved user to enable AI
+access again. Never request keys in chat or claim that repeating phone approval
+repairs preference encryption. Current iCloud approval uses Apple authentication
+and native approval, not a pasted connection key. Older meeting-only grants are
+not silently widened; reconnect for missing preference scopes only when needed
+for a user-requested save.
 Do not loop on denied saves or repeat pairing after a successful reconnect.
 Reload capabilities; if access is still missing, report the unresolved access
 problem and continue authorized on-demand analysis with in-chat preferences.
