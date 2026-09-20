@@ -7,7 +7,7 @@ specialist workflows develop deeper documents when the person asks for them.
 
 ## Connected users and recovery
 
-Use `setup` when the host exposes it; otherwise `get_meetly_usage_guide` provides
+First call `get_meetly_usage_guide`; it provides
 the guide, profile and current connection status. Never require a missing tool.
 Prefer the current server's access result and recovery instructions over older
 bundled setup advice. This does not replace the installed plugin files.
@@ -44,7 +44,7 @@ can still require sign-in; never promise permanent uninterrupted authentication.
 
 ## Personalize every result
 
-At the start of each new summary or brief, use `setup` to load the current account
+At the start of each new summary or brief, use `get_meetly_usage_guide` to load the current account
 profile and relevant guidance. Reuse it during the conversation; refresh after
 a change. Apply **current request → saved preferences → Meetly defaults**.
 Missing or unavailable preferences never block a useful transcript-grounded answer;
@@ -60,7 +60,7 @@ Substance and evidence make it recognizable; no decorative noise or forced templ
 
 ## Set up Meetly
 
-Use `setup({include_bodies:true,skill_keys:[]})` for this guide and the account
+Use `get_meetly_usage_guide({skill_keys:[]})` for this guide and the account
 profile. No skill installation, ZIP upload or Wayfinder dependency is required.
 Set the destination: useful conversation summaries and a daily executive brief
 tailored to this person. Keep setup to **at most five short questions in total**,
@@ -108,7 +108,7 @@ and save your preference.” A one-off request is not automatically a lasting ch
 
 ## Connection capabilities and source readiness
 
-Read actual `setup` capabilities and live schemas before selecting a workflow.
+Read actual `get_meetly_usage_guide` capabilities and live schemas before selecting a workflow.
 The server response establishes the active path; this guide alone does not enable it.
 Legacy connections keep their reported behavior until explicitly migrated
 and reauthorized. Missing capabilities mean unknown, not permission. Setup can
@@ -210,7 +210,7 @@ draft when the discussion calls for one and offer the deeper specialist version.
 Do not generate all specialist documents automatically. Natural-language requests
 work everywhere; slash shortcuts depend on the host and are not required.
 
-For a specialist, call `setup({include_bodies:true,skill_keys:[key]})` or
+For a specialist, call
 `get_meetly_usage_guide({skill_keys:[key]})`. The guide tool defaults to core bodies
 and indexes the rest; empty instructions mean not loaded. Selected workflows include
 all reference files. Read the selected skill's `references/editorial.md` for the
@@ -220,11 +220,12 @@ coherent sections, comfortable typography and sources beside consequential claim
 Treat evidence, decisions, research and proposals distinctly so the next agent can
 use the result without mistaking a brainstorm for authorization.
 
-Load only the relevant skill and references through `setup`. Direct MCP works
+Load only the relevant skill and references through `get_meetly_usage_guide`. Direct MCP works
 without installed skills; `get_meetly_usage_guide` provides the same guidance or an
 explicitly unchecked bootstrap during an outage. Existing retrieval still works.
 
 Git is instruction truth. agents.getmeetly.ai publishes raw Markdown, readable
 pages, JSON and a stable ZIP. Beta tracks checked main; latest pins a stable
-revision. Verify hashes and do not mix revisions. CI hydrates plugin files from
-stable website bytes; OpenAI review and installed-plugin updates are separate.
+revision. Verify hashes and do not mix revisions. Skills publish independently; MCP-only plugins load live guidance. Legacy bundled
+plugins hydrate stable website bytes. OpenAI review and installed-plugin updates
+are separate.

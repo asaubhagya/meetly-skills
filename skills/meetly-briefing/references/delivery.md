@@ -1,6 +1,6 @@
 # Delivery and coverage
 
-Load the current account profile through `setup`. Current pairing includes
+Load the current account profile through `get_meetly_usage_guide`. Current pairing includes
 preference access. An older meeting-only connection needs one interactive reconnect
 through the current Connect Meetly page; `preference_access: "read"` expresses the
 read requirement, not a separate pairing step. Do not repeat denied calls or ask

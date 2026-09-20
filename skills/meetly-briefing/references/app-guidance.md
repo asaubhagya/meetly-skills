@@ -6,7 +6,7 @@ settings deep link or claim that a setting changed without confirmation.
 
 ## Access and recovery
 
-First read `setup`, or `get_meetly_usage_guide` when setup is not exposed.
+First read `get_meetly_usage_guide`.
 If connected/readAllowed are true, proceed to the requested meeting read.
 Missing preferences, empty results and missing generated summaries do not mean
 AI access is disabled. Do not repeat phone approval after success.

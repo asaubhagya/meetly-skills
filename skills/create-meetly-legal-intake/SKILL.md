@@ -1,14 +1,14 @@
 ---
 name: create-meetly-legal-intake
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks to organize a legal client intake conversation into a sourced matter brief and questions for counsel.
 ---
 
 # Create a legal client intake brief
 
 Make the reported situation intelligible to counsel. Load the profile and this
-workflow through `setup`; apply the current request over preferences. Read the raw
+workflow through `get_meetly_usage_guide`; apply the current request over preferences. Read the raw
 intake and authorized matter documents. Follow [Meetly editorial standards](references/editorial.md)
 and the [professional reference](references/professional.md).
 

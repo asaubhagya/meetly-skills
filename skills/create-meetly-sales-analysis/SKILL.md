@@ -1,14 +1,14 @@
 ---
 name: create-meetly-sales-analysis
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks for deep sales discovery or deal-call analysis, qualification, coaching or an evidence-based follow-up draft.
 ---
 
 # Analyze a sales call
 
 Explain the buyer's situation and the next useful commercial action. Load the
-profile and selected workflow through `setup`; apply the current request over
+profile and selected workflow through `get_meetly_usage_guide`; apply the current request over
 preferences. Read the raw call and relevant authorized account, CRM and product
 records. Follow [Meetly editorial standards](references/editorial.md) and the
 [professional reference](references/professional.md).

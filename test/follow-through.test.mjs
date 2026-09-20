@@ -43,3 +43,14 @@ test('approved connections do not repeat pairing for missing personalization', a
   const delivery = await read('skills/meetly-briefing/references/delivery.md');
   assert.doesNotMatch(delivery, /does\s+not request write permission/);
 });
+
+test('all distributed Markdown uses the MCP-only guide contract without retired setup calls', async () => {
+  const manifest = JSON.parse(await read('manifest.json'));
+  const files = [manifest.guide.src, ...manifest.skills.flatMap(skill => skill.files.map(file => file.src))];
+  for (const path of files.filter(path => path.endsWith('.md'))) {
+    assert.doesNotMatch(await read(path), /`setup(?:`|\()|\bsetup\(\)/, path);
+  }
+  const profile = await read('skills/meetly-briefing/references/profile-and-delivery.md');
+  assert.doesNotMatch(profile, /preference_access|read_write|if_authorized/);
+  assert.match(profile, /do not send a dummy\s+write or invent guide parameters/);
+});
