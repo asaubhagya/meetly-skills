@@ -22,7 +22,7 @@ test('account preference saves are explicit and schedule execution stays in the 
   assert.match(guide, /account\s+profile/i);
   assert.doesNotMatch(guide, /Preferences, schedules and documents belong to the host/);
   const reference = await read('skills/meetly-briefing/references/profile-and-delivery.md');
-  assert.match(reference, /preference_access/);
+  assert.match(reference, /does not grant new scopes/);
   assert.match(reference, /never guess revision 0/);
 });
 

@@ -1,14 +1,14 @@
 ---
 name: create-meetly-prd
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks to turn product conversations or discovery evidence into a PRD or product requirements document.
 ---
 
 # Create a PRD
 
 Create a decision-useful product document, not expanded meeting minutes. Load the
-profile and this workflow with `setup`; use the current request over saved
+profile and this workflow with `get_meetly_usage_guide`; use the current request over saved
 preferences. Read the raw transcripts and relevant authorized product context.
 Apply [Meetly editorial standards](references/editorial.md) and consult the compact
 [professional reference](references/professional.md) when composing the document.

@@ -1,6 +1,6 @@
 # Profile and delivery
 
-`setup`, or `get_meetly_usage_guide` when setup is unavailable, returns the account
+`get_meetly_usage_guide` returns the account
 profile, revision and read/write capabilities. No preference access is different
 from an empty profile and does not block meeting retrieval. A null revision or
 `native_migration_required` means saved personalization is unavailable; continue
@@ -13,11 +13,10 @@ for a user-requested save.
 Do not loop on denied saves or repeat pairing after a successful reconnect.
 Reload capabilities; if access is still missing, report the unresolved access
 problem and continue authorized on-demand analysis with in-chat preferences.
-To request access without a dummy write, call `setup` with `preference_access`
-set to `read` for personalization, or `read_write` when the user wants to save
-preferences. These select the operation's access requirement, not separate pairing
-steps. The default `if_authorized` never forces extra consent. After authorization,
-reload the actual revision; never guess revision 0.
+The guide is read-only and does not grant new scopes. If a requested operation
+needs missing access, follow the returned connection flow; do not send a dummy
+write or invent guide parameters. After authorization, reload the actual revision;
+never guess revision 0.
 
 Save a minimal, user-confirmed profile: relevant work context, writing preferences,
 preferred name, language, detail, interests, research, format and delivery wishes.

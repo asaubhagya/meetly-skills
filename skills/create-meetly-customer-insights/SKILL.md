@@ -1,14 +1,14 @@
 ---
 name: create-meetly-customer-insights
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks for deep customer interview analysis, discovery findings or synthesis across customer research conversations.
 ---
 
 # Analyze customer interviews
 
 Develop a clear account of the customer's world and what the evidence means for
-product decisions. Load the profile and this workflow through `setup`; apply the
+product decisions. Load the profile and this workflow through `get_meetly_usage_guide`; apply the
 current request over preferences. Read raw interview transcripts and relevant
 authorized research context. Use [Meetly editorial standards](references/editorial.md)
 and the [professional reference](references/professional.md).

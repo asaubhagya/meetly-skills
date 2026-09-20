@@ -1,14 +1,14 @@
 ---
 name: create-meetly-engineering-spec
 metadata:
-  version: "3"
+  version: "4"
 description: Use when someone asks for an engineering RFC, technical design or implementation specification from recorded discussions.
 ---
 
 # Create an engineering RFC or spec
 
 Turn the technical discussion into a document engineers and coding agents can use.
-Load the profile and selected workflow through `setup`; current instructions take
+Load the profile and selected workflow through `get_meetly_usage_guide`; current instructions take
 precedence over preferences. Read raw transcripts plus relevant authorized design,
 code and incident context. Apply [Meetly editorial standards](references/editorial.md)
 and the [professional reference](references/professional.md).

@@ -3,14 +3,14 @@
   "skills": [
     {
       "key": "create-meetly-customer-insights",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks for deep customer interview analysis, discovery findings or synthesis across customer research conversations.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-customer-insights/SKILL.md",
-          "sha256": "2b5196ae27d29f11f65a734f5acf419e6fa287708624fb74bf36c08cf68f9cb8",
-          "bytes": 1703
+          "sha256": "216c786fb97ebb531d7087d229a124697228886b37e79a1fbbf63a90e8963d9d",
+          "bytes": 1720
         },
         {
           "path": "agents/openai.yaml",
@@ -40,14 +40,14 @@
     },
     {
       "key": "create-meetly-engineering-spec",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks for an engineering RFC, technical design or implementation specification from recorded discussions.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-engineering-spec/SKILL.md",
-          "sha256": "90213d2f27e269df6424c5b3210b5848c4b280e7013ed15b5f0cf2973abe6812",
-          "bytes": 1763
+          "sha256": "f4cd8cb5be73e5e5de589f59cdc8ac517b3e3dd874de91595e119450b1291c8f",
+          "bytes": 1780
         },
         {
           "path": "agents/openai.yaml",
@@ -77,14 +77,14 @@
     },
     {
       "key": "create-meetly-legal-intake",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks to organize a legal client intake conversation into a sourced matter brief and questions for counsel.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-legal-intake/SKILL.md",
-          "sha256": "e29df4512663076aea86b2fa7a7d2eb3e9e17989b2a0dff264cf6aa9236f5af9",
-          "bytes": 1794
+          "sha256": "444265ba8bab4935102af774a381bae00fc2ebb24c4528ba25e51188c19dfcae",
+          "bytes": 1811
         },
         {
           "path": "agents/openai.yaml",
@@ -114,14 +114,14 @@
     },
     {
       "key": "create-meetly-prd",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks to turn product conversations or discovery evidence into a PRD or product requirements document.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-prd/SKILL.md",
-          "sha256": "89dc12fcd2c53e687ba35552b4a3188e9ae86a4b0dbe2561e979cd3ba90d7321",
-          "bytes": 1614
+          "sha256": "6ceeda854d7accba9133b39d0103d45e10e91bd3634606696ea584736e6da965",
+          "bytes": 1631
         },
         {
           "path": "agents/openai.yaml",
@@ -151,14 +151,14 @@
     },
     {
       "key": "create-meetly-sales-analysis",
-      "version": 3,
+      "version": 4,
       "description": "Use when someone asks for deep sales discovery or deal-call analysis, qualification, coaching or an evidence-based follow-up draft.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/create-meetly-sales-analysis/SKILL.md",
-          "sha256": "8beb63157843b1ef22c7d459bbf2caf397d70f851b49ce890ab68896918cf8f1",
-          "bytes": 1753
+          "sha256": "a986e0e40605f405b3668b846abdd7a202938951b285d80946502f0ae4873258",
+          "bytes": 1770
         },
         {
           "path": "agents/openai.yaml",
@@ -188,14 +188,14 @@
     },
     {
       "key": "meetly-briefing",
-      "version": 12,
+      "version": 13,
       "description": "Use when someone wants a daily executive brief, daily roundup or synthesis across a period of recorded conversations, including a scheduled run.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-briefing/SKILL.md",
-          "sha256": "c58de472413c629bd3612cc123e7d7aa332b0d70dd4ed67fbcc0af84311b1f8d",
-          "bytes": 2422
+          "sha256": "fab93abddb7603f165f13886731c8143d33674854bdba504dc5a4da6999bcbe0",
+          "bytes": 2383
         },
         {
           "path": "agents/openai.yaml",
@@ -206,14 +206,14 @@
         {
           "path": "references/app-guidance.md",
           "src": "skills/meetly-briefing/references/app-guidance.md",
-          "sha256": "3598e91d9866b761583262f1c6034973e84b0bac27e8a4dba7cc25fb731e5e9b",
-          "bytes": 2885
+          "sha256": "2aad1c350eb76a8f7e36e3b90fc3bae8ad23847019ab157b70da56f9b7d01149",
+          "bytes": 2847
         },
         {
           "path": "references/delivery.md",
           "src": "skills/meetly-briefing/references/delivery.md",
-          "sha256": "4c71209a2644adba884654fdcd454a220028b24440702930fdcbfc8a7ad90f90",
-          "bytes": 2892
+          "sha256": "6dd20d565dbcedbd3055feabff4b830910fc416e268761b0553a0dfda5c996b7",
+          "bytes": 2909
         },
         {
           "path": "references/document.css",
@@ -230,21 +230,21 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/meetly-briefing/references/profile-and-delivery.md",
-          "sha256": "736ecd5c18e9c4d9af48300b00968eba6b512b0e9c5c447c77222d672bbe9063",
-          "bytes": 4355
+          "sha256": "00a4d96daf99543c0d3202faf522f0fcee71cfd67277624ce4705732ddfe9e5a",
+          "bytes": 4204
         }
       ]
     },
     {
       "key": "meetly-catch-up",
-      "version": 13,
+      "version": 14,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "38316789cff9b12b7a839c2db045cdf3f13f720a383ad47f4c80f01c8b675959",
-          "bytes": 2515
+          "sha256": "d8c9bb2f60280acf3f1f83e5fb694eb016226f22ea64413e246be801ef4c7f3f",
+          "bytes": 2492
         },
         {
           "path": "agents/openai.yaml",
@@ -267,15 +267,15 @@
         {
           "path": "references/icloud-context.md",
           "src": "skills/meetly-catch-up/references/icloud-context.md",
-          "sha256": "43a5711665c0a4b9e404fab6d66ca275c220f57a2fc56008abf1f0e3cd7d99f9",
-          "bytes": 2669
+          "sha256": "b207db93c174694d4b3de68fc9fecc3c000506d9389646e19387e282b8849132",
+          "bytes": 2686
         }
       ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "51d8598b772a9bb1b1f88f94c1005d423e4a3699dd5ddd2997a4375377bba2b7",
-    "bytes": 14793
+    "sha256": "b0f5281f7203b477bd42b89df95ea5c5a7c5b9bf9c171fa6d205202ddad4c55f",
+    "bytes": 14825
   }
 }

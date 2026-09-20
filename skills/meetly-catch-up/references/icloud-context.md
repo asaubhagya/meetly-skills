@@ -2,7 +2,7 @@
 
 Use only for a requested save or an explicitly approved save-back workflow. The
 proposed writer, **update_meeting_context**, is not an available command until
-it appears in the live catalog. At that point, `setup` must
+it appears in the live catalog. At that point, `get_meetly_usage_guide` must
 report meeting read and context-write permission. A read-only connection requires
 additional consent through the supported flow, never another endpoint or key.
 
