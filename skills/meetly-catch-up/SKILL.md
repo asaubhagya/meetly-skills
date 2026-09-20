@@ -1,15 +1,15 @@
 ---
 name: meetly-catch-up
 metadata:
-  version: "12"
+  version: "13"
 description: Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.
 ---
 
 # Conversation Summary
 
-Make an evidence-backed brief. Load profile and guide through `setup` (fallback:
-`get_meetly_usage_guide`); prioritize this request, then saved preferences, then defaults.
-Reuse context.
+First call `get_meetly_usage_guide`; reuse it within this conversation. Follow its
+profile flow: current request, saved preferences, then defaults. If unavailable,
+use exposed `setup` or report missing guidance.
 
 Follow the Guide’s capability, metadata-only discovery and complete-revision
 pagination rules. Read the raw transcript and available metadata: time, speaker labels, calendar and

@@ -63,3 +63,39 @@ test('workflow wiring retains stable-only dependencies, scoped checkout and no f
   assert.match(script, /\['push', 'origin', 'HEAD:main'\]/);
   assert.doesNotMatch(script, /--force|--force-with-lease/);
 });
+
+// Real isolated Git checkout + npm commands: no network, credential, or remote.
+// Missing hydrate command and push remote ensure MCP-only never uses either.
+test('MCP-only promotion validates without lock, hydration, version bump or push', async t => {
+  const { mkdtemp, mkdir, writeFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { execFileSync } = await import('node:child_process');
+  const { promotePlugin } = await import('../scripts/promote-plugin.mjs');
+  const dir = await mkdtemp(join(tmpdir(), 'meetly-promotion-'));
+  t.after(() => rm(dir, { recursive: true, force: true }));
+  const git = (...args) => execFileSync('git', args, { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  const commit = () => {
+    git('add', '.');
+    git('-c', 'user.name=Test', '-c', 'user.email=test@example.invalid', 'commit', '-m', 'fixture');
+  };
+  await mkdir(join(dir, 'meetly/.codex-plugin'), { recursive: true });
+  const descriptor = { name: 'meetly', version: '3.0.0', mcpServers: './.mcp.json', apps: './.app.json' };
+  await writeFile(join(dir, 'meetly/.codex-plugin/plugin.json'), JSON.stringify(descriptor));
+  await writeFile(join(dir, 'package.json'), JSON.stringify({ scripts: { test: 'node -e "process.exit(0)"', check: 'node -e "process.exit(0)"' } }));
+  git('init', '-b', 'main');
+  commit();
+  const head = git('rev-parse', 'HEAD');
+  await promotePlugin(dir, sha);
+  assert.equal(git('rev-parse', 'HEAD'), head);
+  assert.equal(git('status', '--porcelain'), '');
+  assert.deepEqual(JSON.parse(await readFile(join(dir, 'meetly/.codex-plugin/plugin.json'), 'utf8')), descriptor);
+
+  await writeFile(join(dir, 'meetly/skills.lock.json'), '{}');
+  commit();
+  await assert.rejects(promotePlugin(dir, sha), /stale bundled guidance/);
+  await rm(join(dir, 'meetly/skills.lock.json'));
+  await writeFile(join(dir, 'package.json'), JSON.stringify({ scripts: { test: 'node -e "process.exit(1)"', check: 'node -e "process.exit(0)"' } }));
+  commit();
+  await assert.rejects(promotePlugin(dir, sha), /npm step failed/);
+});

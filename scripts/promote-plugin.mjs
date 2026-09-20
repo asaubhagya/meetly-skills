@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, lstat } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -24,6 +24,24 @@ export async function promotePlugin(plugin, sha) {
   };
   if (run('git', ['status', '--porcelain'])) throw new Error('Plugin checkout must be clean before hydration.');
   if (run('git', ['branch', '--show-current']) !== 'main') throw new Error('Plugin checkout must be on main.');
+  const descriptor = JSON.parse(await readFile(join(plugin, 'meetly/.codex-plugin/plugin.json'), 'utf8'));
+  if (descriptor.skills === undefined) {
+    if (descriptor.name !== 'meetly' || descriptor.mcpServers !== './.mcp.json' || descriptor.apps !== './.app.json') {
+      throw new Error('Unrecognized MCP-only plugin descriptor; promotion stopped.');
+    }
+    for (const path of ['meetly/skills', 'meetly/GUIDE.md', 'meetly/skills.lock.json']) {
+      const exists = await lstat(join(plugin, path)).then(() => true, error => {
+        if (error.code === 'ENOENT') return false;
+        throw error;
+      });
+      if (exists) throw new Error('MCP-only plugin contains stale bundled guidance; promotion stopped.');
+    }
+    run('npm', ['test']);
+    run('npm', ['run', 'check']);
+    if (run('git', ['status', '--porcelain'])) throw new Error('MCP-only plugin checks changed the checkout; promotion stopped.');
+    console.log('MCP-only plugin verified; skills publish independently. No hydration, version bump, commit or push.');
+    return;
+  }
   const lockPath = join(plugin, 'meetly/skills.lock.json');
   const previous = JSON.parse(await readFile(lockPath, 'utf8'));
   run('npm', ['run', 'hydrate', '--', '--channel', 'latest']);
