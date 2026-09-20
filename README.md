@@ -108,7 +108,14 @@ ONLY to private `asaubhagya/meetly-plugin`, in this skills repository. Missing k
 fails stable promotion clearly; PRs and beta pushes never run it. The plugin's
 initial `main` must exist before the first stable skills tag.
 
-The job checks out plugin `main` into `plugin/`, runs
+For an MCP-only plugin (no `skills` manifest field), promotion validates the
+canonical component paths, rejects leftover bundled guidance, runs the plugin's
+tests and checks, and requires the checkout to remain clean. It then succeeds
+without hydration, a version bump, commit or push: skills and live MCP guidance
+publish independently. Website propagation and the scoped checkout still apply.
+This branch does not submit or update an installed marketplace plugin.
+
+For older plugins that declare bundled skills, the job checks out plugin `main` into `plugin/`, runs
 `npm run hydrate -- --channel latest`, then `npm test` and `npm run check`. It
 verifies the resulting lock SHA matches the triggering commit, checks that latest
 has not moved again, and commits only `meetly/skills/`, `meetly/GUIDE.md`,

@@ -15,7 +15,7 @@ This change improves standalone skills consumers, but does not replace installed
 
 ## Release pipeline incompatibility
 
-Skills .github/workflows/checks.yml still runs stable-tag promote-plugin. scripts/promote-plugin.mjs reads meetly/skills.lock.json then npm run hydrate. Both are absent from plugin3.0.0. A new stable tag would therefore fail promotion after website notification even if website publication succeeds. Last skills runs succeeded before this architecture divergence. Do not tag/publish this change until promotion is reconciled with MCP-only plugin ownership. Beta main notification and immutable website release resolution remain separate from marketplace updates.
+Skills .github/workflows/checks.yml still runs stable-tag promote-plugin. scripts/promote-plugin.mjs reads meetly/skills.lock.json then npm run hydrate. Both are absent from plugin3.0.0. A new stable tag would therefore fail promotion after website notification even if website publication succeeds. Last skills runs succeeded before this architecture divergence. The prepared compatibility fix now recognizes MCP-only manifests, rejects leftover guidance, runs tests/checks, and exits without hydration or writes; the legacy bundle path is preserved. Do not tag until this fix is integrated and the stable release is reviewed. Beta main notification and immutable website release resolution remain separate from marketplace updates.
 
 ## Reproducible package evidence
 
@@ -29,4 +29,8 @@ Local Codex supports marketplace add/install commands, but installed curated cac
 
 ## Recommended next action
 
-Use the live MCP guide explicitly for present diagnostics. Review the existing3.0.0 canonical package and eight-tool reviewer metadata, resolve obsolete skill promotion, then update the existing published plugin through the authorized owner release route. Retest a fresh host session and check actual guide invocation, transcript revision coverage and speaker provenance in server traces.
+Use the live MCP guide explicitly for present diagnostics. Review the existing3.0.0 canonical package and eight-tool reviewer metadata, integrate the tested promotion compatibility fix, then update the existing published plugin through the authorized owner release route. Retest a fresh host session and check actual guide invocation, transcript revision coverage and speaker provenance in server traces.
+
+## Compatibility verification
+
+25 tests passed including real isolated Git/npm promotion with no lock, hydration command or remote; HEAD/version remain unchanged. Stale bundled guidance and failing npm checks reject promotion. Validation and manifest checks passed. No stable tag, website release or marketplace submission performed.
