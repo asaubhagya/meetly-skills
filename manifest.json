@@ -237,14 +237,14 @@
     },
     {
       "key": "meetly-catch-up",
-      "version": 14,
+      "version": 15,
       "description": "Use when someone wants a summary, explanation, insights, quotes or useful follow-up from a recorded conversation.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-catch-up/SKILL.md",
-          "sha256": "d8c9bb2f60280acf3f1f83e5fb694eb016226f22ea64413e246be801ef4c7f3f",
-          "bytes": 2492
+          "sha256": "8df058826951670a40cb6bb1bf02576950c9ed773ec4c9ebaa9de2ef8331c815",
+          "bytes": 2328
         },
         {
           "path": "agents/openai.yaml",
@@ -275,7 +275,7 @@
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "b0f5281f7203b477bd42b89df95ea5c5a7c5b9bf9c171fa6d205202ddad4c55f",
-    "bytes": 14825
+    "sha256": "bc385f559641a82294320fbb801b8f43e2c018990efb948eaacf08fa6283edc9",
+    "bytes": 15474
   }
 }

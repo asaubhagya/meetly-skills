@@ -34,3 +34,8 @@ test('daily edition has an executive page and detailed edition, not a total two-
   assert.match(briefing, /speaker\s+observations/i);
   assert.doesNotMatch(briefing, /at most the single|compact one–two page equivalent/);
 });
+
+test('conversation summary defaults to researched depth with a simple override and honest evidence', async () => {
+  const body = await read('skills/meetly-catch-up/SKILL.md');
+  for (const phrase of ['Default to bounded public fact-checking', 'simple or quick summary skips research', 'one-page executive opening', 'topic-by-topic', 'secondary', 'disclose missing verification', 'unknown owners and deadlines', 'MTLY-N']) assert.ok(body.includes(phrase), phrase);
+});
