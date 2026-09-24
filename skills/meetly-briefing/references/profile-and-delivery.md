@@ -7,7 +7,9 @@ from an empty profile and does not block meeting retrieval. A null revision or
 with in-chat preferences instead of telling an already-approved user to enable AI
 access again. Never request keys in chat or claim that repeating phone approval
 repairs preference encryption. Current iCloud approval uses Apple authentication
-and native approval, not a pasted connection key. Older meeting-only grants are
+and explicit permission for the named client in the browser, not a pasted connection key.
+Older installations may still request approval in Meetly until the updated app
+has synced its library identity. Older meeting-only grants are
 not silently widened; reconnect for missing preference scopes only when needed
 for a user-requested save.
 Do not loop on denied saves or repeat pairing after a successful reconnect.
