@@ -206,8 +206,8 @@
         {
           "path": "references/app-guidance.md",
           "src": "skills/meetly-briefing/references/app-guidance.md",
-          "sha256": "2aad1c350eb76a8f7e36e3b90fc3bae8ad23847019ab157b70da56f9b7d01149",
-          "bytes": 2847
+          "sha256": "2af9dc7b899ca1bc096a53ec994ecfd579dc268824191e544a399a3da9e36f68",
+          "bytes": 3436
         },
         {
           "path": "references/delivery.md",
@@ -230,8 +230,8 @@
         {
           "path": "references/profile-and-delivery.md",
           "src": "skills/meetly-briefing/references/profile-and-delivery.md",
-          "sha256": "00a4d96daf99543c0d3202faf522f0fcee71cfd67277624ce4705732ddfe9e5a",
-          "bytes": 4204
+          "sha256": "720842a52cdf733287a33b21d5e7d8c34b174ba157635bffa45cb824e149818e",
+          "bytes": 4356
         }
       ]
     },
@@ -275,7 +275,7 @@
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "bc385f559641a82294320fbb801b8f43e2c018990efb948eaacf08fa6283edc9",
-    "bytes": 15474
+    "sha256": "a0551bc0100826c16e8f17354cf05028c61e49e62b99e4ef90f9686a2fae3ce8",
+    "bytes": 16111
   }
 }

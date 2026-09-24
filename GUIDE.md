@@ -27,8 +27,11 @@ returned sync/index coverage before suggesting a first recording or transcript s
 
 For an actual `invalid_token`, `GRANT_REVOKED` or `ICLOUD_REAUTH_REQUIRED`, open
 Meetly's app/plugin connection controls in ChatGPT and choose **Change connection**
-or **Reconnect**, whichever is available. Authenticate, finish phone approval if
-requested, then return and select the updated connection. If the old conversation
+or **Reconnect**, whichever is available. Sign in to the Apple Account used for
+the Meetly iCloud library, review the named client and permissions in the browser,
+then choose **Allow and connect**. Return and select the updated connection.
+Older installations may still request approval in Meetly; follow that prompt, or
+update the app and let iCloud sync finish before reconnecting. If the old conversation
 still uses the previous connection, start a new conversation with the updated
 Meetly connection. Repeated phone approval alone does not change ChatGPT's selected
 connection. Other AI hosts use their own connection controls. See the
@@ -41,6 +44,12 @@ the retry advice for rate limits/outages instead of reconnecting. Do not suggest
 deleting data, toggling access off/on, or changing subscriptions as generic fixes.
 Authorization renews automatically while valid and enabled, but Apple or the host
 can still require sign-in; never promise permanent uninterrupted authentication.
+
+**Meetly Newspaper does not require Connect AI or an AI assistant connection.**
+Start newspaper setup in Meetly. If asked, sign in to iCloud and approve the
+newspaper permission in the browser, then return to the app. This authorizes
+newspaper access separately; it does not enable general AI assistant access.
+An AI-hosted daily brief is a separate workflow using that host's capabilities.
 
 ## Personalize every result
 

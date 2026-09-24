@@ -12,8 +12,11 @@ Missing preferences, empty results and missing generated summaries do not mean
 AI access is disabled. Do not repeat phone approval after success.
 
 For a real expired/revoked connection error, use Meetly's connection controls in
-ChatGPT: **Change connection** or **Reconnect**, authenticate, approve on the
-phone if requested, then select the updated connection in ChatGPT. If an old
+ChatGPT: **Change connection** or **Reconnect**. Sign in to the Apple Account
+used for the Meetly iCloud library, review the named client and permissions in
+the browser, and choose **Allow and connect**. Then select the updated connection
+in ChatGPT. Older installations may still request approval in Meetly; follow
+that prompt, or update the app and let iCloud sync finish before reconnecting. If an old
 conversation retains the previous connection, start a new one with the updated
 Meetly connection. Other hosts use their own connection controls. The maintained
 help page is https://getmeetly.ai/mcp/reconnect?client=chatgpt.
@@ -34,6 +37,13 @@ index coverage. `SOURCE_NOT_SYNCED` means the selected transcript is unavailable
 not that phone approval failed. Device-only recordings remain unavailable to MCP.
 Preserve audio and existing sync choices; never ask for CloudKit tokens, connection
 keys, or private credentials in chat.
+
+## Newspaper setup
+
+Meetly Newspaper does not require Connect AI or an AI assistant connection.
+Start in Meetly, sign in to iCloud if requested, and approve newspaper access in
+the browser. Return to the app to continue. This does not enable general AI access.
+An AI-hosted daily brief is separate and depends on the host's capabilities.
 
 ## Other app help
 
