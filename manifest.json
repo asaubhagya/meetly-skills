@@ -367,14 +367,14 @@
     },
     {
       "key": "meetly-recurring-workflow",
-      "version": 1,
+      "version": 2,
       "description": "Set up or resume an opt-in scheduled Meetly lead or commitment workflow with scoped approval, durable checkpoints and retries.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-recurring-workflow/SKILL.md",
-          "sha256": "6e510fc9ad456f371dc6d624ba1a85c0fc12968bf8e50e1bab8511fb36ae765b",
-          "bytes": 2261
+          "sha256": "614df08f6ac9eac9d1d710494c283e6a96a6263a473e45e943654c6e7d962421",
+          "bytes": 4164
         },
         {
           "path": "agents/openai.yaml",
@@ -393,6 +393,12 @@
           "src": "skills/meetly-recurring-workflow/references/editorial.md",
           "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
           "bytes": 5547
+        },
+        {
+          "path": "scripts/journal.py",
+          "src": "skills/meetly-recurring-workflow/scripts/journal.py",
+          "sha256": "91a8905c15d99bfc790a78e2bdc02b9c623ce20ae09dbc3a3a77265c909ab828",
+          "bytes": 5011
         }
       ]
     },
