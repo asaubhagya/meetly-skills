@@ -27,3 +27,7 @@ The [Mac mini verification record](../testing/runs/MEE-1239/2026-11-21-catalog.m
 ## Change history
 
 21 November 2026: reconciled the existing five-workflow implementation and journal at `223bd3859c8ae0b5d8bb4209254764adf3c5f67c` with Mac mini verification and release boundaries. No skill body or version changed in this documentation pass.
+
+## Synthetic development trial
+
+Present two starting jobs, remembering a person and following through on a commitment. On an empty selection, allow an authorized external contact preview. Source-backed notes attach only to existing shared people. Preserve unmatched contacts for a proposed native import capability. For recurring creates, track the stable source-to-destination binding independently of revision, serializing the first send across overlapping revisions. Rehearse sales, project delivery and legal intake. Prove the same source can be deliberately mapped to two distinct portals while a revision change in one portal cannot create twice. Any missed reply or previous unverified journal entry requires destination lookup.

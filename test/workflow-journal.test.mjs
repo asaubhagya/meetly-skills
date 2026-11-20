@@ -46,3 +46,36 @@ test('approval is payload-bound and a crash between send and receipt never autho
     await rm(dir, { recursive: true, force: true });
   }
 });
+
+test('new source revision cannot duplicate an uncertain or verified issue; a second portal is independent', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const dir = await mkdtemp(join(tmpdir(), 'meetly-revision-'));
+  function call(command, body) {
+    return JSON.parse(execFileSync('python3', [runner, join(dir, 'state.db'), command], {
+      input: JSON.stringify(body), stdio: ['pipe', 'pipe', 'pipe'],
+    }));
+  }
+  function review(row) {
+    const { fingerprint } = call('preview', row);
+    call('approve', { ...row, approvedFingerprint: fingerprint });
+  }
+  const revised = { ...plan, revision: '2' };
+  try {
+    review(plan);
+    review(revised);
+    call('claim', plan);
+    assert.throws(() => call('claim', revised), /Earlier revision owns/);
+    call('retry', { ...plan, verifiedNoEffect: true });
+    call('claim', revised);
+    call('receipt', { ...revised, externalId: 'fixture-123' });
+    call('complete', { ...revised, externalId: 'fixture-123' });
+    const newer = { ...plan, revision: '3' };
+    review(newer);
+    assert.throws(() => call('claim', newer), /Earlier revision owns/);
+    const otherPortal = { ...newer, tenant: 'second-qa' };
+    review(otherPortal);
+    assert.equal(call('claim', otherPortal).state, 'sending');
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});

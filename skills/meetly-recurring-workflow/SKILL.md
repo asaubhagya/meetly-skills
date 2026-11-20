@@ -2,7 +2,7 @@
 name: meetly-recurring-workflow
 description: Set up or resume an opt-in scheduled Meetly lead or commitment workflow with scoped approval, durable checkpoints and retries.
 metadata:
-  version: "2"
+  version: "3"
 ---
 
 # Run a recurring Meetly workflow
@@ -25,3 +25,6 @@ A host with persistent storage can run `python3 scripts/journal.py DATABASE COMM
 4. For a confirmed no-effect attempt, call `retry` with `verifiedNoEffect: true` and any `retryAfterSeconds`. Three unsuccessful attempts move the entry to `review`. Inspect via `status`. Leave ambiguous writes in `sending` until verified. A newly proposed diff invalidates the prior unsent approval.
 
 Scan each new authorized snapshot from its beginning. The journal skips completed revisions and holds uncertain operations across scheduler restarts. Store scan pagination separately if the source provides an incremental feed. Obtain scheduling and credential consent in the host before activating a recurring job.
+
+
+Use the literal action `create` for a new record, and include the destination object kind in the destination identity. The journal reserves a single create for that grant, Space, source, destination and tenant across source revisions. A confirmed no-effect retry releases the reservation. Another revision cannot claim an uncertain or successful create. Resolve previous receipts and use a separately reviewed update for a changed source. Older journal databases contain only per-revision hashes: on upgrade, look up any earlier destination mappings before enabling creates. An external lookup is still required for changed grants, Space moves, and destination records created by another writer.

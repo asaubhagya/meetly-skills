@@ -28,6 +28,8 @@ def operate(db, command, body, now):
     if not isinstance(body["diff"], dict) or not body["diff"]:
         raise ValueError("Supply the exact nonempty reviewed field diff")
     key = digest(identity)
+    # Keep create ownership across revisions, including while a send is uncertain.
+    binding = digest({k: v for k, v in identity.items() if k != "revision"})
     fingerprint = digest(body["diff"])
     db.execute("BEGIN IMMEDIATE")
     try:
@@ -49,6 +51,11 @@ def operate(db, command, body, now):
         elif command == "claim":
             if row["state"] != "approved" or row["retry_at"] > now:
                 raise ValueError("No eligible approval; inspect state before sending")
+            if identity["action"] == "create":
+                existing = db.execute("SELECT owner FROM creates WHERE binding=?", (binding,)).fetchone()
+                if existing and existing["owner"] != key:
+                    raise ValueError("Earlier revision owns this create; inspect its receipt and reconcile")
+                db.execute("INSERT OR IGNORE INTO creates(binding,owner) VALUES(?,?)", (binding, key))
             db.execute("UPDATE work SET state='sending',attempts=attempts+1 WHERE key=?", (key,))
         elif command == "receipt":
             external = body.get("externalId")
@@ -65,6 +72,8 @@ def operate(db, command, body, now):
         elif command == "retry":
             if row["state"] != "sending" or body.get("verifiedNoEffect") is not True:
                 raise ValueError("Resolve the ambiguous external write before retry")
+            if identity["action"] == "create":
+                db.execute("DELETE FROM creates WHERE binding=? AND owner=?", (binding, key))
             exhausted = row["attempts"] >= 3
             delay = max(2 ** row["attempts"] * 30, int(body.get("retryAfterSeconds", 0)))
             db.execute("UPDATE work SET state=?,retry_at=? WHERE key=?",
@@ -88,6 +97,9 @@ def main():
         db.execute("""CREATE TABLE IF NOT EXISTS work(
             key TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, state TEXT NOT NULL,
             attempts INTEGER NOT NULL DEFAULT 0, retry_at INTEGER NOT NULL DEFAULT 0, external TEXT
+        )""")
+        db.execute("""CREATE TABLE IF NOT EXISTS creates(
+            binding TEXT PRIMARY KEY, owner TEXT NOT NULL REFERENCES work(key)
         )""")
         result = operate(db, args.command, json.load(sys.stdin), int(time.time()))
         print(json.dumps(result))

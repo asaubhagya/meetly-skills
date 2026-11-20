@@ -274,14 +274,14 @@
     },
     {
       "key": "meetly-crm-workflow",
-      "version": 1,
+      "version": 2,
       "description": "Preview and reconcile Meetly people, accounts, event leads and conversation evidence with an authorized CRM such as HubSpot.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-crm-workflow/SKILL.md",
-          "sha256": "a3a7509c8be9cfad3383809f52a9ad6a503d19093de763dfdb98a847088168ae",
-          "bytes": 1793
+          "sha256": "db0352380b8033da8e42ac3b89d2b1a5e32d0e3618ab1bdbade298a04178ce5b",
+          "bytes": 2261
         },
         {
           "path": "agents/openai.yaml",
@@ -305,14 +305,14 @@
     },
     {
       "key": "meetly-enrichment",
-      "version": 1,
+      "version": 2,
       "description": "Review sourced facts and external references for a Meetly entity and submit an authorized revision-aware enrichment.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-enrichment/SKILL.md",
-          "sha256": "ddb1128be7f74036a3eee770d863754a3aeb4ab9dbadeb361c19352eb0ad5b47",
-          "bytes": 1450
+          "sha256": "f4ff2dd6fef4f917cf47ce77fe0902a217e6685f57d1cc7390078aeb832c3c63",
+          "bytes": 2331
         },
         {
           "path": "agents/openai.yaml",
@@ -336,14 +336,14 @@
     },
     {
       "key": "meetly-graph-onboarding",
-      "version": 1,
-      "description": "Set up authorized access to the Meetly native graph and guide a user from connection to a first relationship or project workflow.",
+      "version": 2,
+      "description": "Remember a person or follow through on a commitment using the Meetly connection selected by the user.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-graph-onboarding/SKILL.md",
-          "sha256": "6bb1b6b5ea2ec0bdf30b22610369282e90365b212bc190d04a16bfca2a859b0b",
-          "bytes": 1990
+          "sha256": "55985525ff2e07ff2e190ec2584d4830389c128c0ea816bdebcfdb2fe2c5fdb7",
+          "bytes": 2532
         },
         {
           "path": "agents/openai.yaml",
@@ -367,14 +367,14 @@
     },
     {
       "key": "meetly-recurring-workflow",
-      "version": 2,
+      "version": 3,
       "description": "Set up or resume an opt-in scheduled Meetly lead or commitment workflow with scoped approval, durable checkpoints and retries.",
       "files": [
         {
           "path": "SKILL.md",
           "src": "skills/meetly-recurring-workflow/SKILL.md",
-          "sha256": "614df08f6ac9eac9d1d710494c283e6a96a6263a473e45e943654c6e7d962421",
-          "bytes": 4164
+          "sha256": "375cbc016832df6a7714e34ca8a1f86927f74a539d0733211c849d94f13cb66f",
+          "bytes": 4862
         },
         {
           "path": "agents/openai.yaml",
@@ -397,8 +397,8 @@
         {
           "path": "scripts/journal.py",
           "src": "skills/meetly-recurring-workflow/scripts/journal.py",
-          "sha256": "91a8905c15d99bfc790a78e2bdc02b9c623ce20ae09dbc3a3a77265c909ab828",
-          "bytes": 5011
+          "sha256": "d52840bc1e45f4b2bd22cd258166fb77fdc0030bb892eb62cb66ec8cc2b884d8",
+          "bytes": 5886
         }
       ]
     },
@@ -436,7 +436,7 @@
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "d770568ea9f06a7b2e26b7125aefb7f189810e68c6da0e355dc3a134a991b6a2",
-    "bytes": 16502
+    "sha256": "02a6679f624eebdc372ade41a1a9c71d8ede0d8a0fda8f263f23cd7b8cdd1f2d",
+    "bytes": 16681
   }
 }

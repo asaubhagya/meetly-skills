@@ -6,7 +6,7 @@ Five optional specialist workflows develop deeper documents on request.
 
 ## Connected entity workflows
 
-Load `meetly-graph-onboarding` to check a connection and select a Space.
+For people and commitments, start with “remember a person” or “follow through on a commitment.” Load `meetly-graph-onboarding` to check the selected connection and Space. On an empty selection, offer to preview one authorized external contact.
 Use `meetly-crm-workflow` to preview CRM changes, `meetly-task-workflow` for
 projects and issues, `meetly-enrichment` for sourced native write-back, and
 `meetly-recurring-workflow` for an opt-in scheduled run. Check the active
