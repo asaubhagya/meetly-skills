@@ -71,10 +71,11 @@ test('one fictional Meetly contact reconciles independently through two CRM sche
     assert.ok(result.ok);
     return result.json();
   }
-  // PersonIdentity uses name, contacts, emails, and merged. The verified
+  // The native graph person projection drops local contact IDs. The verified
   // address and permitted CRM tag below are explicitly selected fixture facts.
-  const source = { type: 'person', id: 'avery', revision: 'r1', nativeJSON: JSON.stringify({
-    name: 'Avery Reviewer', contacts: [], emails: ['avery@example.test'], merged: [],
+  const source = { type: 'person', id: 'bd4d387f91fab63473584e87a596583a3071f12ee7dd0a39552922e05e6a055a',
+    revision: 'da26a7eece1f47efd1ca641c84cb730e8f258887428802972ac9cd1fe8e35be7', nativeJSON: JSON.stringify({
+    emails: ['avery@clients.example'], linkedContactNames: [], merged: [], name: 'Avery Fixture',
   }) };
   const person = JSON.parse(source.nativeJSON);
   for (const [tenant, keys] of Object.entries(schemas)) {
