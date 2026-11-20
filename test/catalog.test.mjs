@@ -101,12 +101,13 @@ test('CLI can build outside its working directory and invalid skill edits invali
   assert.match(result.stderr, /version/);
 });
 
-test('production catalog exposes two core and five explicit specialist capabilities', async () => {
+test('production catalog exposes core, specialist and graph workflows', async () => {
   const manifest = await buildManifest(root);
   assert.deepEqual(manifest.skills.map(s => s.key), [
     'create-meetly-customer-insights', 'create-meetly-engineering-spec',
     'create-meetly-legal-intake', 'create-meetly-prd', 'create-meetly-sales-analysis',
-    'meetly-briefing', 'meetly-catch-up',
+    'meetly-briefing', 'meetly-catch-up', 'meetly-crm-workflow', 'meetly-enrichment',
+    'meetly-graph-onboarding', 'meetly-recurring-workflow', 'meetly-task-workflow',
   ]);
   assert.deepEqual(manifest.skills.map(s => s.key), [...manifest.skills.map(s => s.key)].sort());
   for (const skill of manifest.skills) {
