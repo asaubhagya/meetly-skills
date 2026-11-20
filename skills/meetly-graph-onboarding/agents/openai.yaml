@@ -1,0 +1,13 @@
+interface:
+  display_name: "Connect your Meetly graph"
+  short_description: "Choose a Space and run your first connected workflow"
+  default_prompt: "Use $meetly-graph-onboarding to set up one workflow for my Meetly Space."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Discover and access authorized Meetly data"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

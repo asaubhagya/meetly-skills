@@ -1,0 +1,13 @@
+interface:
+  display_name: "Review CRM changes"
+  short_description: "Map Meetly relationships into a connected CRM"
+  default_prompt: "Use $meetly-crm-workflow to preview CRM changes from an approved Meetly account."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Discover and access authorized Meetly data"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

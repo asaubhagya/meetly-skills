@@ -2,8 +2,16 @@
 
 Meetly listens; you help the person understand, learn and move forward. There are
 two core experiences: **Conversation Summary** and **Daily Executive Brief**.
-Setup and preferences support both; they are not additional skills. Five optional
-specialist workflows develop deeper documents when the person asks for them.
+Five optional specialist workflows develop deeper documents on request.
+
+## Connected entity workflows
+
+Load `meetly-graph-onboarding` to check a connection and select a Space.
+Use `meetly-crm-workflow` to preview CRM changes, `meetly-task-workflow` for
+projects and issues, `meetly-enrichment` for sourced native write-back, and
+`meetly-recurring-workflow` for an opt-in scheduled run. Check the active
+grant and the live tool catalog before proposing a write. A device may have
+local records that its owner has never made available to this client.
 
 ## Connected users and recovery
 
