@@ -280,8 +280,8 @@
         {
           "path": "SKILL.md",
           "src": "skills/meetly-crm-workflow/SKILL.md",
-          "sha256": "db0352380b8033da8e42ac3b89d2b1a5e32d0e3618ab1bdbade298a04178ce5b",
-          "bytes": 2261
+          "sha256": "f32c04d953b0d50e8390eb26ed27432ad75e1101313207574d3fe9dc7d3df666",
+          "bytes": 2931
         },
         {
           "path": "agents/openai.yaml",
@@ -300,6 +300,12 @@
           "src": "skills/meetly-crm-workflow/references/editorial.md",
           "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
           "bytes": 5547
+        },
+        {
+          "path": "scripts/contact-preview.mjs",
+          "src": "skills/meetly-crm-workflow/scripts/contact-preview.mjs",
+          "sha256": "345920e0d43801f271726cc6dbf417cda2a8658dcf4d9b13437fa8d61cb8fe0d",
+          "bytes": 2254
         }
       ]
     },
