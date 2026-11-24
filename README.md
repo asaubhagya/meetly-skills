@@ -13,6 +13,20 @@ sales analysis and legal client intake. The MCP guide indexes all of them and
 returns selected bodies and complete reference files. Templates inform quality;
 they do not force identical document sections or an extra onboarding interview.
 
+## Use the graph workflows
+
+For ChatGPT and Claude connected to the hosted MCP, request the workflow by
+key through the usage guide when the verified release lists it. On a local
+skill-capable host, install the complete selected directory from the pinned
+catalog in the host skill directory (for Claude Code, `~/.claude/skills/`).
+Connect the hosted MCP separately and check which graph operations the current
+grant supports. Installing a skill grants no access to Meetly or a destination.
+
+Start with `meetly-graph-onboarding`. Use `meetly-crm-workflow`,
+`meetly-task-workflow`, `meetly-enrichment` or `meetly-recurring-workflow`
+for the selected flow. A recurring run requires a separately configured
+orchestrator with durable checkpoints.
+
 ## Develop
 
 Requires Node.js 22 or newer. No dependencies or install step.

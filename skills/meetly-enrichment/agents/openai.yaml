@@ -1,0 +1,13 @@
+interface:
+  display_name: "Enrich a Meetly record"
+  short_description: "Append sourced facts and reconcile external mappings"
+  default_prompt: "Use $meetly-enrichment to reconcile verified external facts with this Meetly record."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Discover and access authorized Meetly data"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

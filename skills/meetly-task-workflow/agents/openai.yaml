@@ -1,0 +1,13 @@
+interface:
+  display_name: "Review project and task changes"
+  short_description: "Map Meetly projects and commitments into a tracker"
+  default_prompt: "Use $meetly-task-workflow to preview Linear issues for this Meetly project."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Discover and access authorized Meetly data"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

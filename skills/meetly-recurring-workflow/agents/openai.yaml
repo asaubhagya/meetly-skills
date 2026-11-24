@@ -1,0 +1,13 @@
+interface:
+  display_name: "Run a recurring Meetly workflow"
+  short_description: "Plan and operate incremental cross-app workflows"
+  default_prompt: "Use $meetly-recurring-workflow to set up a dry run for new Meetly commitments."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "meetly"
+      description: "Discover and access authorized Meetly data"
+      transport: "streamable_http"
+      url: "https://mcp.getmeetly.ai/mcp"
+policy:
+  allow_implicit_invocation: true

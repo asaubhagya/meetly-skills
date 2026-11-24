@@ -271,11 +271,178 @@
           "bytes": 2686
         }
       ]
+    },
+    {
+      "key": "meetly-crm-workflow",
+      "version": 2,
+      "description": "Preview and reconcile Meetly people, accounts, event leads and conversation evidence with an authorized CRM such as HubSpot.",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "src": "skills/meetly-crm-workflow/SKILL.md",
+          "sha256": "f32c04d953b0d50e8390eb26ed27432ad75e1101313207574d3fe9dc7d3df666",
+          "bytes": 2931
+        },
+        {
+          "path": "agents/openai.yaml",
+          "src": "skills/meetly-crm-workflow/agents/openai.yaml",
+          "sha256": "0b2cf43914042a58ff416e17bcc3d7ad05c6001b3f1ecb2ac991621bd4bdf9c1",
+          "bytes": 464
+        },
+        {
+          "path": "references/document.css",
+          "src": "skills/meetly-crm-workflow/references/document.css",
+          "sha256": "56dfdf5b256e8dca8c681e374c9ee8e8103231e4efa774dc576a74169017920a",
+          "bytes": 1379
+        },
+        {
+          "path": "references/editorial.md",
+          "src": "skills/meetly-crm-workflow/references/editorial.md",
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
+        },
+        {
+          "path": "scripts/contact-preview.mjs",
+          "src": "skills/meetly-crm-workflow/scripts/contact-preview.mjs",
+          "sha256": "345920e0d43801f271726cc6dbf417cda2a8658dcf4d9b13437fa8d61cb8fe0d",
+          "bytes": 2254
+        }
+      ]
+    },
+    {
+      "key": "meetly-enrichment",
+      "version": 2,
+      "description": "Review sourced facts and external references for a Meetly entity and submit an authorized revision-aware enrichment.",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "src": "skills/meetly-enrichment/SKILL.md",
+          "sha256": "f4ff2dd6fef4f917cf47ce77fe0902a217e6685f57d1cc7390078aeb832c3c63",
+          "bytes": 2331
+        },
+        {
+          "path": "agents/openai.yaml",
+          "src": "skills/meetly-enrichment/agents/openai.yaml",
+          "sha256": "2e47e556640d3f0020c2806f1ef5ef6ff6106dc2ec6a9462785cab79e82ba2d0",
+          "bytes": 479
+        },
+        {
+          "path": "references/document.css",
+          "src": "skills/meetly-enrichment/references/document.css",
+          "sha256": "56dfdf5b256e8dca8c681e374c9ee8e8103231e4efa774dc576a74169017920a",
+          "bytes": 1379
+        },
+        {
+          "path": "references/editorial.md",
+          "src": "skills/meetly-enrichment/references/editorial.md",
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
+        }
+      ]
+    },
+    {
+      "key": "meetly-graph-onboarding",
+      "version": 2,
+      "description": "Remember a person or follow through on a commitment using the Meetly connection selected by the user.",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "src": "skills/meetly-graph-onboarding/SKILL.md",
+          "sha256": "55985525ff2e07ff2e190ec2584d4830389c128c0ea816bdebcfdb2fe2c5fdb7",
+          "bytes": 2532
+        },
+        {
+          "path": "agents/openai.yaml",
+          "src": "skills/meetly-graph-onboarding/agents/openai.yaml",
+          "sha256": "325dc6c6df05819f68d1d410ed2346c488f6d05f57ae735cd646c72b26e6f1ca",
+          "bytes": 470
+        },
+        {
+          "path": "references/document.css",
+          "src": "skills/meetly-graph-onboarding/references/document.css",
+          "sha256": "56dfdf5b256e8dca8c681e374c9ee8e8103231e4efa774dc576a74169017920a",
+          "bytes": 1379
+        },
+        {
+          "path": "references/editorial.md",
+          "src": "skills/meetly-graph-onboarding/references/editorial.md",
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
+        }
+      ]
+    },
+    {
+      "key": "meetly-recurring-workflow",
+      "version": 3,
+      "description": "Set up or resume an opt-in scheduled Meetly lead or commitment workflow with scoped approval, durable checkpoints and retries.",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "src": "skills/meetly-recurring-workflow/SKILL.md",
+          "sha256": "375cbc016832df6a7714e34ca8a1f86927f74a539d0733211c849d94f13cb66f",
+          "bytes": 4862
+        },
+        {
+          "path": "agents/openai.yaml",
+          "src": "skills/meetly-recurring-workflow/agents/openai.yaml",
+          "sha256": "c7ca45404a2749cec2abfd637f530303dc00fe99a9ce1edcc08c72d36d9de2d3",
+          "bytes": 478
+        },
+        {
+          "path": "references/document.css",
+          "src": "skills/meetly-recurring-workflow/references/document.css",
+          "sha256": "56dfdf5b256e8dca8c681e374c9ee8e8103231e4efa774dc576a74169017920a",
+          "bytes": 1379
+        },
+        {
+          "path": "references/editorial.md",
+          "src": "skills/meetly-recurring-workflow/references/editorial.md",
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
+        },
+        {
+          "path": "scripts/journal.py",
+          "src": "skills/meetly-recurring-workflow/scripts/journal.py",
+          "sha256": "d52840bc1e45f4b2bd22cd258166fb77fdc0030bb892eb62cb66ec8cc2b884d8",
+          "bytes": 5886
+        }
+      ]
+    },
+    {
+      "key": "meetly-task-workflow",
+      "version": 1,
+      "description": "Resolve Meetly projects, commitments and tasks into approved changes in Linear or another connected work tracker.",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "src": "skills/meetly-task-workflow/SKILL.md",
+          "sha256": "ddf29baa76291e916875e71622640a93f93e0bf0376a3b6a558a9bab4ce339a0",
+          "bytes": 1654
+        },
+        {
+          "path": "agents/openai.yaml",
+          "src": "skills/meetly-task-workflow/agents/openai.yaml",
+          "sha256": "e9b6042f16b013b5e3c52ca1f958770a7f11825f8f99ca6338505473ddb3b7f4",
+          "bytes": 477
+        },
+        {
+          "path": "references/document.css",
+          "src": "skills/meetly-task-workflow/references/document.css",
+          "sha256": "56dfdf5b256e8dca8c681e374c9ee8e8103231e4efa774dc576a74169017920a",
+          "bytes": 1379
+        },
+        {
+          "path": "references/editorial.md",
+          "src": "skills/meetly-task-workflow/references/editorial.md",
+          "sha256": "5d4a30fcc56571a9bfedce0e895514d3c1bfe148bbcd448cbbb7849329fe97ff",
+          "bytes": 5547
+        }
+      ]
     }
   ],
   "guide": {
     "src": "GUIDE.md",
-    "sha256": "a0551bc0100826c16e8f17354cf05028c61e49e62b99e4ef90f9686a2fae3ce8",
-    "bytes": 16111
+    "sha256": "02a6679f624eebdc372ade41a1a9c71d8ede0d8a0fda8f263f23cd7b8cdd1f2d",
+    "bytes": 16681
   }
 }
