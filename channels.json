@@ -1,0 +1,18 @@
+{
+  "schema": "meetly-channels/1",
+  "latest": {
+    "ref": "v3.2.10",
+    "sha": "0c85b534a6e386a57837ac566b860117edca03bd",
+    "manifestUrl": "https://raw.githubusercontent.com/asaubhagya/meetly-skills/0c85b534a6e386a57837ac566b860117edca03bd/manifest.json",
+    "skillsZip": {
+      "url": "https://raw.githubusercontent.com/asaubhagya/meetly-skills/channels/zips/0c85b534a6e386a57837ac566b860117edca03bd.zip",
+      "sha256": "62ad1efa56dfce98103cf074cd80e5b0d405591e4cbd5b8e652c52d71f539caa",
+      "bytes": 47754
+    }
+  },
+  "beta": {
+    "ref": "main",
+    "sha": "ea8c697abe6d6e4502e2fe38c4d7054e468f3a9b",
+    "manifestUrl": "https://raw.githubusercontent.com/asaubhagya/meetly-skills/ea8c697abe6d6e4502e2fe38c4d7054e468f3a9b/manifest.json"
+  }
+}
