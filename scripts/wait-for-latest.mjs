@@ -1,6 +1,8 @@
 import { pathToFileURL } from 'node:url';
+import { CHANNELS_URL } from './publish-channels.mjs';
 
-export const channelsUrl = 'https://agents.getmeetly.ai/channels.json';
+// MEE-1347: channels are published by this repo on its `channels` branch (no website).
+export const channelsUrl = CHANNELS_URL;
 
 export async function latestMatches(sha, request = globalThis.fetch, timeoutMs = 15_000) {
   try {
@@ -23,15 +25,15 @@ export async function waitForLatest(sha, {
   const deadline = now() + timeoutMs;
   while (now() < deadline) {
     if (await latestMatches(sha, request, Math.max(1, Math.min(15_000, deadline - now())))) {
-      log('Website latest points to the triggering commit.');
+      log('Published channels point to the triggering commit.');
       return;
     }
     const remaining = deadline - now();
     if (remaining <= 0) break;
-    log('Waiting for website latest propagation; response content is not logged.');
+    log('Waiting for published channels to propagate; response content is not logged.');
     await sleep(Math.min(15_000, remaining));
   }
-  throw new Error('Website latest did not reach the triggering commit within the bounded wait; plugin was not promoted.');
+  throw new Error('Published channels did not reach the triggering commit within the bounded wait; plugin was not promoted.');
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -240,8 +240,8 @@ Load only the relevant skill and references through `get_meetly_usage_guide`. Di
 without installed skills; `get_meetly_usage_guide` provides the same guidance or an
 explicitly unchecked bootstrap during an outage. Existing retrieval still works.
 
-Git is instruction truth. agents.getmeetly.ai publishes raw Markdown, readable
-pages, JSON and a stable ZIP. Beta tracks checked main; latest pins a stable
+Git is instruction truth. This repository publishes its release channels and a
+stable ZIP on its `channels` branch. Beta tracks checked main; latest pins a stable
 revision. Verify hashes and do not mix revisions. Skills publish independently; MCP-only plugins load live guidance. Legacy bundled
-plugins hydrate stable website bytes. OpenAI review and installed-plugin updates
+plugins hydrate stable release bytes. OpenAI review and installed-plugin updates
 are separate.

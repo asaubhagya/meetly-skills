@@ -86,36 +86,23 @@ verify every file, preserving relative paths and invocation policy.
 
 CI runs tests, validation, and manifest drift checks for pushes and pull requests.
 After successful checks, trusted pushes to `main` (beta) and stable semver tags
-(latest) notify downstream using the first configured route:
-
-1. `MEETLY_AGENTS_DEPLOY_HOOK`: preferred project-scoped Vercel deploy-hook URL.
-   CI POSTs to it without a Vercel management token. The hook selects the website
-   project/branch; its build must resolve checked Meetly skills channels, pin the
-   chosen revision, and verify the manifest. A hook does not transmit the triggering
-   skills SHA or select a skills release by itself.
-2. `MEETLY_DISTRIBUTION_TOKEN`: optional fallback only when no hook is configured.
-   Dispatches `meetly-skills-updated` to `asaubhagya/get-meetly-ai`, with repository,
-   immutable SHA, ref, and channel in the payload outside the manifest.
-
-The owner provisions these repository secrets; local scripts do not create them.
-Neither configured means a successful skip with a clear CI notice. Pull requests
-run checks only and explicitly report that notification is disabled. A configured
-route's failure fails notification without trying the other route, avoiding
-duplicate builds after an ambiguous response. Hook URLs, tokens, response bodies,
-and raw network errors are never logged. Acceptance is not deployment success.
-
-The downstream consumer must compare semantic versions before moving latest,
-so replaying an older tag cannot roll it back, and must verify hashes. The website
-owns channel resolution, deployment, and Meetly setup tool integration. This
-workflow triggers its configured build but does not publish GitHub releases.
+(latest) run `scripts/publish-channels.mjs --publish` (MEE-1347; this replaced the
+agents.getmeetly.ai website and its Vercel deploy hook). It resolves the highest
+stable `vX.Y.Z` tag and `main` to commits, verifies every manifest file (bytes and
+SHA-256), checks that the stable release names only tools in the live connector
+catalog, builds a deterministic stable ZIP, and commits `channels.json` and
+`zips/<stable sha>.zip` to the `channels` branch. Consumers read
+`https://raw.githubusercontent.com/asaubhagya/meetly-skills/channels/channels.json`:
+the Meetly connector (meetly-mcp `supabase/functions/mcp/setup.ts`) and the plugin
+(meetly-plugin `scripts/hydrate.mjs`). Nothing is published when a check fails.
+Run it without `--publish` to see what would be published. Pull requests never publish.
 
 ### Stable plugin file promotion
 
 The downstream trigger job is `notify`. After `checks` and `notify` succeed,
 `promote-plugin` runs only for stable `vMAJOR.MINOR.PATCH` tag pushes. It peels the
-tag to a commit, then polls `https://agents.getmeetly.ai/channels.json` for up to
-ten minutes until `latest.sha` equals that commit. A build-hook acknowledgment
-alone is insufficient. Poll errors and response bodies are not printed.
+tag to a commit, then polls the published `channels.json` for up to
+ten minutes until `latest.sha` equals that commit. Poll errors and response bodies are not printed.
 
 The owner must provision `MEETLY_PLUGIN_DEPLOY_KEY`, an SSH write deploy key scoped
 ONLY to private `asaubhagya/meetly-plugin`, in this skills repository. Missing key
