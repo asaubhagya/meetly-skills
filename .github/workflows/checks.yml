@@ -22,6 +22,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: echo '::notice::Pull request checks only; downstream notification is disabled.'
 
+  # MEE-1347: publish channels.json and the stable skills ZIP to this repo's `channels` branch (was a Vercel hook that
+  # rebuilt agents.getmeetly.ai). The Meetly connector and plugin read them through raw.githubusercontent.com.
   notify:
     needs: checks
     outputs:
@@ -29,8 +31,15 @@ jobs:
       sha: ${{ steps.release.outputs.sha }}
     if: github.event_name == 'push' && github.repository == 'asaubhagya/meetly-skills' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: meetly-skills-channels
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -40,14 +49,8 @@ jobs:
         run: |
           echo "sha=$(git rev-parse 'HEAD^{commit}')" >> "$GITHUB_OUTPUT"
           node --input-type=module -e 'import { appendFileSync } from "node:fs"; const stable = /^refs\/tags\/v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.test(process.env.GITHUB_REF); appendFileSync(process.env.GITHUB_OUTPUT, `stable=${stable}\n`);'
-      - name: Notify website after successful checks
-        env:
-          MEETLY_AGENTS_DEPLOY_HOOK: ${{ secrets.MEETLY_AGENTS_DEPLOY_HOOK }}
-          MEETLY_DISTRIBUTION_TOKEN: ${{ secrets.MEETLY_DISTRIBUTION_TOKEN }}
-          SOURCE_REPOSITORY: ${{ github.repository }}
-          SOURCE_REF: ${{ github.ref }}
-          SOURCE_SHA: ${{ steps.release.outputs.sha }}
-        run: node scripts/notify-distribution.mjs
+      - name: Publish release channels to the channels branch
+        run: node scripts/publish-channels.mjs --publish
 
   promote-plugin:
     needs: [checks, notify]
@@ -68,7 +71,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Wait up to ten minutes for website latest
+      - name: Wait up to ten minutes for published channels
         run: node scripts/wait-for-latest.mjs
       - name: Check out private plugin main with its scoped deploy key
         uses: actions/checkout@v4
